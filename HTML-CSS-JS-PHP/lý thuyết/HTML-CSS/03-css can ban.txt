@@ -1,0 +1,94 @@
+CSS (cascading style sheets) là một ngôn ngữ hỗ trợ tìm và định dạng cho HTML( màu sắc, kích thước, vị trí, ....các thuộc tính liên quan)
+để làm cho đoạn html trở nên đẹp và bắt mắt hơn.
+
+
+cấu trúc cú pháp của ngôn ngữ CSS:
+  P{            
+      color:red;
+      font-size: 120px;
+  }
+ p là câu lệnh chỉ đến thẻ p trong html, các thuộc tính sẽ để trong ngoặc nhọn,
+ giá trị thuộc tính sẽ để sau thuộc tính bới dấu : & kết thúc bằng ;
+
+
+
+có 03 kiểu sử dụng và khai báo CSS cơ bản
+ 01/ Internal: nghĩa là khai báo trực tiếp CSS trong html
+ yêu cầu phải bỏ tất cả CSS vào thẻ <style> CSS </style>.
+ ví dụ: 
+          <!DOCTYPE html>
+          <html>
+
+          <head>
+              <meta charset="UTF-8">
+              <title>luyện tập html, css</title>
+              <!-- phần CSS se để tong {} và gáng đến đúng giá trị trong html -->
+              <style>
+                  h1 {
+                      color: red;
+                      font-size: 100px;
+                  }
+              </style>
+          </head>
+
+          <body>
+              <h1>Văn bản báo cáo</h1>
+          </body>
+          </html>
+
+
+ 02/ kiểu External đây là kiểu khai báo CSS ở một file riêng và 
+ gáng vào html bằng câu lệnh: <link rel="stylesheet" href="đường dẫn đến fil.css">
+ note: đối với kiểu External thì ta viết file css riêng và không cần bỏ vào thẻ <style></style>.
+
+  ví dụ:
+    tạo file CSS: style.css
+          h1 {
+                color: red;
+                font-size: px;
+           }
+    gáng CSS vào HTML"
+      
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+             <meta charset="UTF-8">
+             <title>luyện tập html, css</title>
+             <!-- phần CSS se để tong {} và gáng đến đúng giá trị trong html -->
+             <link rel="stylesheet" href="../CSS/style.css">
+             <!-- khai báo CSS qua link rel-->
+        </head>
+
+        <body>
+             <h1>Văn bản báo cáo</h1>
+        </body>
+
+        </html>
+
+
+03/ kiểu Inline: nghĩa là đưa thuộc tính CSS trực tiếp vào dòng câu lệnh HTML 
+thông qua style="thuộc tính cần triển khai"
+ ví dụ:
+    
+      <!DOCTYPE html>
+      <html>
+
+      <head>
+          <meta charset="UTF-8">
+          <title>luyện tập html, css</title>
+          <!-- phần CSS se để tong {} và gáng đến đúng giá trị trong html -->
+      </head>
+
+      <body>
+          <h1>Văn bản báo cáo</h1>
+
+          <p style="font-size:150px; color: rgb(187, 255, 0);">kiểu Inline</p>
+          <!-- đưa truực tiếp css vào dòng <p> thông qua thuộc tính style="thuộc tính" -->
+      </body>
+
+      </html>
+
+
+
+      ****NOTES: trong 3 cách trên thì External được dùng nhiều nhất và phổ biến hơn cả

@@ -1,0 +1,97 @@
+CSS UNITS: ĐƯỢC HIỂU là các đơn vị trong CSS UNITS, gồm 2 cái
+01/ Absolute units: đơn vị tuyệt đối
+-px: đơn vị px, kích thước
+ **note: ĐƠn vị tuyệt đối có nhiều loại đại khái là các đơn vị mà khi thuộc tính chỉ định thì nó không thay đổi 
+ dù cho các thuộc tính hay đối tượng xung quanh có thay đổi thì đơn vị cố định vẫn giữ nguyên.
+   
+02/ Relative units: đơn vị tương đối
+ - %: điều chỉnh độ rộng tương thích theo kích thuoc trình duyệt, theo thẻ cha body của html
+ - rem: thẻ điều chỉnh kích thước nhưng nó phụ thuộc vào sự thay đổi của thẻ html
+ - em: cũng tương tự rem nhưng nó không phụ thuộc vào thẻ cha html mà 
+ nó phụ thuộc vào giá trị kích thước được quy định ở thẻ có chung thuộc tính gần nhất kế nó
+ mà đơn vị em đang có
+
+     vd: thẻ .thuoctinh{ font-size: 100px;}
+        thẻ   h2{ font-size: 200px;}
+
+              h3 {font-size: 1em;}
+    -----> như vậy thì thuộc tính font-size của h3 có đơn vị em sẽ
+    thay đội dựa trên thuộc tính của class, hay tag-1 gần nhất là 
+    thuộc tính font-size của thẻ h2, chứ không phụ thuộc vào html nữa.
+
+ - vw( vieport width): đơn vị khung nhìn chiều ngang của trình duyệt
+    + 1vw=1%, 100vw=100%
+      khác ở giá trị % thì đơn vị vw, vh không phụ thuộc trình duyệt và thẻ body
+      nên dù thẻ body hay trình duyệt có nhỏ đi thì giá trị 50vw =50% 
+      là giữ nguyên không nhỏ, hay lớn theo sự thay đổi của trình duyệt
+
+ - vh(viewport height): đơn vị khung nhìn chiều cao hay chiều dọc của trình duyệt
+    + tương tự y như vw
+
+
+
+
+     ví dụ code:
+
+
+                        <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>HỌC VỀ CSS UNITS, ĐƠN VỊ TRONG CSS</title>
+
+                        <!-- bài này mình sẽ khai báo CSS kiểu internal trực tiếp thông qua câu lệnh <style> -->
+
+                        <style>
+                            .box{
+                                height:100px;
+                                width: 50%;
+                                background-color: green;
+                            
+                            }
+                            
+                            h1{
+                                font-size: 50px;
+                                color: red;
+                            }
+
+                            /* thẻ html va h2 de vidu cho đơn vị rem  */
+                            html{
+                                font-size: 40px;
+                            }
+                            h2{
+                                font-size: 1rem;
+                                color:rgb(158, 199, 61);
+                            }
+
+                            /* thuộc tính đơn vị viewport vw( chiều ngang) & vh(chiều cao*/
+                            .box2{
+                                height:50vh;
+                                width:50vw;
+                                font-size: 40px;
+                                background-color:rgb(136, 22, 60);
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>định dạng Absolute units kiểu đơn vị tuyệt đối: đơn vị %</h1>
+                        <div class="box">box định dang đơn vị %
+                            <!--  hộp thoại box, thuộc tính width định dạng cho đơn vị %
+                            ta thấy là ở file css class box, thuộc tính width: 50%"
+                            thì dù ta kéo to nhỏ hộp box cũng sẽ tự điều chỉnh kích thước 
+                            chiều rộng tương thích, đó là cái hay của đơn vị tương đối %
+                            -->
+                        </div><br/><br/>
+
+                        <h2>định dạng đơn vị kiểu relative units: đơn vị rem</h2>
+                        <!-- ta thấy là với cách đặt đơn vị rem. thì thẻ h2 sẽ hoàn toàn phụ thuộc vào đơn
+                        vị của thẻ html, nếu font-size của thẻ html, lên 100px thì
+                        mặc định 1 rem của thẻ h2 cũng lên 100px; nó phụ thuộc vào phụ
+                        thuộc vaÒ SỰ  thay đổi đơn vị của thẻ cha html
+                        -->
+
+
+                        <div class="box2"> định dạng kích thước  vw- vh</div>
+                        <!-- ta thấy là dù trình duyệt to nhỏ thì giá trị vw, vh không phụ thuộc vào trình duyệt -->
+                    </body>
+                    </html>

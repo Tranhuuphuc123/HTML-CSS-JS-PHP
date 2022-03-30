@@ -1,0 +1,21 @@
+ - Trên trình duyệt được đặt sẵn một số thuộc tính CSS mặc định,
+trong đó có thuộc tính margin, đây là thuộc tính tạo ra một khoảng cách 
+giữa các thẻ. Cụ thể trong tình huống trên, thẻ body mặc định có
+ margin: 8px, vì vậy body đang đẩy ra xung quanh 8px và gây ra 
+ hiện tượng trên.
+
+
+
+ - Cách khắc phục
+Không chỉ thẻ body, một số thẻ thông dụng như h1-h6, p cũng có 
+margin mặc định. Trong thực tế, điều này thường tạo ra những khoảng 
+trắng ngoài ý muốn. Để khắc phục chúng ta sẽ Reset CSS bằng cách
+ sau:
+
+👉 Sử dụng * selector, vì nó tác động lên mọi thẻ, vì vậy chúng 
+ta có thể reset cho mọi thẻ:
+
+* {
+    margin: 0; /* Loại bỏ margin mặc định */
+    padding: 0; /* Loại bỏ padding mặc định */
+}

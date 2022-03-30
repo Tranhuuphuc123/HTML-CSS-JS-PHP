@@ -1,0 +1,57 @@
+Cách sử dụng biến trong CSS, hay còn gọi là CSS Varibales ( kỹ thuật đặt biến giả trong CSS)
+mục đích của cách sử dụng biến CSS variable nhằm mục đích thống nhất một kiểu CSS tùy biến cho nhiều id, class, CSS trong lúc gáng giáng trị
+để khi muỗn thay đổi về thuộc tính ta chỉ cần thay đổi trong biến CSS là xong không cần thay đổi từng class hoặc ID của CSS.
+
+*** cú pháp:
+  :root{
+      -- tên biến gả;
+  }
+
+  .tên class{
+      thuộc tính: var(--tên biến giả);
+  }
+ 
+ #tên id{
+      thuộc tính: var(--tên biến giả);
+  }
+
+tag -1{  //tag-1: là một thẻ cố định trog htmml//
+    -tên thuộc tính: var(--tên thẻ )
+}
+ 
+
+ví dụ:
+  tạo 1 file dat-bien.css:
+      :root{
+          --text-color: red;
+      }
+
+      h1{
+          color:var(--text-color);
+      }
+      h2{
+          color: var(--text-color);
+      }
+      h3{
+          color: var(--text-color);
+      }
+
+file html:
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+                <title>ĐẶT BIẾN GIẢ TRONG CSS, CSS VARIBALES</title>
+                <link rel="stylesheet" href="../CSS/biengiaCSS.css">
+            </head>
+            <body>
+                <h1>kiểu H1</h1>
+                <h2>Kiểu H2</h2>
+                <h3>Kiểu H3</h3>
+            </body>
+        </html>
+
+
+------->> như lúc này ta thấy tất cả các thẻ css h1-h3, đều phụ thuộc vào biến giả :root 
+chỉ cần tưa thay đổi gái trị màu đỏ trong biến giả root là ngay lập tức cá thẻ h1 đều thayd dổi màu hêt

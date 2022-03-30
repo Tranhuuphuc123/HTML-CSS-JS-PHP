@@ -1,0 +1,22 @@
+*cau truc co ban cua mot doan code html:
+
+
+<!DOCTYPE html> <!--thong bao trinh duyet html phai co tu ban html5, giup xac dinh chinh xac trinh duyet-->
+<html>
+ <head>
+    <title>TIEU DE TRNG WED</title>
+    <meta http-equid="Content-Type"; charset="utf-8" <!-- viet duoc tieng viet co dau-->
+ </head>
+
+ <body>
+     <!--phan noi dung trang web-->
+ </body>
+
+</html>
+
+
+
+** NOTE: de coment trong code html. css: dung cu phap
+ <!-- noi dung -->
+ dung phim tat thi nhan: "crtl+/"
+ 

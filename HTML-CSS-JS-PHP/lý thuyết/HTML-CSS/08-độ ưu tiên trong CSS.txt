@@ -1,0 +1,20 @@
+**** ĐỘ ƯU TIÊN THỨ TỰ CÁC CLASS, ID.., TRONG CSS****************
+01/ đối với kiểu internal và external thì không có sự phân biệt
+kiểu nào xuất hiện sau, và mới nhất thì kiểu đó được ưu tiên.
+
+02/ các cấp độ ưu tiên:
+   - tag-1: một thẻ cụ thể trong css: h1, p, a.... ưu tiên: 1 điêmr
+   - class: độ ưu tiên cao hơn tag-1 10 điểm
+   - #id: độ ưu tiên cao hơn class, 100 điểm
+   - Inline: kiểu khai baops trực tiếp tại thẻ html: 1000 điểm
+các cấp độ ưu tiên, chấm điểm mang tính khách quan để hình dung ra độ ưu tiên cao thấp
+
+
+
+03/ equal specitify: ý nghĩa là selctor thuộc tính được lặp lại giữa 2 id hoặc class thì cái nào mới hơn 
+sẽ đc ưu tiên.
+
+04/ universal selector and inherited: thẻ chung mang tinmhs định nghĩa toàn bộ cho html:
+  - thẻ *
+  - thẻ html 
+  - li.... các thẻ mang tính định nghĩa toàn bộ

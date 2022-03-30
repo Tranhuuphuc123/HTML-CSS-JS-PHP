@@ -1,0 +1,53 @@
+********************CÁC HÀM TRONG CSS-CSS FUNCTION***********************
+01/ thuộc tính tô nền rgba(màu 1, màu 2, maù 3, alpha): đây là thuộc tính mở 
+rông hơn so với rgb với thuộc tính alpha( tùy chỉnh độ trong suốt của màu từ 0.1-1.0).
+thuộc tính alpha càng bé độ trong suốt càng cao.
+
+02/ thuộc tính rgb(): giống rgba nhưng không có thuộc tính alpha, không có màu nền alpha trong suốt
+
+03/ các hàm cơ bản, đáng chú ý là hàm attr(): atribute.
+
+ví dụ:
+file CSS:
+    a::after {
+        content:"("attr(href)")";
+    }
+file html:
+    <a a href="http://www.hoclaptrinh.edu.vn"> hoc lap trinh (http://www.hoclaptrinh.edu.vn) </a>
+
+
+---> ta thấy để thay đổi đường dẫn url: "http://www.hoclaptrinh.edu.vn"
+ta phải sưa cả 2 bên href và bên mục hiển thị
+
+để khắc phục trường hợp này là sử dụng biến giả, như file css trên :
+lúc này: thì phần điền bên học lap trinh ta khong can chèn vao đường link
+bên href nữa, chỉ cần thông qua biến giả tạo ra trên css, ta chỉ cần sữa bên href  thì mặc định 
+bên mục điền hoc laptrinh sẽ tự động thêm vào đường link
+file CSS:
+    a::after {
+        content:"("attr(href)")";
+    }
+file html:
+    <a a href="http://www.hoclaptrinh.edu.vn"> hoc lap trinh </a>
+
+
+
+****code ví dụ:
+
+                    <!DOCTYPE html>
+                    <html >
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>các hàm trong CSS- CSS function</title>
+                        <style>
+                            a::after{
+                                content: "("attr(href)")";
+                            }
+
+                        </style>
+                    </head>
+                    <body>
+                        <a href="https://zingnews.vn/">đi tới trang tin</a>
+                        <--mặc định đi tới trang tin sẽ tự thêm vào liên kết chú thích mà không cần điền vào-->
+                    </body>
+                    </html>

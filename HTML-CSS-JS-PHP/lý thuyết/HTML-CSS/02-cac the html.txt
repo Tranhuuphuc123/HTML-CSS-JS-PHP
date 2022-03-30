@@ -1,0 +1,113 @@
+** cac the trong html:
+  01/ the <h></h>: heading tieu de
+  02/ the <p></p>: doan paragrah đoạn văn bản dài
+  03/ the <br/>: ngat dong doan van ban tranh dai le the
+  04/ the <img src="duong link anh" alt="lenh alt giup hien thi a mo khi khong loa dc anh chinh">
+  05/ the <a href="link lien ket"></a>: the lien ket den trang can lien ket
+  06/ thẻ ol: thẻ tạo danh sách có thứ tự:
+    <ol></ol>
+
+    note: <ol style="list-style:decimal" start="1" end=""></ol>
+    lưu ý đoạn code trên có thuộc tính style="list-style:+thuộc tính thứ tự"
+    ** các thuộc tính thứ tự gồm:
+      + decimal: 1,2,3..., 
+      + upper-roman: I,II, III...
+      + lower-roman: i, ii, iii...
+      + upper-alpha: A, B, C...
+      + lower-alpha: a, b, c...
+
+  07 ul (unodered list), li (list): thẻ sổ danh sách không có thứ tự trong html
+  08/ thẻ <table>:
+     + <thread>
+         <th> thẻ tiêu đề </th>
+       </thread>
+    + <tbody>
+        <tr> định nghĩa 1 hàng </tr>
+        <td> định nghĩa 1 ô </td>
+      </tbody>
+
+ 09/ thẻ <input></input>: thẻ tạo các ô tích, text để nhập dữ liệu
+   - type: + radio: tạo ô tích tròn
+           + text: tạo ô nhập dữ liệu điền thông tin    
+           + checkbox: tạo ô dấu tích
+
+10/ thẻ <button></button>: thẻ tạo nút nhấn liên kết
+
+11/ thuộc tính artributes: thuộc tính chèn thêm cho các thẻ, có rất nhiều 
+atributes: title,href:đường link liên kết, style: list-style-type or style: decimal, onclick, ......
+các cái chèn vào các thẻ gọi là thuộc tính html atributes
+
+
+vidu dụ code:
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DU AN TRANG WEB CA NHAN</title>
+        <meta http-equiv="Content-Type" charset="UTF-8">
+    </head>
+    <body>
+        <h1>Nhiều tài xế taxi công nghệ muốn tắt app</h1>
+        <p>tôi làm từ thời giá xăng chỉ khoảng 12.000-14.000 đồng/lít, giờ xăng đã tăng giá hơn gấp đôi nhưng giá cước trên ứng dụng chỉ tăng nhỏ giọt.
+            <br/> Như lần gần nhất ứng dụng tăng giá cước tính ra mỗi cuốc thu nhu nhập của tôi tăng chưa được 10%. Một tháng chạy mòn xe, mòn cả người nhưng mang về cho vợ con được không tới 10 triệu đồng", anh Nam chia sẻ</p>
+
+        <img src="../images/xe.jpg" ><br/> <!--them dong br de xuong dong-->
+        <a href="https://zingnews.vn/nhieu-tai-xe-taxi-cong-nghe-muon-tat-app-post1302379.html">báo mới</a>
+
+        <ol style="list-style-type: decimal" start="1">
+            <li>quá trình 1
+               <ul style="list-style-type: square">
+                    <li>mục 1</li>
+                    <li>mục 2</li>
+                    <li>mục 3</li>
+               </ul> 
+            </li>
+            <li>quá trình 2
+                <ul style="list-style-type: square">
+                    <li>mục 1</li>
+                    <li>mục 2</li>
+                    <li>mục 3</li>
+               </ul> 
+            </li>
+            <li>quá trình3
+                <ul style="list-style-type: square">
+                    <li>mục 1</li>
+                    <li>mục 2</li>
+                    <li>mục 3</li>
+               </ul> 
+            </li>
+
+        </ol>
+
+        <table cellspacing="0" cellpadding="5" border="1">
+            <!-- mục cellspacing: do day k/cách giữa các ô
+                 mục cellpadding: k/cách |.| nội dung và đường viền
+                 boder: độ dày đường viền
+            -->
+            <thread >
+                <th>tiêu đề 1</th>
+                <th>tiêu đề 2</th>
+                <th>tiêu đề 3</th>
+            </thread>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                </tr>
+            </tbody>
+        </table><br/><br/> <!--br/ xuống dòng-->
+
+    <input type="text">
+    <input type="radio">
+    <input type="checkbox"><br/> <br/>
+
+    <button><a href="https://www.google.com/">google.com</a></button>
+    </body>
+</html>

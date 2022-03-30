@@ -1,0 +1,62 @@
+  
+  Trong CSS, CSS selectors là các cách chúng ta sử dụng để chọn ra các phần tử (elements) mà chúng ta muốn “style” cho chúng.
+  Có 2 CSS selectors thân thuộc với chúng ta nhất là id và class.
+  Để định nghĩa cho một file css nhằm định dạng cho HTML, thì để chuyên nghiệp và mang tính thông chống
+nhất hơn ta có thuật ngữ ID và Class.
+
+01/ ID: là thuộc tính của phần tử HTML, bộ chọn ID được dùng để áp dụng một kiểu riêng biệt vào phần tử nào đó trên website
+nghĩa là một ID sẽ ứng với một giá trị được gáng duy nhất và không thay đổi. Không được đặt trung id
+trên cùng một HTML
+
+
+cú pháp: 
+    # [tên id]{
+        thuộc tính id....
+    }
+
+    // lưu ý ID phải có dấu # phía trước
+
+02/ Class: tuơg tự ID, tuy nhiên nó có thể sử dụng cho nhiều phần tử trong HTML,
+nghĩa là nhiều phần tử có thể được gáng chung một lớp Class.
+
+  cú pháp: 
+
+    . [tên calss]{
+        thuộc tính class
+    }
+
+
+ví dụ:
+ tạo file style2.css
+      #dinh-dang {
+          color: red;
+          font-size: 100px;
+      }
+      /* định dạng kiểu ID */
+
+
+      .dinh-kieu {
+          color: green;  
+          font-size: 50px;;
+      }
+
+
+chèn vào html:
+ 
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Luyện HTML và CSS</title>
+        <link rel="stylesheet" href="../CSS/style2.css">
+    </head>
+
+    <body>
+        <h1 id="dinh-dang">hiển thị ID</h1>
+        <p class="dinh-kieu">hiển thị Class 1</p>
+        <p class="dinh-kieu">hiển thị Class 2</p>
+        <p class="dinh-kieu">hiển thị Class 3</p>
+    </body>
+
+    </html>
