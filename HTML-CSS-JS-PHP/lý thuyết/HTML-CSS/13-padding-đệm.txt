@@ -1,0 +1,53 @@
+**************************************PADDING - THUỘC TÍNH ĐỆM TRONG CSS *******************************
+- CSS PADDING là thuộc tính được sử dụng để tạo không gian xung quanh của phần tử html, box, div..bên trong 
+bất kỳ đường viền xác định nào. Với CSS bạn có toàn quyền kiểm soát phần đệm, giúp đệm thêm tăng thêm
+so với kích thước gốc để cái đường viền đệm thêm được dày hơn hay mỏng đi do người dụng đặt.
+
+- cấu trúc của PADDING:
+    padding-top: đệm trên cùng
+    padding-right: đệm bên phải
+    padding-bottom: đệm phía dưới
+    padding-left: đệm bên trái
+- hoặc khai báo tắt: 
+    padding: 10px 12px // được hiểu là top và bottom là 10px; right và left là 12px.
+    padding: 10px; // được hiểu là top-right-bottom-left đều đc đệm là 10px; right 
+    padding: top right bottom left  // thứ tự mặc định
+      --->>vd:  padding: 10px 20px 10px 23px; // tức là top 10px, right là 20px, bottom là 10px và left là 23px
+
+
+ví dụ code:
+
+
+                            <!DOCTYPE html>
+                            <html>
+                            <head>
+                                <meta charset="UTF-8">
+                                <title>thuộc tính PADDING trong css, lớp đệm trong css</title>
+                                <style>
+                                    .box{
+                                        height:60px;
+                                        width: 60px;
+                                        color:#fff;
+                                        display:flex;
+                                        align-items:center;
+                                        justify-content: center;
+                                    }
+                                    .box1{
+                                        background-color:rgb(5, 4, 4);
+                                    }
+                                    .box2{
+                                        background-color:rgb(12, 10, 153);
+                                    }
+                                    .box3{
+                                        background-color:rgb(76, 196, 28);
+                                        padding: 10px 20px 5px 30px;
+                                        /* padding: top right bottom left*/
+                                    }
+                                </style>
+                            </head>
+                            <body>
+                                <div class="box box1"> box 1</div>
+                                <div class="box box2">box 2</div>
+                                <div class="box box3">box 3</div>
+                            </body>
+                            </html>

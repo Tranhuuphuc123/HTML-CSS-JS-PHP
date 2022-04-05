@@ -1,0 +1,113 @@
+                         ******PSEUDO ELEMENTS THUẬT NMGUWX PHẦN TỬ GIẢ***********
+
+
+- Phần tử giả Pseudo-elements được sử dụng để tạo kiểu cho các phần tử của một phần tử cụ thể nào đó. 
+pseudo-elements phần tử giả của CSS gần như có thể viết ra để thay thể các phần tử trong html để hiện thị lên website
+
+- Cấu trúc của Pseudo-elements:
+    selector(bộ chọn)::pseudo-elements{
+        property: value;
+    }
+       trong đó: 
+           + selector là bộ chọn trong CSS mà bạn muốn tạo kiểu: #id, .(class), thẻ tag-1 (p, a, div, h1, li....)
+           + psseudo-elements: tên các định dạng liên kết của phần tử giả
+           + property: thuộc tính color, background, fontsize...
+           + value: giá trị thuộc tính...
+
+*******CÁC ĐỊNH DẠNG PHẦN TỬ GIẢ (pSEUDO-ELEMENTS) TRONG CSS********************
+
+   pseudo-elements             vd                             mô tả
+   ::before            .box::before       phần tử giả có thể được sử dụng để chèn một số nội dung vào trước nội dung của một phần tử. 
+   ::after             .box::after        phần tử giả được sử dụng để chèn một số nội dung vào sau(cuối) nội dung của một phần tử.
+   ::first-letter      h1::first-letter   thuộc tính dùng để thêm kiểu đặc biệt cho chữ cái đầu tiên của một văn bản
+   ::first-line        p::first-line      thuộc tính dùng để thêm kiểu đb vào dòng đầu tiên của văn bản. 
+   ::selection         a::selection       thuộc tính sự lựa chọn khi bạn bôi chuột copy văn bản
+                                           ----> (Chọn phần của phần tử do người dùng chọn)
+
+   ::maker             a::maker           Chọn điểm đánh dấu của các mục danh sách
+
+
+
+
+ví dụ code: 
+
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                    <meta charset=UTF-8">
+                    <title>Pseudo-elements phần tử giả</title>
+                    <style>
+                        html{
+                            margin: 0;
+                        }
+
+                        .box{
+                            width: 100%;
+                            height: 120px;
+                            background-color:rgb(51, 255, 0);
+                        }
+                        /* khai báo pseudo-elements */
+                        /* khai báo tạo hộp thoại box trog box ở phần đầu before và apter ở phần sau của box
+                        nghĩa là trong thẻ div tạo bên dưới dù có 100 div con, hay bất kể gì thì 2 thuộc tính
+                        before và after chỉ tham chiếu đến phần đầu và phần cuối của thẻ box mà thui
+                        */
+                        .box::before{
+                            content: ""; /*thuộc tính dùng để thêm thông tin vào phần tu3wr html mà khoog trực tiếp điền ở html*/
+                            display: block; /*tạo dạng khối ở phần tử css*/
+                            height:50px;
+                            width:50px;
+                            background-color:rgb(186, 197, 33);
+                    
+                        }
+                        .box::after{
+                            content: ""; /*thuộc tính dùng để thêm thông tin vào phần tu3wr html mà khoog trực tiếp điền ở html*/
+                            display: block; /*tạo dạng khối ở phần tử css*/
+                            height:50px;
+                            width:50px;
+                            background-color:rgb(212, 30, 45);
+                        
+                        }
+
+                        /*first-letter sẽ giúp tăng chữ cái t đầu tiên trong văn bản to lên theo định dạng*/
+                        h1::first-letter{
+                            font-size: 50px;
+                        }
+
+                        /*voi phần tử giả và cách khai báo bên dưới chỉ dòng 1 là đổi màu*/
+                        p::first-line{
+                            color: red;
+                        }
+                        /*tao hiệu ứng khi tô đen văn bản nó sẽ có background và màu chữ màu
+                        khác khi tô đen để coppy nhờ vào thuộc tính pseudo-elements ::selction
+                        */
+
+                        a::selection{
+                            background-color:rgb(142, 170, 106);
+                            color: #fff;
+                        }
+                    </style>
+            </head>
+            <body>
+                        <div class="box">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <h1>toi la ironman</h1>
+
+                        <p>dòng 1 <br/>
+                        dòng 2
+                        </p>
+
+                        <a>hiệu ứng tô đen bằng ::selection</a>
+            </body>
+        </html>
