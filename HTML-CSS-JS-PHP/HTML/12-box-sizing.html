@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>thuộc tính BOX-SIZING trong css, TÍNH TOÁN TỔNG THÔNG MINH trong css</title>
+    <style>
+        .box{
+            height:100px;
+            width: 100px;
+            background-color:rgb(233, 41, 41);
+            color:#fff;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+
+            /* thêm padding & border xảy ra vấn đề làm tăng kích thước hộp box */
+            padding: 10px;
+            border: 2px solid rgb(12, 11, 11);
+
+            /* giải quyết vấn đề tính toán hợp lý để không phá vỡ kích thước tổng */
+            box-sizing: border-box;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">box thuộc tính box-sizing</div>
+   
+</body>
+</html>

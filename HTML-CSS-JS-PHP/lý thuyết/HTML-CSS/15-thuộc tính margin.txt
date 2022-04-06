@@ -1,0 +1,66 @@
+**** THUỘC TÍNH MARGIN ( KHOẢNG CÁCH LỀ) ****************
+
+**** THUỘC TÍNH MARGIN *****
+-Thuộc tính margin(khoảng cách lề): thuộc tính dùng để tạo khoảng cách lể giữa các elements(các yếu tố).
+
+-cú pháp:
+    margin-top: value;            // chỉnh k/c lề phía trên
+    margin-right:value;           // .. phía phải
+    margin-bottom: value;         // .. phía dưới
+    margin-left: value;           // .. phía trái
+    
+    ...........
+
+
+-cú pháp: viết rút gọn
+       margin: 10px 20px #red;       /* cách viết này tự hiểu là khoảng cách lề trên dưới cách 10px, trái và phải là 20px*/
+       margin: 10px 20px 10px 20px  /*thứ tự laf top-right-bottom-left*/
+
+
+
+
+
+>> code vd:
+
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>thuộc tính PADDING trong css, lớp đệm trong css</title>
+                        <style>
+                            .box{
+                                height:60px;
+                                width: 60px;
+                                color:#fff;
+                                display:flex;
+                                align-items:center;
+                                justify-content: center;
+                            }
+                            .box1{
+                                background-color:rgb(5, 4, 4);
+                            }
+                            .box2{
+                                background-color:rgb(12, 10, 153); 
+                                /*thuộc tính k/c lề margin kiểu khai báo chi tiết
+                                từng cái riêng lẻ
+                                */
+                                margin-top: 5px;
+                                margin-bottom: 5px;
+                                margin-right: 5px;
+                                margin-left: 5px;
+                                
+                            }
+                            .box3{
+                                background-color:rgb(77, 196, 28);
+                            /* thuộc tính margin cách khai báo kiểu viết tắt */
+                            margin: 5px 10px;
+                            
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="box box1">box 1</div>
+                        <div class="box box2">box 2</div>
+                        <div class="box box3">box 3</div>
+                    </body>
+                    </html>

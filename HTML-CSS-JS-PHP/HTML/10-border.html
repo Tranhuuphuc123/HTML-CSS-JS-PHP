@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>thuộc tính PADDING trong css, lớp đệm trong css</title>
+    <style>
+        .box{
+            height:60px;
+            width: 60px;
+            color:#fff;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+        }
+        .box1{
+            background-color:rgb(5, 4, 4);
+        }
+        .box2{
+            background-color:rgb(12, 10, 153); 
+            /*thuộc tính đường viền border kiểu khai báo chi tiết
+            từng cái riêng lẻ
+            */
+            border-color: red;
+            border-style: solid;
+            border-width: 5px;
+            
+        }
+        .box3{
+            background-color:rgb(77, 196, 28);
+           /* thuộc tính border cách khai báo kiểu viết tắt */
+           border: 5px solid rgb(11, 11, 19);
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">box 1</div>
+    <div class="box box2">box 2</div>
+    <div class="box box3">box 3</div>
+</body>
+</html>

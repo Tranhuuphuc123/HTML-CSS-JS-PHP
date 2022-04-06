@@ -1,0 +1,55 @@
+****THUỘC TÍNH BOX-SIZING THUỘC TÍNH TÍNH TOÁN HỢP LÍ TỔNG KÍCH THUOCS VIÊN, ĐỆM MARGIN)************************
+   Trong css khi ta sử dụng các thuộc tính padding, border... xảy ra một tình huống là nó đụng với nhau làm tăng kích
+hiện tại so với kích thước gốc ví dụ như hộp box sẽ bị đôn lên quá lớn so với kich thuocs ban đầu..... 
+---------------> vì vậy để giải quyết tình trạng này ta dùng thuộc tính Box-sizing sẽ giúp tính toán hợp lý, tự trừ và phân bố
+các thuộc tính padding, border.. hợp lý để hông mở rộng thêm kích thuocs so với kích thước ban đầu
+
+
+note: trong box-sizing: thì phân padding và border không quá lớn để dễ xảy ra lỗi phá vỡ tổng tính ban đầu.
+
+
+
+
+-cú pháp:
+     box-sizing: border-box;
+               + unset: reset lại ban đầu bỏ đi thuộc tính toán của box-sizing: border-box;
+               +content-box: cũng như unset
+
+
+
+
+
+>>code ví du:
+
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>thuộc tính BOX-SIZING trong css, TÍNH TOÁN TỔNG THÔNG MINH trong css</title>
+            <style>
+                .box{
+                    height:100px;
+                    width: 100px;
+                    background-color:rgb(233, 41, 41);
+                    color:#fff;
+                    display:flex;
+                    align-items:center;
+                    justify-content: center;
+
+                    /* thêm padding & border xảy ra vấn đề làm tăng kích thước hộp box */
+                    padding: 10px;
+                    border: 2px solid rgb(12, 11, 11);
+
+                    /* giải quyết vấn đề tính toán hợp lý để không phá vỡ kích thước tổng */
+                    box-sizing: border-box;
+                    
+                }
+                
+            </style>
+        </head>
+        <body>
+            <div class="box">box thuộc tính box-sizing</div>
+        
+        </body>
+        </html>
