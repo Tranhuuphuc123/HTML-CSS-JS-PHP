@@ -1,0 +1,50 @@
+ *****TỔNG HỢP TẤT CẢ CÁC THẺ THUỘC TÍNH, VALUE TRONG CSS THƯỜNG DÙNG*********
+ 
+ 
+>>>>>> KIỂU FONT CHỮ <<<<<<<<
+ 1/ Thuộc tính "text-decoration" đưa thêm các định dạng trang trí cho chữ (các dòng kẻ qua chữ):
+   - text-decoration-line	  
+       ++ none : hủy kẻ qua chữ
+       ++ underline: gạch chân
+       ++ overline: gạch trên đầu chữ
+       ++ line-through: gạch qua chữ( giống thẻ delete trong html gạch ngang giữa chữ)
+     
+   - text-decoration-color:
+      ++ Đặt màu đường trang trí mà loại đường thì thiết lập ở text-decoration-line, nó nhận giá trị là các mã màu CSS
+      
+   - text-decoration-style: thuộc tính thiết lập kiểu đường trang trí, nhận các giá trị:
+      ++ solid : đường liền
+      ++ double: đường đôi
+      ++ dotted: đường chấm chấm
+      ++ dashed: đường gạch gạch
+      ++ wavy: lượn sóng
+      
+  2/ Cỡ font chữ với thuộc tính "font-size"
+         .small {
+             font-size: small;
+          }
+          p.medium {
+             font-size: medium;
+          }
+          p.large {
+             font-size: large;
+          }
+          p.xlarge {
+             font-size: x-large;
+          }
+       ++ Các cỡ chữ tuyệt đối căn cứ theo cỡ chữ mặc định gồm: xx-small, x-small, small, medium, large, x-large, xx-large, xxx-large
+       ++ Chỉ ra kích thước theo đơn vị mong muốn như 14px (xem các đơn vị CSS)
+       ++ Chỉ ra giá trị phần trăm so với font chữ phần tử cha, như 80%
+       
+  3/ "font-style" kiểu chữ đậm, nghiêng
+      ++ normal kiểu chữ bình thường
+      ++ italic chữ nghiêng
+      ++ oblique nghiêng
+      
+  4/ "font-weight" thiết lập độ dày, mỏng của chữ
+     - Thuộc tính "font-weight" thiết lập độ dày mỏng của chữ nó có thể nhận các giá trị như: normal, bold, bolder, lighter
+     
+  5/ font: italic 30px " Time New Roman";
+  ---> đây cũng là một cách khai báo kiểu font chữ và kích thước tổng hợp nên tham khảo
+
+    
