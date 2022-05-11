@@ -43,8 +43,20 @@
       
   4/ "font-weight" thiết lập độ dày, mỏng của chữ
      - Thuộc tính "font-weight" thiết lập độ dày mỏng của chữ nó có thể nhận các giá trị như: normal, bold, bolder, lighter
+             
      
   5/ font: italic 30px " Time New Roman";
   ---> đây cũng là một cách khai báo kiểu font chữ và kích thước tổng hợp nên tham khảo
-
+  
+  
+  
+  >>>>>>> KIỂU THUỘC TÍNH HOVER>>>>>
+--> tiim hieu lai cac thuoc tinh note: ben duoi
+ 1/ transition-duration: TÌM HIỂU LẠI thuoc tinh hover click chuot zoom hình ảnh?????
+ 2/ box-shadow:???
+ 3/ animation: mymove 5s infinite; tao hieu ung di chuyển trong thuộc tính skeyframe???
+ 4/  overflow: hidden;?????
+ 5/display: block;????
+ 6/ texxt-decoration la gi???/
+ 
     
