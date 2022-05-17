@@ -17,23 +17,61 @@
       + lower-alpha: a, b, c...
 
   07 ul (unodered list), li (list): thẻ sổ danh sách không có thứ tự trong html
-  08/ thẻ <table>:
-     + <thread>
-         <th> thẻ tiêu đề </th>
-       </thread>
-    + <tbody>
-        <tr> định nghĩa 1 hàng </tr>
-        <td> định nghĩa 1 ô </td>
-      </tbody>
+  08/ thẻ table:
+              <table>
+                + <thread>
+                    <th> thẻ tiêu đề </th>
+                </thread>
+                + <tbody>
+                    <tr> định nghĩa 1 hàng  
+                            <td> định nghĩa 1 ô </td>
+                    </tr>
+                </tbody>
+             </table>
 
- 09/ thẻ <input></input>: thẻ tạo các ô tích, text để nhập dữ liệu
+      >> Các thuộc tính của Table:
+       + border: đường viền
+       + cellpadding: khoảng cách giữa nội dung và đường viền
+       + cellspacing: khoảng cách giữa các ô
+       + colspan: độ mở rộng của cột
+       + rowspan: độ mở rộng của dòng.
+
+  09/  THẺ FORM: được sử dụng để tạo một vùng chứa dữ liệu điều khiển thông tin chung. các đk đc sử dụng để nhập thông tin từ người dùng
+  và cung cấp tương tác cho người dùng 
+     cấu trúc:
+        <FORM>
+            + <label>: nhãn thông tin nhập ( này bỏ cũng đc ta có thể nhập trực tiếp sau thẻ td trong table...)  
+             
+        </FORM>
+    
+    >> thuộc tính:
+        + Action: thuộc tính xác định vị trí của script sẽ xử lý biểu mẫu hoàn chỉnh và đc gửi đi ( cú pháp Action="url")
+        + Accept: thuộc tính xác định danh sách xử lý biểu mẫu
+        + Method: thuộc tính xác định phương thức dữ liệu đc gửi đến máy chủ.( thường là dạng POST)
+        + Enctype: thiết lập cách dữ liệu đc mã hóa khi chuyển lên server
+
+    
+
+  10/ thẻ <input></input>: thẻ tạo các ô tích, text để nhập dữ liệu
    - type: + radio: tạo ô tích tròn
            + text: tạo ô nhập dữ liệu điền thông tin    
            + checkbox: tạo ô dấu tích
+           + button: kiểu tạo nút nhấn liến kết 
+           + date: kiểu lịch ngày giờ
+           + url: kiểu ô đường dẫn
+    
+     >> cú pháp:
+      <input type="radio/text/checkbox/button..." value="" name ="tên giá trị hỗ trợ type">
 
-10/ thẻ <button></button>: thẻ tạo nút nhấn liên kết
+    - thẻ <select>: hộp lựa troạn dạng xổ xuống theo danh sách
+       >> cú pháp:
+         <select>
+           <option>abc</option>: các phần tử xổ xuống trong thẻ select
+         </select>
+       >> thuộc tính select:
+         + disabled: xác định tùy chọn vô hiệu hóa hay không
 
-11/ thuộc tính artributes: thuộc tính chèn thêm cho các thẻ, có rất nhiều 
+ 11/ thuộc tính artributes: thuộc tính chèn thêm cho các thẻ, có rất nhiều 
 atributes: title,href:đường link liên kết, style: list-style-type or style: decimal, onclick, ......
 các cái chèn vào các thẻ gọi là thuộc tính html atributes
 
