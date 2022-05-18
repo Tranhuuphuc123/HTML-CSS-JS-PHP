@@ -63,7 +63,7 @@
      >> cú pháp:
       <input type="radio/text/checkbox/button..." value="" name ="tên giá trị hỗ trợ type">
 
-    - thẻ <select>: hộp lựa troạn dạng xổ xuống theo danh sách
+    - thẻ <select>: hộp lựa chọn dạng xổ xuống theo danh sách
        >> cú pháp:
          <select>
            <option>abc</option>: các phần tử xổ xuống trong thẻ select
@@ -75,9 +75,62 @@
 atributes: title,href:đường link liên kết, style: list-style-type or style: decimal, onclick, ......
 các cái chèn vào các thẻ gọi là thuộc tính html atributes
 
+  12/ thẻ <audio></audio>: thẻ chèn đường liên kết âm thanh
 
-vidu dụ code:
+    - Kiểu MIME cho định dạng Audio
+             Định dạng   	MIME type
+                MP3	        audio/mpeg
+                Ogg	        audio/ogg
+                Wav	        audio/wav
+    - Các thuộc tính
+           Thuộc tính	        Giá trị	                               Mô tả
+             autoplay	        autoplay	    Chỉ định âm thanh được bật ngay khi sẵn sàng (chỉ cần load xong là sẽ tự động bật)
+             controls	        controls	    Chỉ định là nút điều khiển sẽ hiển thị ra ngoài (thí dụ như nút tắt bật âm thanh)
+              loop	             loop	        Chỉ định là âm thanh sẽ được bật lại lần nữa sau khi hoàn thành xong
+              muted	             muted       	Chỉ định âm thanh đầu ra không có cường độ (tắt tiếng)
 
+             preload	         auto            Chỉ định cách thức tải trước của âm thanh khi trang web được tải. 
+                                metadata       Điều này ảnh hưởng đến thời gian tải trang. Nên sẽ ảnh hưởng đến trải nghiệm người dùng.
+                                  none	 
+                                 
+               src                URL	        Đường dẫn chứa file audio
+
+
+          --->vidu dụ code:
+                    <audio controls autoplay muted>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                    </audio>
+
+
+        
+    13/ thẻ <video></video>
+
+     - định dạng file video:
+       + video/mp4: định dạng MP4.
+       + video/webm: định dạng WebM.
+       + video/ogg: định dạng OGG.
+
+     - thuộc tính:
+       + controls:  Chỉ định là nút điều khiển sẽ hiển thị ra ngoài (thí dụ như nút tắt bật video)
+       + Autoplay: thẻ tự động bật lại video khi chạy hết.
+       + src: đường dẫn file video
+       + width, heigth: quy định chiều cao và rộng của video
+       + poster: ảnh đại diện cho video
+       + preload: xác định video sẽ đc tải tại trang tải, và luôn sãn sàng chạy dù bị tắt mạng. nó sẽ bị ảnh hưởng khi đứng chung với thẻ auotoplay
+       + loop: tự bật lại video playback lần nưã sau khai tắt
+       + autobuffer: video sẽ tự động đệm ngay khi nó không được thiết lập để tự động phát.
+
+          >>ví dụ code:
+                <video width="320" height="240" autoplay muted>
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+
+
+
+** chương trình code html cơ bản:
 
 <!DOCTYPE html>
 <html>
