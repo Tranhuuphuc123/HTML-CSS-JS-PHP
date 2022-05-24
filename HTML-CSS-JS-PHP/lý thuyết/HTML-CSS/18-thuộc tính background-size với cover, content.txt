@@ -1,0 +1,15 @@
+>>>> THUỘC TÍNH BACKGROUND-SIZE NÂNG CAO <<<<<
+
+- Trong bài học thêm về các tính năng của thuộc tính background -size:  cover và  content
+
+  + cấu trúc: background-size: 100px auto
+
+      ++ mặc định kích thước theo quy tắc: [kích thước chiều ngang], auto(mặc định kích thước chiều dọc hoặc tự đặt).
+      
+      ++ thay thể bằng contain: Tỷ lệ chiều rộng/chiều cao của hình nền sẽ bằng với tỷ lệ chiều rộng/chiều cao của tấm hình gốc. 
+      và đồng thời không làm mất đi kích thước gốc hay ảnh bị che khuất và cắt xén đi hình ảnh 
+      
+      ++ thay thể bằng cover: Tỷ lệ chiều rộng/chiều cao của hình nền sẽ bằng với tỷ lệ chiều rộng/chiều cao của tấm hình gốc. 
+      nhưng nó sẽ chấp nhận việc ảnh gốc bị che khuất đi.
+
+  

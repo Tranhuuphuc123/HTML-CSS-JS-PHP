@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../CSS/style.css">
+        <title>thuộc tính background img</title>
+
+
+        <style>
+            .anhlon{
+                width: 100%;
+                height: 400px;
+            }
+            .anhnen{
+                width: 500px;
+                height: 350px;
+                background-image: url(../images/xe.jpg);
+                background-size: 500px;
+                background-repeat: no-repeat;/*thuộc tính tắt tính năng tự động repeat( lặp lại) ảnh*/
+                float:left;
+
+            }
+
+            /* thuộc tính linear-gradient là chuyển màu phụ trợ thêm cho ảnh nền phàn này luyện tập thêm cần rèn thêm*/
+            .anhnen2{
+                width: 500px;
+                height: 350px;
+                background-image: linear-gradient(180deg, rgba(172, 189, 134,0.4), rgba(169, 206, 83, 0.4)),
+                url(../images/xe.jpg);
+                /*phần độ xoay 0-360 độ ngoài trừ 0 thì các phần lớn hơn cần khai báo độ phái sau ở đây là deg ( vd: 360deg)*/
+                /* mình sẽ tạo màu chuyển để làm đẹp hơn cho ảnh nền bằng cảnh chèn màu chuyển trc rồi tới ảnh nền sau, lưu ý thì 
+                đối với ảnh màu chuyển tăng độ đẹp của hiển thị hình ảnh nên sử dụng rgba tức có thêm màu trong suốt để lộ ảnh nên.*/
+                background-size: 500px 350px;
+                background-repeat: no-repeat;
+                border: solid 1px rgba(216, 140, 140, 0.30);
+                float:left;
+                margin-left: 100px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="anhlon">
+            <div class="anhnen"></div>
+            <div class="anhnen2"></div>
+        </div>
+        
+    </body>
+</html>

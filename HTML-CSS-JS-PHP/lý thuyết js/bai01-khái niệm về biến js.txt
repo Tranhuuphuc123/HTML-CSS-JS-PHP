@@ -1,0 +1,16 @@
+>>>> BÀI HỌC VỀ BIẾN TRONG NGÔN  NGỮ JAVACRIPT <<<<<
+
+1/ CÁC LOẠI BIẾN TRONG JAVASCRIPT
+
+  - var
+  - let
+  - const
+
+
+  *** Cấu trúc:   kiểu biến + tên biến( do người dùng đặt lưu ý cóp phân biệt hoa thường, giống C) = ' value giá trị biến'
+      >> vd:   var x =5;
+               var alo = ' abcxyzd';
+            
+2/ Khi nào nên sử dụng biến nào cho hợp lý
+ - var mã biến đc sử dụng tử 1995 tới 2015 ( nếu muốn sử dụng ở mọi trình duyệt cũ lẫn mới nên dùng var để khai báo).
+ - let và const thì đưa vào sử dụng 2015 ( ưu tiên trình duyệt mới)./

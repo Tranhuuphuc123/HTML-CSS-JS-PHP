@@ -1,0 +1,114 @@
+>>> Bài học hôm nay sẽ không chỉ làm quen về chọn ảnh nền bằng background img đơn giản mà là các thuộc tính phụ hỗ
+trợ việc tạo ảnh nền chuyên nghiệp và các cách căn chỉnh để ảnh nền background img có thể làm background cho các trang web 1 cách chuyên nghiệp
+hơn.
+
+
+
+>> Background Image: thẻ tạo ảnh nền bằng ảnh trong CSS
+- cấu trúc:
+
+  + background-Image(img): url( đg dẫn ảnh)
+  ----->> note: đối với thuộc tính này thì mún chèn bao nhiều url(ảnh) trên một nền background-image cũng đc và  ngăn cách sau dấu phẩy ",".
+  Thứu tự ưu tiền là url( ảnh nền chèn) nào nằm trước dấu phẩy thì sẽ xuất hiện ở đầu trc. Ứng dụng này dùng cho 1 số trường hợp cần chèn ảnh
+  trên 1 ảnh khác làm tiêu đề hay phụ họa nào đó
+         ++ ví dụ:
+             background-image: url(ảnh nền 1), url(ảnh nền 2)---> lúc này ảnh nền 1 sẽ nằm trên ảnh nền 2.
+             
+  + Bacground-image (dạng đặc biệt về dãy màu chuyển ( phụ về hòa tấu màu sắc hiển thị cho ảnh nền chèn từ background-img)):
+         ++ thuộc tính: linear-gradient(độ xoay của màu chuyển( 0 độ - 360 độ), màu bắt đầu chuyển, màu kết thúc chuyển )
+                 +++ ví dụ: background-image: linear-gradient(180, #333, #ccc)--> mã màu có thể xem thêm ( bấm f12 vào phần element trên wed 
+                 truy cập style(phần Css) của web coi mã màu và mã thập lục phân (vd: #333...) để chèn vào màu chuyển).
+
+                    #### phần độ xoay 0-360 độ ngoài trừ 0 thì các phần lớn hơn cần khai báo độ phía sau ở đây là deg ( vd: 360deg), lưu ý
+                    là ta nên dùng thuộc tính màu sắc là rgba(có màu trông suốt mới thấy đc ảnh nền).
+                
+
+
+  + background-size: tùy chình kích thước ảnh vì không có thuộc tính này ảnh sẽ bị auto rất lớn
+  và bị repeat tức lặp lại ảnh làm xuất hiện nhiều ảnh phụ không mong muốn
+     ++ vd: background-size: 100px auto: 
+                            +++ 100px la xét kích thước chiều ngang
+                            +++ auto thường chiều dọc sẽ mặc định là auto hoặc cũng có thể đặt tùy đặt.
+                            +++ có thể thay thể giá trị mạc định bằng: contain và cover
+                            
+
+  + background-repeat: no-repeat  --> Như ở nói ở trên thêm thuộc tính này sẽ làm mất đi tính lặp lại repeat khi chèn background-img.
+      ++ các thuộc tính của background-repeat:
+                            +++ repeat: lặp lại ảnh cả chiều ngang lẫn dọc
+                            +++ no-repeat: bỏ tính năng lặp lại ảnh
+                            +++ repeat-x: lặp ảnh lại theo trục hoành ( tức chiều ngang) 
+                            +++ repeat-y: lặp awnh theo chiều dọc( trục tung).
+                            +++ initial: nếu chọn thuộc tính này  thì nó sẽ hiểu là giá trị mặc định của thẻ background-image chính là repeat.
+                            +++ inherit: kế thừa giá trị thuộc tính từ phần tử cha của nó
+                               ## ví dụ: khi sử dụng inherit thì mặc nhiên nó sẽ kế thừa thuộc tính khai báo background-img gốc ( thẻ cha)
+                                trong trường hợp này là thuộc tính background-img của thẻ div sẽ kế thừa thuộc tính từ background-img của thẻ cha
+                                ở phần trc nó là phần body.
+                                    <style type="text/css">
+                                        body{
+                                            background-image: url(../image/flower.gif);
+                                            background-repeat: repeat;
+                                        }
+                                        div{
+                                            margin:100px;
+                                            height:200px;
+                                            border:1px solid black;
+                                            background-image: url(../image/smile-face.png);
+                                            background-repeat: inherit;
+                                        }
+                                    </style>
+    ----->>>> tóm lại đối với thẻ background-image: không phải là không có tác dụng, ở các ảnh nền dọc caro hay hoa văn caro thì thuộc tính này 
+    sẽ phát huy tác dụng như là một thẻ kẻ thêm tiếp nối các dọc hoa văn caro, sọc đó để làm đẹp thêm ảnh nền background-image.
+
+
+>>>>>>>>> CODE THAM KHẢO<<<<<<
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../CSS/style.css">
+        <title>thuộc tính background img</title>
+
+
+        <style>
+            .anhlon{
+                width: 100%;
+                height: 400px;
+            }
+            .anhnen{
+                width: 500px;
+                height: 350px;
+                background-image: url(../images/xe.jpg);
+                background-size: 500px;
+                background-repeat: no-repeat;/*thuộc tính tắt tính năng tự động repeat( lặp lại) ảnh*/
+                float:left;
+
+            }
+
+            /* thuộc tính linear-gradient là chuyển màu phụ trợ thêm cho ảnh nền phàn này luyện tập thêm cần rèn thêm*/
+            .anhnen2{
+                width: 500px;
+                height: 350px;
+                background-image: linear-gradient(180deg, rgba(172, 189, 134,0.4), rgba(169, 206, 83, 0.4)),
+                url(../images/xe.jpg);
+                /*phần độ xoay 0-360 độ ngoài trừ 0 thì các phần lớn hơn cần khai báo độ phái sau ở đây là deg ( vd: 360deg)*/
+                /* mình sẽ tạo màu chuyển để làm đẹp hơn cho ảnh nền bằng cảnh chèn màu chuyển trc rồi tới ảnh nền sau, lưu ý thì 
+                đối với ảnh màu chuyển tăng độ đẹp của hiển thị hình ảnh nên sử dụng rgba tức có thêm màu trong suốt để lộ ảnh nên.*/
+                background-size: 500px 350px;
+                background-repeat: no-repeat;
+                border: solid 1px rgba(216, 140, 140, 0.30);
+                float:left;
+                margin-left: 100px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="anhlon">
+            <div class="anhnen"></div>
+            <div class="anhnen2"></div>
+        </div>
+        
+    </body>
+</html>
+
+
