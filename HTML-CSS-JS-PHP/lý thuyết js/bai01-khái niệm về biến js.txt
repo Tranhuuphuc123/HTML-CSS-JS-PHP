@@ -13,4 +13,17 @@
             
 2/ Khi nào nên sử dụng biến nào cho hợp lý
  - var mã biến đc sử dụng tử 1995 tới 2015 ( nếu muốn sử dụng ở mọi trình duyệt cũ lẫn mới nên dùng var để khai báo).
- - let và const thì đưa vào sử dụng 2015 ( ưu tiên trình duyệt mới)./
+ - let và const thì đưa vào sử dụng 2015 ( ưu tiên trình duyệt mới).
+        + Nếu bạn muốn một quy tắc chung: luôn khai báo các biến với const.
+        + Nếu bạn nghĩ rằng giá trị của biến có thể thay đổi, hãy sử dụng let.
+
+
+
+3/ lệnh xuất trong javasript: 
+   + alert()
+   + document.write();
+
+4/ ghi chú trong javasript
+  + dùng dấu: //   coment 1 dòng
+              /**/ coment nhiều dòng
+              
