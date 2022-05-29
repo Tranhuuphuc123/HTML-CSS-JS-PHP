@@ -52,7 +52,9 @@ có thể tùy chỉnh ứng biến cho nhiều dòng, nhiều thành phần.
 
   ++ ví dụ:
      
-    
+       <div style="margin-top: 100px;">
+          <img onerror="this.src='../images/anhduphong.jpg'" src="../images/xedfdf.jpg">
+       </div>
   
 
   
