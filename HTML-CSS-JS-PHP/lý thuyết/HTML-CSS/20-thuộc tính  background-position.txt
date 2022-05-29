@@ -1,0 +1,35 @@
+>>>> thuộc tính định trí hình nền của img, phần tử trong html<<<<<
+
+- Thuộc tính background-position dùng để thiết lập "vị trí của hình nền" trong phần tử HTML.
+- Để sử dụng thuộc tính background-position, ta dùng các cú pháp như sau:
+
+      >>  backgroud-position: giá trị 1, giá trị 2 ( dạng 1)
+
+      >> background-position: x px y px  ( dạng 2)
+
+      >> background-position: x% y%  ( dạng 3)
+
+    + trong đó: 
+       ++ ( dạng 1)
+          giá trị 1: xác định vị trí của hình nền theo chiều ngang, nó có thể là một trong ba giá trị: left, center, right
+          Giá trị 2: xác định vị trí của hình nền theo chiều dọc, nó có thể là một trong ba giá trị: top, center, bottom
+
+                ví dụ:  background-position: left top; (ta tự ý thay đổi vị trí left right, bottom, top)
+        
+       ++ dạng 2
+           Hình nền sẽ xuất hiện ở vị trí:
+                Cách đường viền bên trái của phần tử một khoảng x pixel
+                Cách đường viền phía trên của phần tử một khoảng y pixel
+              ---> Lưu ý: Đối với cách xác định vị trí này, nếu ta chỉ đưa ra một giá trị thì giá trị còn lại sẽ là 50%, ví dụ giá trị "100px"
+               sẽ tương đương với "100px 50%"
+
+                  ví dụ: background-position: 0px 0px;( vị trí mặc định hình nền sẽ xuất hiện ở góc phía trên bên trái của phần tử. Tương ứng 
+                  0px 0px ta có thể thay đổi px )
+        
+       ++ dạng 3:
+          Hình nền sẽ xuất hiện ở vị trí:
+            Cách đường viền bên trái của phần tử một khoảng x % trên tổng số "chiều rộng của phần tử - chiều rộng của tấm hình"
+            Cách đường viền phía trên của phần tử một khoảng y % trên tổng số "chiều cao của phần tử - chiều cao của tấm hình"
+
+               ví dụ:  background-position: 0% 0%;
+

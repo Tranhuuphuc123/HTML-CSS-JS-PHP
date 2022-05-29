@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÌM hiểu về thuộc tính position định vị trí cho các thành phần html</title>
+    <style>
+        /*thuộc tính position relative*/
+        h1{
+            position: relative;
+            top: 100px;
+            left: 100px;
+            /**nó giúp đẩy thuộc tính phần tử thẻ h1 mà không làm dịch chuyển các khối phân tử khác
+            ta có thể thay đổi hiển thị vị trí thông qua top left right và bottom*/
+        }
+
+        .thecha{
+            width: 100%;
+            height: 200px;
+            background-color: aqua;
+            position: relative;
+            top: 100px;
+        }
+        .thecon{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 0, 0);
+            position: absolute;
+            top: 50px;
+            right: 50px;
+          
+        }
+
+        /*định danh fixxed tính năng giúp giữ nguyên vị trí cố định trên wedsite ở đây là giữu thanh header*/
+        ul{
+            height: 700px;
+        }
+        .giutrang{
+            height: 50px;
+            width: 100%;
+            background-color:black;
+            position: fixed; /* thuộc tính fixed sẽ giúp giữ cố định thanh header như một tp cố định của html
+            dù ta có croll ảnh dài hàng ngàn px thì phần header vẫn giữ nguyên và hiện lên*/
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <!--thuộc tính fixxed giữ nguyên thanh header khi croll trang-->
+    <div class="giutrang">
+        <a>Phần header đc giữ nguyên</a>
+    </div>
+
+    <!--thuộc tính position relavtive-->
+    <h1>Position</h1>
+    <ul>
+        <li>Relavtive</li>
+        <li>absolue</li>
+        <li>fixed</li>
+    </ul>
+
+
+    <!--thuộc tính tuyệt đối absolute-->
+    <div class="thecha">
+        <div class="thecon">
+
+        </div>
+    </div>
+</body>
+</html>

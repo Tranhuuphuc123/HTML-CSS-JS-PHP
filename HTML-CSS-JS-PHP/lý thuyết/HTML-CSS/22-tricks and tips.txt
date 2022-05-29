@@ -1,0 +1,58 @@
+****** TRICKS AND TIPS CÓ NGHĨA LÀ CÁC THỦ THUẬT TỔNG HỢP TRONG CSS************
+1/ CÁC KIỂU CĂN CHỈNH GIỮA TRONG CSS
+
+- text-align: center;  // canh giữa theo chiều ngang
+- line-height: 100px;     // canh giữa theo chiều dọc, lưu ý: kích thước nên dựa theo kích thước của kích thước tổng để căn chỉnh thích hợp.
+-  hoặc a có thể dùng cách khác để căn giữa thay thể cho text-align và line-height
+----> display: flex ở the cha và  margin: auto ở thẻ con
+     ++ ví dụ:
+                    .thecha{
+                        width: 100%;
+                        height: 100px;
+                        background-color: #red;
+                        display: flex;              // nó sẽ căn chỉnh giữa cho cả chiều ngang và dọc thay thế text align và line-height
+                    }
+
+                    h3{
+                        margin: auto;    // khai báo để display: flex phát huy chức năng.. bộ này đi kèm lưu ý
+                    }
+
+
+- align-items: center;---> căn giữa theo chiều dọc, chiều cao giống line-height.
+- justify-content: center--> giúp căn giữa ngay ngay trục chính ngĩa là nằm giữa ở trung tâm theo chiều dọc lần ngang.. thuộc tính này linh động
+có thể tùy chỉnh ứng biến cho nhiều dòng, nhiều thành phần.
+
+
+
+**** dã dụ khi sử dụng các thuộc tính căn giữa trên không dùng đc do kích thước thay đổi liên tục thì ta có thể sử dụng một cách thức thông qua
+định vị trí position để cố định vị trí canh giữa dù cho kích thước khối lt thay dổi thì nó vẫn nằm giữa:
+
+++ ví dụ:
+        .box{
+            width: 100%;
+            height: 100px;
+            background: red;
+            position: relative;
+        }
+
+        h3{
+            position: absolute;
+            top: 50%;  // các kích thước phụ thuộc vào kích thước thẻ cha .
+            left: 50%;
+            transform: translate(-50%,-50%);   // do định nghĩa sẽ bị lệch nên dùng thẻ này để dịch lên 50 cho căn đều lại
+        }
+
+...... còn rất nhiều cách bổ sung khi gặp thực thế
+
+
+
+
+2/ hiển thị ảnh dự phòng khi ảnh chính bị lỗi:
+  - đôi khi file ảnh chính bị lỗi ta cần chèn ảnh dự phòng vafo để hiển thị tránh trắng xóa đi thi ta dùng: onerror="this.src( duogn dẫn ảnh phụ)";
+
+  ++ ví dụ:
+     
+    
+  
+
+  

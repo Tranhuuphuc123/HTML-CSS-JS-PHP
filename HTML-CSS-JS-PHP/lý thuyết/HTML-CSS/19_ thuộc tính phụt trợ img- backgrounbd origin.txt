@@ -1,0 +1,53 @@
+******** BÀI HỌC TÌM HIỂU VỀ THUỘC TÍNH HỖ TRỢ CHO BACKGROUND IMG LÀ BACKGROUND ORIGIN***************
+
+- Backgroud origin: 
+  + Thông thường  một khối phần tử trong htm gồm 4 lớp là: margin(k/c lề) -> border(đường viên bao quanh) -
+  --> padding( vùng đệm khoảng cách giữa contet và đường viền -> content( phần nội dung trong html). 
+  + Như chúng ta đã biết, khi một phần tử sử dụng thuộc tính background-image thì mặc định phạm vi mà hình nền bắt đầu được xuất hiện sẽ 
+  là từ phần padding.
+  ----> Từ đây, thuộc tính background-origin giúp ta thiết lập phạm vi mà hình nền sẽ bắt đầu xuất hiện theo ý ta muốn, có thể từ margin 
+  hay border tới content.
+
+  + Để sử dụng thuộc tính background-origin, ta dùng cú pháp như sau: 
+      background-origin: border-box|padding-box|content-box|initial|inherit;
+
+      >> trong đó:
+        ++ border-box: Phạm vi hình nền sẽ bắt đầu được xuất hiện là từ phần border
+        ++ padding-box: Phạm vi hình nền sẽ bắt đầu được xuất hiện là từ phần padding
+        ++ content-box: Phạm vi hình nền sẽ bắt đầu được xuất hiện là từ phần content
+        ++ initial: Sử dụng giá trị mặc định của nó-> Lưu ý: Mặc định thì giá trị thuộc tính background-origin của một phần tử là padding-box.
+
+
+
+>>. code ví dụ:
+     
+     <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>tìm hiểu về thuộc tính background-origin hỗ trợ thiết lập phạm vi hiển thị background img</title>
+        </head>
+        <body>
+        <!--xây dựng css-->
+            <style>
+                .theanh{
+                    width: 100%;
+                    height: 150vh;
+                    background-image: url(../images/xe.jpg);
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    border: 10px  dotted;
+                    padding: 20px;
+
+                    /*thuộc tính không lam mất đi kích thước tổng thể do các phần padding và border chèn thêm*/
+                    box-sizing: border-box;
+
+                    /*thuộc tính background-origin: thuộc tính chỉ định vị trí xuất hiện ảnh trong phần tử html;*/
+                    background-origin: content-box;
+                }
+            </style>
+            <div class="theanh">
+            
+            </div>
+        </body>
+    </html>

@@ -6,7 +6,7 @@ alert(hack);
 
 /* hàm chạy thông báo console chạy thông báo console trên web bấm f12 mở tab console để text*/
             //.log();
-            console.log('cấm truy cập');// giá trị truyền vào kiểu dữ lệu string
+            console.log('hiển thị cơi bản trong js');// giá trị truyền vào kiểu dữ lệu string
             console.log(100); // giá trị truyền vào kiểu int
             console.log(['Html','CSS','JS']);// giá trị truyền vào kiểu array
             console.log(true);  // truyền kiểu boolean
@@ -73,13 +73,13 @@ alert(hack);
                     // }
 
                     // setTimeout(chaythu, 1000);
-            // setTimeout(()=>alert("chạy sau 1s"),1000);
+            setTimeout(()=>alert("chạy sau 1s"),1000);
 
 
 
 /*hàm setInterval() hàm này sẽ thường được sử dụng để thiết lập độ trễ cho các hàm sẽ được thực hiện lặp lại như là hiệu ứng.*/ 
-        function laplai(){
-            alert("chạy cứ sau 1s chạy 1 lần");
-        }
+        // function laplai(){
+        //     alert("chạy cứ sau 1s chạy 1 lần");
+        // }
 
-         setInterval(laplai,2000);
+        //  setInterval(laplai,2000);

@@ -1,0 +1,44 @@
+****** CÁC THUỘC TÍNH VỊ TRÍ TRONG CSS ******
+
+Hiểu về thuộc tính position trong CSS – Khi bạn thiết kế các layout cho website việc chuyển từ file thiết kế theo định dạng HTML
+(Hypertext Markdown Language) bạn sẽ buộc phải sử dụng thuộc tính position trong CSS. Ví dụ như làm thanh tính năng trên menu, header,
+ v.v. Có thể hiểu nó là thuộc tính xác định loại của phương pháp định vị trí cho thành phần.
+
+>> THUỘC TÍNH CSS POSITION: Với thuộc tính position chúng ta có 5 giá trị chính cần biết:
+  - Static: Đây được xem là giá trị hiển thị Position trong css một cách mặc định (default). 
+
+  - Relative: Định vị trí tuyệt đối cho các thành phần, không gây ảnh hưởng tới vị trí ban đầu hay các thành phần khác.
+
+  - Absolute: Giá trị này sẽ giúp định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài, hoặc ít nhất là theo cửa sổ trình duyệt.
+   
+  - Fixed: Định vị và giúp cho phần tử luôn cố định một chỗ, ví dụ như khi bạn scroll trình duyệt chẳng hạn, phần tử sẽ không thay đổi.
+  
+  - Inherit: Xác định thừa hưởng thuộc tính từ thành phần cha (thành phần bao ngoài).
+
+
+
+
+>> chi tiết:
+
+    >>>>>>> thuộc tính position-Relative"
+       Thuộc tính position: relative trong CSS giúp Định vị trí tuyệt đối cho các thành phần, Nếu bạn sử dụng thuộc tính này thì sẽ phải
+     sử dụng kèm theo với các thuộc tính căn chỉnh tọa độ của thành phần (lưu ý: các giá trị của các thẻ này là chính là đơn vị đo như px). 
+     Top: là cách trên, Bottom: là cách dưới, Left: là cách trái, Right: là cách phải.
+    ---> khác margin: là định k/c cho cả khối thì position-relative chỉ định vị trí cho đúng t/p mà đc thêm thuộc tính position-relative mà thui.
+
+
+    >>>>>>> thuộc tính position-Absolute: 
+         thuộc tính có gí trị tuyệt đối phụ thuộc vào thẻ cha có thuộc tính position gần nhất đứng trc nó, giống như
+    thằng relative vậy tuy nhiên một số thẻ trong trình duyệt web ở phần header hay ở các mục thông báo này nọ khi click vào sẽ xổ xuống 1 trang
+    phụ thì lúc này sẽ cần đến thuộc tính Absolute này để định vị trí mà không mất đi lk với thuộc tính position thẻ cha, tạo lk vững chắc  trong
+    cùng 1 tính năng định vị trí của position
+    -----> nói tóm lại là sẽ dùng Absolute trong trường hợp nó lá thẻ con của một thẻ cha nào đỏ ta mà cần định ví trí để hiển thị phần tử đóa
+    trong thẻ cha mà không bị lệch ra ngoài thẻ cha đó. Thì ta mới dùng đến Absolute nói cách khác là position-Absolute sẽ dùng thẻ cha position
+    đứng trc đó làm gốc tọa độ để định ví trí các thẻ con mà không làm lệch đi vị trí của toàn thẻ mà người viết cần định nghĩa.
+ 
+
+   >>>>>>>> thuộc tính position-Fixed:  
+       chỉ định thuộc tính cố định trong trình duyệt thì sử dụng fixed, cụ thể trong wedsite khi scroll kéo trang thì phần header và footer 
+    gần như không dịch chuyển và để trang web luôn hiển thị nó khi kéo trang thì tính năng fixed này sẽ phát huy
+    ---> ví dụ ở đây ta vào trang f8--kéo tận trang cúi nhưng phần header vẫn giữ nguyên và hiển thị cho ta xem thì đó là tính năng fixed
+    
