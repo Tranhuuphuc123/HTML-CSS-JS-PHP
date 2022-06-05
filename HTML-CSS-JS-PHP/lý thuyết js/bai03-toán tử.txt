@@ -1,0 +1,119 @@
+***** CÁC TOÁN TỬ TRONG JAVASCRIPT*****
+
+- CÁC TOÁN TỬ SỐ HỌC:
+        > toán tử +
+        > toán tử -
+        > toán tử /
+        > toản tử *
+        > toán tử  luy thừa **
+        > toán tử chia lấy dư %
+        > toán tử tắng ++
+        > toán tử giảm --
+
+
+- TOÁN TỬ GÁN:
+   toán tử       ví dụ          tương đương
+    =             x=y              x=y
+    +=            x+=y             x=x+y
+    -=            x-=y             x=x-y
+    *=            x*=y             x=x*y
+    /=            x/=y             x=x/y
+    **=           x**=y            x=x**yêu
+
+- Toán tử ++ và --
+ tương tự thuộc tính như trong các ngôn ngữ khác
+
+
+- TOÁN TỬ NỐI CHUỖI:
+  trong trường hợp cần nối các chuỗi lại với nhau ta dùng toán tử nối chũi
+
+           ++ ví dụ:
+                var firstName = 'Kiều';
+                var lastName = 'Trang';
+                var fullName = firstName + ' ' + lastName;
+
+                console.log(fullName);
+
+
+
+- TOÁN TỬ SO SÁNH:
+    toán tử                     miêu tả
+
+      ==                         bằng
+      !=                         khác
+      >                          lớn hơn
+      <                          bé hơn
+      >=                         lớn hơn hoặc bằng
+      <=                         bé hơn hoặc bằng
+
+
+
+      -----> ví dụ:
+                        var a = 5;
+                        var b = 6;
+
+                        if(a==b){
+                        console.log('diều kiện đúng');
+                        }else{
+                        console.log( ' do '+ a + ' # '+ b +' nên điều kiện sai');
+                        }
+
+                        if(a==5){
+                        console.log('a = '+ 5 + ' kết quả chính xác nha ');
+                        }
+
+
+- TOÁN TỬ BOOLEAN ( TRUE OR FALSE):
+     Thường trả về kết quả true false mang tính đúng sai trong các phép toán điều kiện và so sánh
+                var a=1;
+                var b=2;
+
+                var soSanh=a>b;
+                console.log(soSanh);--> // do a không lớn hơn b nên kết quả là false.
+
+                                
+
+ - TOÁN TỬ LOGICAL: TOÁN TỬ LOGIC
+  
+      toán tử                                    mô tả
+        &&                                 toán tử và và, dùng liên kết 2 dữ liệu khi cả 2 đồng loạt có giá trị
+        !                                  toán tử not phủ định( nó sẽ đảo ngược lại kết quả ban đầu)
+        ||                                 toán tử or, hoặc có 1 trong 2 điều kiện
+
+  
+
+  ******* TOÁN TỬ NÂNG CAO ******
+  >> TOÁN TỬ SO SÁNH cấp độ 2
+   - toán tử === và !==
+     + toán tử ===  gọi là toán tử so sánh bằng tuyệt đối
+       đối với toản tử so sánh == bình thường thì nó chỉ so sánh value của hai biến, tuy nhiên với === thì toán tử so sánh tuyệt đối sẽ so cả 
+      về value và kiểu dử liệu định danh của value đó để cho ra kết quả true false đúng nhất.
+
+          ++ ví dụ:
+                        var a = 100;
+                        var b ='100';
+
+                        // dùng toán tử so sánh tuyệt đối
+                        console.log(a===b);
+
+                          --> kết quả là fale vì giống số 100 nhưng khác kiểu dữ liệu, nếu dung phép ss == thì sẽ không truy ra đc
+                          vì nó hiểu 100 vs '100' là bằng nhau do kiểu string thì thường là ký tự.. vì vậy dùng giá trị tuyệt đối nó mới xét đến
+                          kiểu dữ liệu để truy xét cho chính xác nhất
+
+    - toán tử !==: toán tử khác tuyệt đối
+       cũng tương tự với trên dùng toán tử này sẽ tuy xét cả value và kiểu dữ liệu cho ra kq chính xác nhất.
+
+          ++ví dụ: 
+               // toán tử !===
+
+                        console.log(a!=b); 
+                        
+                        // sẽ ra kw false lý do phép toán ss != chỉ ss giá trị nên nhìn vào cách khai báo nó sẽ hiểu 
+                  lầm 100 vs '100' bằng nhau
+
+                        console.log(a!==b);
+                        
+                        // kq true vì nó xét tới kiểu dữ liệu 1 là number 100 và string '100' nên a # b là đúng
+                                                      
+                            
+    

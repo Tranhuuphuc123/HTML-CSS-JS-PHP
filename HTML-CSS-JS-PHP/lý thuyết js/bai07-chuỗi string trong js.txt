@@ -1,0 +1,40 @@
+******** TÌM HIỂU VỀ CHUỖI STRING TRONG JAVASCRIPT ********
+
+>> kHÁI NIỆM: 
+    - Chuỗi là một đoạn text có thể có một hoặc nhiều ký tự và thông thường chúng ta sẽ lưu trữ nó vào một biến, biến này ta sẽ gọi là biến có 
+kiểu dữ liệu là String (chuỗi). Tất cả các chuỗi đều phải được bao quanh bằng cặp dấu nháy đơn ' hoặc nháy kép ".
+
+
+>> CÁCH KHAI BÁO CHUỖI STRING
+   - có 2 cách khai báo chuỗi trong Javascript
+     
+     + cách 1:( ưu tiên sài cách 1)
+
+          var fullName = 'kiểu chuỗi thường gặp' // bỏ trong dấu "" cũng đc.
+
+     + cách 2: dùng kiểu khai báo String.( cú pháp đầy đủ là 'new string')
+
+          var fullName = new string ('cách khai báo với string');
+          console.log(fullName);
+
+
+>> sử dụng ký tự thoát biến backslash:
+  - trong một số trường hợp khi khai báo value bằng chuỗi để hiển thị các dấu đặc biệt như "", \, ''.. rất dễ bị trùng với dấu '' hoặc "" bao 
+  quanh value của Chuỗi
+    + ví dụ:
+          var fullName = ' tôi tên là 'phúc''; // nó sẽ báo lỗi vì trùng dấu ''
+
+---> để giải quyết vấn đề ta dùng ký tự thoát biến \ để tránh bị trùng
+    + ví dụ:
+         var fullName4 = 'tôi tên là \'phúc\'';
+---> hoặc dùng dấu khác để phân biệt
+    + ví dụ:
+         var fullName5 = " tôi tên là 'Phúc' ";
+
+---> ngoài ra ký hiệu backslash còn dùng để định nghĩa \ , *... bằng cách chèn sau dấu \
+   + ví dụ:  \\    - là thêm dấu \
+             \*    - chèn dấu *
+             \'    - chèn thêm dấu '
+             ...... có thể tìm hiểu thêm thuộc tính " backslash trong JAVASCRIPT ".
+         
+ 

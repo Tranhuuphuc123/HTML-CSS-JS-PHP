@@ -1,0 +1,91 @@
+***** CÁC KIỂU DỮ LIỆU TRONG NGÔN NGỮ JAVASCRIPT **********
+
+1/ KIỂU DỮ LIỆU NGUYÊN THỦY( PRIMITIVE DATA)
+  - Number, String, Boolean, Underfined, Null, Symbol
+2/ KIỂU DỮ LIỆU PHỨC TẠP (Complex Data)
+  - Function, Object
+
+
+
+>>>>>> CHI TIẾT:
+   - các kiểu dữ liệu number( số ), string( chuỗi ký tự), Boolean( true false có điều kiện)--> đã biết có thể tham khảo thêm
+
+   - Underfined: kiểu khai báo biến nhưng không gán giá trị ( value) vào biến đó
+      ++ ví dụ:
+          var age;
+          console.log(age);  --> biến age không đc gán value, đây là cách khai báo kiểu underfined.
+
+   - Null: kiểu giữ liệu không có gì trong biến và khi khái báo thì gán những biến không có giá trị bằng từ "Null" luôn
+
+   - kiểu Symbol:
+           Nó có một kiểu dữ liệu rất đặc biệt. Khi bạn tạo một Symbol, giá trị của nó được giữ kín và chỉ để sử dụng nội bộ. Bạn tạo một Symbol 
+        bằng cách gọi hàm global Symbol():
+
+                ++ ví dụ: const mySymbol = Symbol()
+
+           Mỗi khi bạn gọi tới hàm Symbol(), chúng sẽ nhận được một giá trị mới và giá trị này là duy nhất (unique), đồng thới giá trị của nó 
+        cũng khác với giá trị của các Symbol khác:
+
+                ++ ví dụ: Symbol() === Symbol() // kết quả là false vì 2 symbol nhận các giá trị khác nhau.
+
+            Bạn có thể truyền tham số cho Symbol() và được sử dụng làm mô tả cho chính Symbol đó:
+
+                ++ ví dụ: 
+                            console.log(Symbol()) //Symbol()
+                            console.log(Symbol('Some Test')) //miêu tả cho symbol
+
+>>> kiểu nâng cao 
+  > Function: quá quen thuộc cách xây dựng hàm y như trong C, Java-- muốn thực thi câu lệnh trong function thì ta phải gọi hàm đó ra nó mới thực
+  thi được câu lệnh trong hàm function đó
+
+     ++ ví dụ:
+
+
+  > Object:
+   >> Object: Objects trong JavaScript, cũng tương tự như những ngôn ngữ khác, có thể so sánh như đối tượng trong đời thường. Khái niệm của 
+   objects trong JavaScript có thể được hiểu như những đối tượng thực tế trong đời thực.
+        --> ví dụ:
+                                var myObject = {
+                                    name: 'Phúc', age: 18, adress: 'cần thơ', diachi: 'tp. hcm'
+                                    // tên biến như name, adress, diachi.. do mình tự định nghĩa đều đc
+                                
+                                }
+
+                                 console.log('object của tôi: ',myObject);
+
+
+
+ >> Array: thuộc tính tạo mảng với cách khai báo thông qua dấu []:
+
+   Array, hay được gọi là mảng, là kiểu dữ liệu mà giá trị của nó chứa nhiều giá trị khác. Mỗi giá trị của mảng được gọi là element (phần tử)
+Có 2 cách khai báo Array trong Javascript:
+
+    + Dùng Array literals - Được biểu diễn bằng dấu ngoặc vuông và theo sau là giá trị rỗng hay một hoặc nhiều giá trị được ngăn cách nhau
+    bằng dấu phẩy
+                                        var foo = [];
+                                        var number = [1, 2, 3, 4, 5];
+
+    + Dùng Array constructor - Được khởi tạo bằng sử dụng từ khóa 'new'
+                                        var foo = new Array()
+                                        var number = new Array(1, 2, 3, 4, 5);
+
+
+
+            +++ ví dụ code:
+               
+                    /* kiểu mảng Array với dấu [], nơi lưu trữ nhiều giá trị khác objeck là không cần định nghĩa key phía trc value
+                     ví dụ không cần định nghĩa key (name: hữu phúc)  mà chỉ cần khai báo 'hữu phúc' trực tiếp luôn */
+
+                    var mangCon = ['hữu phúc', 'mssv: 1400253', 'độc thân'];
+                    console.log(mangCon);
+
+
+
+>>>>>> NOTE:CÁCH KIỂM TRA KIỂU DỮ LIỆU TRONG JavaScript
+  - Ta dùng hàm typoef.
+
+
+   ++ ví dụ muốn kiểm tra kiểu nào đó ta dùng như sau:
+      var a =100;
+      console.log( typoef a) // hàm sẽ ra kw la number....
+      

@@ -1,0 +1,215 @@
+***** TÌM HIỀU VỀ HÀM FUNCTION TRONG JAVASCRIPT ******
+
+>>> Đ/N: 
+      Hàm trong javascript là một tập hợp các xử lý nhằm thực hiện một chức năng cụ thể nào đó trong chương trình. Hàm cho phép bạn kết hợp các 
+xử lý khác nhau thành một và đặt tên cho nó. Sau khi tạo và đặt tên cho một hàm, chúng ta chỉ cần gọi tên hàm ra mỗi khi cần sử dụng đến nó 
+trong chương trình.
+
+     Bằng cách kết hợp các xử lý lại thành một hàm, chúng ta không cần viết lại các xử lý nhiều lần, qua đó có thể giảm sai sót khi viết code, 
+cũng như có thể tái sử dụng hàm cho một chương trình khác.
+
+     Một hàm có thể nhận một giá trị và trả về một giá trị đã trải qua một số xử lý, do đó nó có khả năng tạo ra công suất tối đa chỉ với lượng
+ mã chương trình tối thiểu.
+
+
+ -------> tóm lại hàm là một khối mã được người viết xây dựng và khai báo nhằm thực thi một chức năng nào đó, tường minh rõ ràng dễ quản lý
+ , dễ thay thế và sữa lỗi.
+
+
+
+>>> Cấu trúc của một hàm 
+
+                        function tên_hàm(value tham số truyền vào){
+                            khối lệnh thực thi;
+                        }
+
+      - trong đó quy tắc đặc tên Hàm:
+              + các ký tự cho phép: 0->9, a-> z, A->Z, dấu _ , dấu $
+              + không để số trc ký tự, hay hàng đầu tiên
+              + không trùng tên các hàm built in hàm có sẵn trong js.
+
+
+>>> tính chất của hàm function trong js:
+  - không có thực thi khối lệnh đang định nghĩa trong hàm( chỉ chạy khi gọi hàm).
+  - Muốn thực thi code trong hàm thì phải gọi hàm function đó ra.
+  - có thể nhận tham số.
+  - có thể trả về một giá trị.
+
+
+>>> các loại Hàm
+  > hàm Built in: hàm có sẵn trong js đc học ở bài 02 ( console.log, alert, confirm, prompt....)
+
+  > hàm tự xây dựng:
+      hàm do người viết từ xây dựng theo cấu trúc--> chạy thì dùng hàm call gọi Hàm
+
+      ++ ví dụ:
+        function hamCoBan(){
+            alert("hello mới làm quen về hàm")'
+        }
+
+        // lệnh call gọi hàm
+
+        hamCoBan();--> hàm sẽ thực thi khi đc gọi
+
+
+
+
+
+
+
+
+
+
+     
+
+******* THAM SỐ TRONG HÀM *******
+
+  >> ĐỊNH NGHĨA: 
+   - Tham số là giá trị truyền vào dấu (), trong một function(...vị trí thám số..) do người viết đưa vào để thực thi hàm đó.
+      + ví dụ:
+           function kiemTra(text){
+                console.log(text);
+           }
+
+           // call function
+
+           kiemTra(' đây là cách truyền tham số')
+
+           --> với cách thức này ta có thể thay đổi nhiều giá trị cho tham số chứ không mặc định giá trị cố định một lần. Lưu ý là function(text),
+           text đc gọi là tham số, còn khi gọi hàm kiemTra("nội dung gì đó") thì phần trong dấu "" đc gọi là đối số.
+
+>> Kiểu dữ liệu khi tạo tham số:
+       kiểu dữ liệu truyền vao tham số giống như kiểu dữ liệu truyền bt, không có ảnh hưởng gì cả..nghĩa là tham số chấp nhận tất cả các kiểu 
+dữ liệu truyền vào nó.
+
+
+>> Tính private: tính riêng tư của tham số
+     + ví dụ:
+
+                                function kiemTra(text){
+                                        console.log(text);
+                                }
+
+                                // call function
+                                kiemTra('tính private'); // in ra câu tính private.
+
+           ---> lúc này tính Private đc hiểu là t/c riêng tư nó chỉ được thực thi trong khối lênh ở trong dấu {}, nghĩa là tham số text khi đc
+           gọi ra ở hàm kiemTra('tính private') thì câu lệnh gán vào tham số text sẽ đc thực thi nếu tham số text đc khai báo trong dấu {}--> 
+           còn đem ra ngoài sẽ bị lỗi.
+
+                               function kiemTra(text){
+                                        console.log(text);
+                                }
+                                 console.log(text); // đem ra ngoài khai báo làm mất tính private sẽ báo lỗi
+                           
+                                kiemTra('tính private'); // câu lệnh sẽ báo lỗi ngay
+
+>> có thể truyền nhiều tham SỐ hơn một tham số bình thường
+   + ví dụ:
+                            function kiemTra2 ( met1, met2){
+                                console.log(met1);
+                                console.log(met2);
+                            }
+                            kiemTra2( " tham số thứ nhất", " tham số thứ hai");
+
+
+>> Arguments ( đối tượng ):
+
+ - Xảy ra một trường hợp như sau, nếu ta muốn in ra 100 giá trị khi gọi hàm thì ta bắt buộc phải khai báo 100 cái tham số.. để chứa 100 cái giá
+ trị muốn xuất ra. vậy thì quá mất thời gian và code dài dòng 
+
+ ----> tuy nhiên để giải quyết vấn đề này trong js có một thuộc tính đó là Arguments ( thuộc tính đối tượng)
+
+
+     ++ ví dụ:
+          
+                        function kiemTra3 (){
+                            console.log(arguments);
+                        }
+                        kiemTra3("giá trị lần 1", "giá trị lần 2", "giá trị lần 3");
+                        // in lần lượt ra 3 value dù không khai báo tham SỐ
+
+            ----> Lúc này dù không khai báo bất kỳ tên tham số nào nhưng khi gọi hàm nó vẫn in ra đc 3 giá trị cho hàm và không báo lỗi, tương tự
+            có thể in ra 100 giá trị vẫn đc mà không cần khai báo 100 tham số tất cả nhờ vào thuộc tính Arguments.
+                            
+
+>> vòng lặp for of cho hàm:
+chức năng đơn giản là lặp lại n lần giá trị đưa vào--> ở đây ta giải quyết bài toán in ra 3 giá trị lần lượt và nối với nhau qua dấu -
+
+  ++ ví dụ:
+            function kiemTra4(){
+                var huuPhuc;
+                var noiTu ='';
+                for( huuPhuc of arguments){
+                    noiTu += `${huuPhuc} - `
+                }
+                console.log(noiTu);
+            }
+            kiemTra4('lần 1', 'lần 2', 'lần 3');
+
+            --->cách dùng hàm forr of trong hàm. ở đây ta thấy cóa sự xuất hiện của ký hiệu ${..}--> ta tìm hiểu  ngay sau đây
+
+
+>> ký hiệu $ trong JAVASCRIPT
+       Ký hiệu đô la hay $ trong JavaScript là mã định danh JavaScript, có nghĩa là chúng xác định một đối tượng theo cách giống như tên. Các đối 
+    tượng mà chúng xác định bao gồm những thứ như biến, hàm, thuộc tính, sự kiện và đối tượng.
+
+       Vì lý do này, các ký tự này không được xử lý giống như các ký hiệu đặc biệt khác. Thay vào đó, JavaScript xử lý $ như thể nó là chữ cái 
+    trong bảng chữ cái.
+
+ > Template Literals: $ {...}
+
+            Trong phiên bản JavaScript ES6 có giới thiệu tính năng mới của JavaScript có liên quan đến ký hiệu $. Đó là Template Literals.
+        Template Literals hay còn gọi là Template Strings là một cú pháp mới để khai báo String trong JavaScript. Nó cho phép chúng ta sử dụng 
+        multi-line string, biến, biểu thức, hàm bên trong String mà không phải thông qua phép cộng String.
+
+            Và ký hiệu $ được sử dụng trong biểu thức nội suy. 
+            ++ ví dụ:
+                Thay vì phải cộng chuỗi:
+
+                                let name = 'Jack';
+                                console.log('Hello ' + name); // Hello Jack
+
+                Thì nay có thể dùng $ thay thế:
+
+                                let name = 'Jack';
+                                console.log(`Hello ${name}`); // Hello Jack
+
+
+                    ----> lưu ý khi khai báo mã định danh $ thì cần khai báo trong dấu ` ` chứ không phải '' và ""
+
+
+
+
+
+
+
+
+
+***** HÀM TRẢ VỀ RETURN *******
+
+  trong Hàm function nên sử dụng return hàm trả về nhất là khi ta dùng hàm xay dựng nên các phép tính toán.
+nếu không có returrn hàm trả về thì mặc định các kết quả trong hàm sẽ là kiểu dữ liệu underfined ( kiểu khai báo biến nhưng không có giá trị).
+
+   ++ ví dụ:
+                 function phepCong(a, b){
+                     var tong = a+b;
+                     return tong;
+                 }
+                 console.log(phepCong);
+
+                 ---> nếu không có return tong thì phép tính không đc thực hiện vì lúc này nó hiểu là kiểu underfied có khai báo nhưng không có
+                 giá trị.
+
+
+            ---> để vẫn chạy khi không có return thì ta cần khai báo như sau:
+                 
+                                function phepCong(a, b){
+                                    var tong = a+b;
+                                    console.log(tong);
+                                    return tong;
+                                }
+                                phepCong(7,6);
+
+                    --> vì trong ham ta gọi lệnh console.log(tong)  ra luôn nên nó sẻ xử lý lun mà không cần return lại, còn nếu khai báo nư ví dụ trên
+                    thì phải có return  nếu không thì nó sẽ hiểu lầm là kiểu dữ liệu underfied( kiểu có khai báo tham số nhưng không có giá trị)

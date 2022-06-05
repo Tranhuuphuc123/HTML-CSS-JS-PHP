@@ -12,7 +12,6 @@
              + console.log(): Giá trị truyền vào của .log() là tất cả các kiểu dữ liệu từ String, Number, Array, Object, Boolean,... rất linh hoạt các bạn nhé.
 
                             ++ Ví dụ:
-
                                     console.log(100) // Number
                                     console.log('www.suntech.edu.vn') // String
                                     console.log(['HTML', 'CSS', 'Javascript']) // Array
@@ -28,7 +27,7 @@
 
 
             +  Console.assert(): Phương thức console.assert về mục đích sử dụng cũng giống như console.log() được dùng để in dữ liệu ra màn 
-            hình console. Tuy nhiên với console.assert lại có hai tham số truyền vào. Tham số thức nhất là điều kiện để in dữ liệu ra là true or
+            hình console. Tuy nhiên với console.assert lại có hai tham số truyền vào. Tham số thứ nhất là điều kiện để in dữ liệu ra là true or
             false và Tham số thứ 2 là nội dung chúng ta muốn in ra .
                 Chính sự khác nhau như vậy nên để in được dữ liệu với console.assert  nó còn phục thuộc vào tham số thứ nhất trả về là true 
             hay false nữa, Để hiểu hơn hãy xem ví dụ dưới đây:

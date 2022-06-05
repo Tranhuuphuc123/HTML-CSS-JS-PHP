@@ -16,7 +16,7 @@ hơn.
              
   + Bacground-image (dạng đặc biệt về dãy màu chuyển ( phụ về hòa tấu màu sắc hiển thị cho ảnh nền chèn từ background-img)):
          ++ thuộc tính: linear-gradient(độ xoay của màu chuyển( 0 độ - 360 độ), màu bắt đầu chuyển, màu kết thúc chuyển )
-                 +++ ví dụ: background-image: linear-gradient(180, #333, #ccc)--> mã màu có thể xem thêm ( bấm f12 vào phần element trên wed 
+                 +++ ví dụ: background-image: linear-gradient(180deg, #333, #ccc)--> mã màu có thể xem thêm ( bấm f12 vào phần element trên wed 
                  truy cập style(phần Css) của web coi mã màu và mã thập lục phân (vd: #333...) để chèn vào màu chuyển).
 
                     #### phần độ xoay 0-360 độ ngoài trừ 0 thì các phần lớn hơn cần khai báo độ phía sau ở đây là deg ( vd: 360deg), lưu ý
