@@ -51,10 +51,17 @@ có thể tùy chỉnh ứng biến cho nhiều dòng, nhiều thành phần.
   - đôi khi file ảnh chính bị lỗi ta cần chèn ảnh dự phòng vafo để hiển thị tránh trắng xóa đi thi ta dùng: onerror="this.src( duogn dẫn ảnh phụ)";
 
   ++ ví dụ:
+<<<<<<< HEAD
         <div style="margin-top: 100px;">
             <img onerror="this.src='../images/anhduphong.jpg'" src="../images/xedfdf.jpg">
         </div>
     
+=======
+     
+       <div style="margin-top: 100px;">
+          <img onerror="this.src='../images/anhduphong.jpg'" src="../images/xedfdf.jpg">
+       </div>
+>>>>>>> f10b654dc7d4162163202b672536d6fec933a609
   
 
   
