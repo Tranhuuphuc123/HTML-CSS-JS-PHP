@@ -1,5 +1,6 @@
 ******** TÌM HIỂU VỀ CHUỖI STRING TRONG JAVASCRIPT ********
 
+
 >> kHÁI NIỆM: 
     - Chuỗi là một đoạn text có thể có một hoặc nhiều ký tự và thông thường chúng ta sẽ lưu trữ nó vào một biến, biến này ta sẽ gọi là biến có 
 kiểu dữ liệu là String (chuỗi). Tất cả các chuỗi đều phải được bao quanh bằng cặp dấu nháy đơn ' hoặc nháy kép ".
@@ -36,5 +37,166 @@ kiểu dữ liệu là String (chuỗi). Tất cả các chuỗi đều phải �
              \*    - chèn dấu *
              \'    - chèn thêm dấu '
              ...... có thể tìm hiểu thêm thuộc tính " backslash trong JAVASCRIPT ".
-         
- 
+
+
+
+
+
+
+
+
+
+
+****************** CÁCH LÀM VIỆC VỚI CHUỖI TRONG JAVASCRIPT ********************
+
+>>> key tìm hiểu thêm về chuỗi string trong js: javascript string methods
+
+
+1/ thuộc tính lenght: đo độ dài của Chuỗi 
+ - ví dụ:
+        var fullName = ' toi ten la tran huu phuc'
+        console.log(fullName.lenght);
+        ---> lenght giúp ta đo đc độ dài của chuỗi là bao nhiêu.
+
+
+
+2/ thuộc tính find index: đếm tìm vị trí ký tự trong một Chuỗi
+  - thuộc tính find index có cú pháp indexOf() và search() nó sẽ đếm từ 0-n.
+  - Ví dụ:
+                    var ten ='trần hữu phúc 1400253'
+                    console.log(ten.indexOf('p'));
+                    ---> cú pháp indexOf() giúp ta tìm đc vị trí trong một chuỗi của thuộc tính find index
+                    cụ thể là tìm vị trí thứ mấy của chữ P trong chuỗi khai báo  là ở vị trí nào. ở day chữ P ở vtri 9
+   
+
+    >> đặc giả dụ trong chuỗi có nhiều chữ p thì làm sau tìm đc chữ p thứ 2 trở lên
+          ví dụ:
+              var ten = ''hu p Hu p p";
+              --> để tìm đc vị trí P số 2 ta cần khai báo thêm vị trí mà miễn sau nó bắt đầu sạu vị trí thẻ P thứ nhất là đc
+              console.log(ten.indexOf'p',4 )
+              --> vị trí 4 là sau vị trí p thứ nhất nên nó sẽ tính từ đó để mò tìm tới thằng P kế tiếp.
+
+    >> đặc tình huống muốn kiếm chữ p cúi cùng thì sau.
+          var ten = 'hu p hu p hu p ku p'
+          --> để tìm đc vị trí p cúi cùng ta không nên định thêm vị trí mắc công mà nên dùng lastIndexOf()
+          console.log(ten.lastIndexOf('p'));
+          -->lúc này nó sẽ mò đến thằng p cúi cùng luôn là vị trí  12 mà không cần mắc công khai báo vị trí sau vị trí thẻ p để né thẻ p mà đém 
+          tới thẻ p cúi cùng như cách ở trên.
+
+
+    >> phương thức search()
+      --> cũng giống với indexOf(); tuy nhiên nó  là khai báo phương thức cứng không có khai báo thêm vị trí nào khác
+      + ví dụ:
+             var ten =' hu p hu p hu p';
+             console.log(ten.search('p'));
+             --> kết quả là 3 và dù chèn thêm vị trí nào để tìm kiếm các vị trí thẻ p đứng sau nữa thì nó vẫn để là 3 vị nó là pt khai báo cứng
+             ---> ta sẽ tìm hiểu thêm ở phần nâng cao và ứng dụng thực tế
+
+
+
+
+3/ thuộc tính cut string:  thuộc tính cắt chuỗi
+ - phương thức cắt chuỗi cut string là slice();
+     câu trúc:
+             slice(vị trí bắt đầu, vtrí kết thúc cắt); // khoảng cắt để chứa đc thằng ký tự cần cắt
+ - đặt tính huống muốn cắt chữ 'huu' trong chuỗi 'tran huu phuc' ta lam như sau:
+     ++ ví dụ:
+
+           >> cắt theo chiều thuận từ trái qua phải
+          
+                              var ten2 ='tran huu phuc';
+                              console.log(ten2.slice(4,8));
+
+                              ---> kết quả là chữ 'huu' đc cắt, chữ 'huu' năm trong khoảng từ vtri 5 tới 7 nên cắt khoảng
+                              bao chứa nó là 4 và 8 là bao cắt gọn đc ký tự 'huu' trong chuỗi, Nên cắt ra rất chính xác.
+
+                              console.log(ten2.slice(4)); //cắt từ huu tới phuc
+                              console.log(ten2.slice(0)); // cắt hết chuỗi luôn
+                    ---> đây là cắt theo thứ tự chuẩn từ trái qua phải 
+               
+          >> cắt ngc lại từ phải qua trái thì làm như sau: dung giá trị âm tính vtri dau là 0 từ bên phải đếm qua trái
+              
+                    ++ ví dụ: cắt chữ 'phu; theo chiều từ phải qua
+                            var ten2 ='tran huu phuc';
+                              --> 'phuc': vtri 0=c, -1=u... p=-3.. 
+                            console.log(ten2.slice(-4, -1)); // ra chu 'phu;
+             
+
+
+
+
+
+4/ thuộc tính replace: phương thức ghi đè
+    - cấu trúc:
+          replace( vtri ký tự cần chèn, vtri ký tự chèn để thay thể ký tự đang chèn ở đầu );
+    - ví dụ:
+               var ten3 = 'js' // muốn chèn js thành javascript
+               console.log(ten3.replace('js', 'javasript'));
+                    //--> chèn javascript thay cho js.
+     
+        >> biểu thức chính quy giúp ghi đè tât cả các chữ js mà mình mún chèn: 
+           ++ cấu trúc: / ký tự cần chèn /g  ~ //g.
+
+           ++ ví dụ:
+               var ten4 = 'js js js js js js';
+               console.log(ten4.replace(/js/g, 'javascript')); 
+               ----> /js/g phương thức chính quy thay thể tất cả ký tự cần chèn, với cách khai báo phước thức chính quy  //g ta có thể tìm
+               và chèn tất cả ký tự tg tự như vậy trong chuỗi.
+
+              
+                         
+
+5/ thuộc tính chuyển chữ in hoa và in thường
+  >> Convert to upper case: thuộc tính chuyển in hoa
+    - phương thức: toUpperCase()
+               + ví dụ:
+                         var ten5 ='toi ten la abc';
+                         console.log(ten5.toUpperCase());// chuyển tất cả thành in hoa.
+
+  >> Convert to lower case: thuộc tính chuyển chữ in thường 
+    - phương thức toLowerCasse()
+             + ví dụ:
+                    var ten6 = ' BIẾN ĐỔI THÀNH CHỮ THƯỜNG';
+                    console.log(ten6.toLowerCase());
+            
+
+
+6/ thuộc tính Trim xử lý dữ liệu nhập vào từ người dùng: ở đây là xóa khoảng trắng nhập thừa từ người dùng
+
+   ++ ví dụ:
+          var ten7 = '      huu phuc    '; // mỗi khoản trắng tính là 1 ký tự để xóa các khoản trắng thừa do người dùng nhập vào ta dùng trim
+          console.log(ten7.trim());
+          console.log(ten7.trim().length); /* dùng lenght để kiểm tra ro ràng hơn với các khoản trắng là trên 20 ký tự, nhưng có trim thì nó sẽ xóa
+          các khoảng trắng và chỉ tính các ký tự hiện hữu lúc này còn đúng 8 ký tự */ 
+
+          ----> kết quả là mất khoản trắng không cần thiết.
+
+
+
+
+7/ thuộc tính Split thuộc tính chuyển chuỗi thành kiểu array mảng
+  - phương thức là Split.
+     cấu trúc: split(chèn điểm chung giữa chuỗi và array) --> có thể là các điểm chung như dấu "," .v.v...
+  - ví dụ:
+                    var chuoi = 'mảng 1, mảng 2, mảng 3'; // có dấu hiệu chung là dấu ",".
+                    --> chuyển thành mảng 3 tham số với 3 giá trị chuỗi như sau
+                    console.log(chuoi.split(','));
+                         
+
+     
+
+
+8/ get a character of index: thuộc tính lấy ký tự bất kỳ trong chuỗi.
+  --> với thuộc tính find index( indexOf..) là ta tìm và đếm đc vitri hiển thị của ký tự tuy nhiên để lấy ký tự ở vtri can lay thay vi cắt như
+  thuộc tính  cut string (slice) thì ta dùng phương thức charAt().
+  - cấu trúc:
+     phương thức charAt(số vị trí cần lấy)
+
+     ++ ví dụ:
+         var layKyTu = 'lay ký tự bằng charAt';
+         console.log(layKyTu.charAt(7));
+         --> kết quả lấy ký tự t ở vtri 8
+
+    
+          
+                              

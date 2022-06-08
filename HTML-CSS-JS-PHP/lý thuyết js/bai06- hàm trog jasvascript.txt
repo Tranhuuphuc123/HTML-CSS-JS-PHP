@@ -207,7 +207,7 @@ nếu không có returrn hàm trả về thì mặc định các kết quả tro
                                 function phepCong(a, b){
                                     var tong = a+b;
                                     console.log(tong);
-                                    return tong;
+                                 
                                 }
                                 phepCong(7,6);
 

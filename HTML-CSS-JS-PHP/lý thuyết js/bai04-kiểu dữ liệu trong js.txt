@@ -38,7 +38,24 @@
   > Function: quá quen thuộc cách xây dựng hàm y như trong C, Java-- muốn thực thi câu lệnh trong function thì ta phải gọi hàm đó ra nó mới thực
   thi được câu lệnh trong hàm function đó
 
-     ++ ví dụ:
+             ++ ví dụ:
+                     / xây dựng trực tiếp hàm
+                              function hamCoBan(){
+                                 alert(" ví dụ về hàm function đầu tiên");
+                              }
+
+                              hamCoBan();
+
+                     // hoặc thể viết thông qua cách khai báo biến --lưu ý là function là một hàm đc người dungfg tự xây dựng
+
+
+                              var ham = function(){
+                                 alert(" a nhô nha");
+                              }
+
+                              ham();
+                              
+
 
 
   > Object:
