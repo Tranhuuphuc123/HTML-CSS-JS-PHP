@@ -51,13 +51,21 @@
   
   
   >>>>>>> KIỂU THUỘC TÍNH HOVER>>>>>
+
+
+
+
+
+
+  >>>>> PHẦN CẦN TÌM HIỂU THÊM<<<<<<<<
 --> tiim hieu lai cac thuoc tinh note: ben duoi
  1/ transition-duration: TÌM HIỂU LẠI thuoc tinh hover click chuot zoom hình ảnh?????
  2/ box-shadow:???
  3/ animation: mymove 5s infinite; tao hieu ung di chuyển trong thuộc tính skeyframe???
  4/  overflow: hidden;?????
  5/display: block;????
- 6/ texxt-decoration la gi???/
- 7/ tìm hiểu về keyframe??
+6/ tìm hiểu vệ định vị trí Sử dụng bố cục trang Flexbox trong CSS
+    cách hiển thị dạng display: flex trong các thẻ div
+7/ tìm hiểu về keyframe??
  
     
