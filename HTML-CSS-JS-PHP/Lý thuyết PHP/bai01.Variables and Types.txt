@@ -1,0 +1,84 @@
+****************************TIỀM HIỂU VỀ KIỂU DỮ LIỆU VÀ BIẾN TRONG PHP************************
+>>>>>> KHÁI NIỆM VARIABLES:
+ - VARIABLES(Biến): là tên của một vị trí bộ nhớ chứa dữ liệu. Biến là bộ nhớ tạm thời được
+ sử dụng để lưu trữ dữ liệu tạm thời.
+
+  ## Syntax:
+    $<TÊN BIẾN>: 
+      vd:
+           $name;
+
+  ## Quy tắc đặt tên:         
+   - Tên biến trong PHP phải bắt đầu bằng chữ cái hoặc dấu gạch dưới
+   - Tên  biến trong PHP được phép chứa: chữ cái, chữ số và dấu gạch dưới
+   - Trong PHP Phân biệt hoa thường
+   - ******Khi đặt tên biến trong PHP không cần khai báo kiểu dữ liệu*****
+   - Nên đặt theo quy chuẩn camelCase: nghĩa là tên đầu viết thường chữa cái đầu của vế kế viết hoa.
+
+  ## Gán biến:
+    $<tên biến> = value;
+
+  ## Xuất dữ liệu với echo:
+     echo <tên biến/tên hàm/chuỗi/số>   
+
+     vd:
+       $name = 'Huu phuc';
+       $name =10;
+       $name = 10.5;
+       -->Note: khá là đa di năng, nó tự xác định kiểu dữ liệu dựa vào giá trị.
+
+       echo 'Huu phuc';
+       echo $name;
+
+  ## In mảng Array và Object với print_r
+    - Syntax:
+        print_r($<tên mảng>);
+
+        vd:
+             $arr = [1,2,3,4];
+             print_r($arr);
+        
+
+  ## xuống dòng trong PHP;
+    - Syntax:
+      dot<.>"<br>"
+        or
+      dot<.>"\n"  
+
+       +trong đó:
+          ++ dot<.>: ý là biểu thị dấu '.'
+          ++ br, \n hai thẻ xuống dòng.
+
+        + vd:
+           $a =10;
+           $b =10.5; 
+           $c= 'alo';
+
+           echo $a . "<br>";
+           echo $b . "\n";
+           echo $c;
+
+        
+
+
+>>>>>>> Chú thích coment trong PHP:
+ - dùng dáu: 
+   + //: cho một dòng
+   + /**/: cho đoạn
+
+
+
+>>>>>> CẤU TRÚC KHI KHAI BÁO PHP:
+  - Syntax:
+       <?php
+          // nội dung
+        ?>
+
+
+>>>>>>> KIỂM TRA KIỂU DỮ LIỆU(HÀM TRẢ VỀ KIỂU DỮ LIỆU):
+ - Syntax:
+    var_dump($<tên biến>);
+
+
+      
+   

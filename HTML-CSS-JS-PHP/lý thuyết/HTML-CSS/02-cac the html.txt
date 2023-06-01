@@ -16,12 +16,29 @@
       + upper-alpha: A, B, C...
       + lower-alpha: a, b, c...
 
+     - Các  thành phần liệt kê sẽ dùng: <li>nội dung</li> 
+     vd:
+
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol>
+
   07 ul (unodered list), li (list): thẻ sổ danh sách không có thứ tự trong html
+     - Các  thành phần liệt kê sẽ dùng: <li>nội dung</li> 
+     vd:
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+         
   08/ thẻ table:
               <table>
-                + <thread>
+                + <thead>
                     <th> thẻ tiêu đề </th>
-                </thread>
+                </thead>
                 + <tbody>
                     <tr> định nghĩa 1 hàng  
                             <td> định nghĩa 1 ô </td>
@@ -29,14 +46,26 @@
                 </tbody>
              </table>
 
-      >> Các thuộc tính của Table:
+      >> Các thuộc tính khai báo của Table:
        + border: đường viền
        + cellpadding: khoảng cách giữa nội dung và đường viền
        + cellspacing: khoảng cách giữa các ô
        + colspan: độ mở rộng của cột
        + rowspan: độ mở rộng của dòng.
 
-  09/  THẺ FORM: được sử dụng để tạo một vùng chứa dữ liệu điều khiển thông tin chung. các đk đc sử dụng để nhập thông tin từ người dùng
+      >> các thẻ tạo cột column, rowspan
+       - <td>: ô bảng, chứa nội dung của table mỗi ô bảng tưởng  ứng một colummn
+       - <tr>: hàng bảng đc hiểu là định nghĩa rowspan của table
+       - <th>: tiêu đề header ở mục đầu của bảng
+       - <caption>: xác định chú thích table
+       - <thead>: nhóm nội dung tiêu đều của bảng
+       - <tbody>: nội dung thân bảng table
+       
+
+
+
+
+  09/ THẺ FORM: được sử dụng để tạo một vùng chứa dữ liệu điều khiển thông tin chung. các đk đc sử dụng để nhập thông tin từ người dùng
   và cung cấp tương tác cho người dùng 
      cấu trúc:
         <FORM>
@@ -45,6 +74,9 @@
         </FORM>
     
     >> thuộc tính:
+        + method: chỉ định phương thức Http khi gửi dữ liệu
+          ++ get: gửi nhận dữ liệu(giới hạn ký tự..phù hợp với dl không an toàn)
+          ++ post: cũng là method gửi dữ liệu mẫu (không giới hạn kích thước..an toàn bảo mật hơn)
         + Action: thuộc tính xác định vị trí của script sẽ xử lý biểu mẫu hoàn chỉnh và đc gửi đi ( cú pháp Action="url")
         + Accept: thuộc tính xác định danh sách xử lý biểu mẫu
         + Method: thuộc tính xác định phương thức dữ liệu đc gửi đến máy chủ.( thường là dạng POST)

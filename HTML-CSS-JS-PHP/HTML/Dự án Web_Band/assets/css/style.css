@@ -1,0 +1,145 @@
+/*********************************PHẦN NỘI DUNG CHUNG CHO CẢ WEBSITE*******************************/
+/* Reset css không để nội dung kích thước mặc định */
+*{
+    padding: 0;
+    margin: 0;
+    /* tự điều chỉnh lại kích thước khi có margin-padding--> không làm gia tăng kích thước */
+    box-sizing: border-box;
+}
+/* định nghĩa các id trong css */
+/* 
+ xây dựng bố cục:
+  1/ vị trí?
+  2/ kích thước?
+  3/ màu sắc?
+  4/ kiểu dáng(kiểu chũ, hình tròn, vuông....)
+*/
+
+/* thẻ bao toàn cục cho web */
+#Wraper{
+ 
+}
+
+html{
+    /* set font chữ chung cho web */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+/* ===================================HEADER(NAV)=============================================== */
+/* phần thẻ header */
+#header{
+   height: 46px;
+   background-color: black;
+
+}
+#nav, .subnav{
+    /* giúp xóa các dấu chấm tròn của các ul>li */
+    list-style-type: none;
+}
+
+/* định dang thẻ nã của mục header */
+#nav li{
+    /* inline-bloc dạng hiển thị cho nằm ngang đều một hàng */
+   display: inline-block;
+   /* thiết lập Position:relavtive-> định vị trí tuyệt đối cho thẻ cha không bị xê dịch  */
+   position: relative;
+
+}
+/* bieeyr thị dấu > để hiểu là chỉ trực tiếp thẻ li a nào của id #nv mới chịu màu trắng thui */
+#nav > li > a{
+    /* tạo màu chữ cho các tên mục ở thẻ a */
+    color: #fff;    
+    /* thuộc tính giúp các mục trong li>a của id nav đều đc in hoa */
+    text-transform: uppercase;
+}
+
+#nav li a{
+  
+    /* thẻ line-heigth: giúp căn chỉnh chữ đều padding so với box bao xung quanh */
+    line-height: 46px;
+    /* tùy chình khoản cách nội dung tên mục giữa cac mục nav: trên dưới, trái phải */
+    padding: 0px 24px;
+    /* bỏ gạch chân của nội dung text mục */
+    text-decoration: none;
+}
+
+/* tạo hiệu ứng hover khi nhấn vào các mục tên trên nav-> lưu ý dùng dâu > chỉ hiển thị ở li a của #nav thui */
+#nav > li > a:hover{
+    color:#000!important;
+    background-color: #ccc!important;
+    /* nó giúp hover full box: vì nó không định đc kích thước nên nó chỉ biết là lấy full */
+    display: inline-block;
+}
+
+/* thẻ subnav- các mục con của nav>li>a "More" */
+#nav .subnav{
+    /* ẩn đi thuộc tính subnav vứi none- túc ẩn đi mấy <li> con của <li>more</li> */
+  display: none;
+  /* position:absolute-giúp định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài
+  nghĩa là nó hiểu thẻ nav li ở trên là thẻ cha và nó sẽ làm thẻ con giữ vị trí cố định  */
+  position: absolute;
+  background-color: #fff;
+  /* thuộc tính tạo đổ bóng cho hộp thoai */
+  box-shadow:0 0 10px black ;
+  /* đặt chiều ngang tối thiểu cho hộp thoại subbox */
+  min-width: 60px;
+}
+
+
+/* định màu chữ cho các mục item của class.subnav */
+#nav .subnav a{
+    color:black;
+    font-weight: bold;
+    /*  chỉnh chiều cao padding của nội dung các mục ia>a của subnav nhỏ lại */
+    line-height: 38px;
+}
+
+/* tạo pseudo class: hover khi nhấn vào more nó hiện subnav con */
+#nav li:hover .subnav{
+    display: block;
+}
+
+/* tạo pseudo class: hover vào các li a của class subnav */
+#nav .subnav  li:hover {
+    color:#000!important;
+    background-color: #ccc!important;
+    /* nó giúp hover full box: vì nó không định đc kích thước nên nó chỉ biết là lấy full */
+    display: block;
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================Slider(ảnh động chuyển )=========================================== */
+/* tạo ảnh chuyển */
+#sider
+{
+  min-height: 800px;
+  /* background-color: grey; */
+}
+
+
+
+/* =================================Content(Nội dung chính-phần thân web)================================================= */
+/* nội dung phần thân */
+#conten{
+
+}
+
+
+
+/* ======================================Footer(phần nội dung cuối trang)=========================================== */
+/* thẻ tiêu đề cúi trang */
+#footer{
+
+}
+

@@ -3,6 +3,11 @@
  
 >>>>>> KIỂU FONT CHỮ <<<<<<<<
  1/ Thuộc tính "text-decoration" đưa thêm các định dạng trang trí cho chữ (các dòng kẻ qua chữ):
+   - text-decoration:
+     ++ none: bỏ gạch chân underline cho nội udng text.
+     ++ underline: gạch chân
+     ++ overline: gạch trên đầu chữ
+
    - text-decoration-line	  
        ++ none : hủy kẻ qua chữ
        ++ underline: gạch chân
@@ -49,23 +54,50 @@
   ---> đây cũng là một cách khai báo kiểu font chữ và kích thước tổng hợp nên tham khảo
   
   
+===========================================================================================================================================
+>>>>>>> KIỂU THUỘC TÍNH HOVER>>>>>
+ 1/ Hover:
+   + 
+
+
+
+===========================================================================================================================================
+>>>>>>>THUỘC TÍNH HIỂN THỊ DISPLAY HIỂN THỊ<<<<<<<<
+  1/ Display:
+    + inline-blocK: xếp các thuộc tính nằng ngang hàng
+    + none: ẩn đi thuộc tính cần hiển thị
+
+
+===========================================================================================================================================
+>>>>>> THUỘC TÍNH CĂN CHỈNH PADDING(giữa, trá, phải)<<<<<<<<
+ - line-heigth: thuộc tính căn giữ nội dung chữ so với k/c padding 
+ với box bao quanh chữ.
   
-  >>>>>>> KIỂU THUỘC TÍNH HOVER>>>>>
+
+
+===========================================================================================================================================
+>>>>>>>CÁC THUỘC TÍNH TỔNG HỢP<<<<<<<<
+ 1/ ul>li: thương tạo ul sẽ có các mục chấm tròn ở mỗi li
+   + list-style-type: none   // xóa đi các thẻ đó
+
+
+ 2/ Text-transform: Uppercase;
+  -> thuộc tính giúp viết in hoa bất kỳ ký tự nào  
 
 
 
 
 
 
-  >>>>> PHẦN CẦN TÌM HIỂU THÊM<<<<<<<<
---> tiim hieu lai cac thuoc tinh note: ben duoi
- 1/ transition-duration: TÌM HIỂU LẠI thuoc tinh hover click chuot zoom hình ảnh?????
- 2/ box-shadow:???
- 3/ animation: mymove 5s infinite; tao hieu ung di chuyển trong thuộc tính skeyframe???
- 4/  overflow: hidden;?????
- 5/display: block;????
-6/ tìm hiểu vệ định vị trí Sử dụng bố cục trang Flexbox trong CSS
-    cách hiển thị dạng display: flex trong các thẻ div
-7/ tìm hiểu về keyframe??
- 
+
+
+  
+  
+
+
+
+
+
+
+
     

@@ -1,0 +1,16 @@
+***********************MỘT SỐ THỦ THUẬT PHÍM TẮT TRONG LẬP TRÌNH HTML-CSS-JS**********************
+
+>>>>> THỦ THUẬT COPY NHANH CÙNG LÚC NHIỀU ĐỐI TƯỢNG:
+ - gỉa dụ ta tạo 10,20... mấy cái id hay class bên HTML
+ ==> làm cách nào để copy nhanh tất cả tên class, id đã khai báo qua bên css một lượt thay
+ vì phải copy từng cái
+
+ ===> chọn một tên đại diện là mã ID hoăc class:
+   +  bấm: Ctrl + shift + L.   -> di chuyển tới đầu tên class id
+   + bấm: alt + shift + mũi tên   -> di cuyển tới cúi tên class id
+   + copy tên đầy đủ đồng loạt
+   + qua css: bấm Ctrl + V.
+   + di chuyển mũi tên đồng loạt ở đầu bấm bấm:
+           alt + mũi tên    ->để chọn hết tên,-> sau đố thêm dấu #, . để tạo class id đồng loạt
+
+   + di chuyển con trỏ chuột ra sau và bấm {}.. để tạo đồng loạt       

@@ -1,0 +1,71 @@
+/* tiềm hiểu kiến thức tổng ôn lại css */
+/* có hai kiểu là id # và class class khai báo bằng cách dùng dấu . */
+/* kỹ thuật sử dụng iến giả :root */
+:root{
+    --text-color: yellow;
+}
+h5{
+    color:var(--text-color)
+}
+
+.mauchu{
+    color:var(--text-color)
+}
+
+/* các cách sử dụng của css */
+ /* Lựa chọn toàn bộ các thẻ */
+ * {
+    /* `font-style: italic` là chữ nghiêng */
+    font-style: italic;
+}
+
+/* Lựa chọn toàn bộ các thẻ p */
+p {
+    /* `text-decoration: underline` là chữ gạch chân */
+    text-decoration: underline;
+}
+
+/* Lựa chọn toàn bộ các thẻ có class-1 */
+.class-1 {
+    color: red;
+}
+
+/* Lựa chọn toàn bộ thẻ đồng thời có cả class-2 và class-3 */
+.class-2.class-3 {
+    color: green;
+}
+
+/* Lựa chọn thẻ có class-5 là con của thẻ class-4 */
+.class-4 .class-5 {
+    color: violet;
+}
+
+/* Lựa chọn toàn bộ các thẻ p có class-6 */
+p.class-6 {
+    color: blue;
+}
+
+/* Lựa chọn toàn bộ các thẻ h3, h4 */
+h3, h4 {
+    color: brown;
+}
+
+/* Lựa chọn toàn bộ thẻ li là con của class list */
+.list li {
+    color: deepskyblue;
+}
+
+/* Lựa chọn toàn bộ thẻ li là con trực tiếp của thẻ có class list */
+.list > li {
+    color: fuchsia;
+}
+
+/* Lựa chọn 1 thẻ p đứng liền kề sau class-9 */
+.class-9 + p {
+    color: goldenrod;
+}
+
+/* Lựa chọn toàn bộ thẻ p đứng sau class-10 */
+.class-10 ~ p {
+    color: limegreen;
+}

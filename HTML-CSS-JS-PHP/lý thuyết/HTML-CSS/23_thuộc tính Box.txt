@@ -1,0 +1,21 @@
+*************CÁC THUỘC TÍNH CỦA BOX:
+ >>>>LIST:
+  1/ Box-sizing: đã nói bài lý thuyết 16
+
+  2/ Thuộc tính bóng đổ box-shadow:
+      - syntax:
+        box-shadow: <h-ofsset> <v-offset> <blur> <spread> <color>
+
+       # trong đó:
+        + h-ofsset: đổ nghiên theo chiều ngang theo trục xem
+        + v-ofsset: đổ theo chiều dọc theo chục y
+        + blur: độ mờ của bóng
+        + spread: đô lan bóng
+        + color: màu của bóng
+
+        vd:
+
+             box-shadow:0 0 10px black ;
+             -> nghiên h-v là 0, tới độ mờ 10px, bỏ trống đô lan tớ màu sắc lun
+         
+         

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân tích các thành pần cần có của Website</title>
+</head>
+<body>
+    <!--Cấu trúc cơ bản của một Website -->
+    <!--I/ header -->
+    <header></header>
+
+    <!--I/1.0/ Navigation- thanh điều hướng -->
+
+    <!--II/ thanh Breakcrum cụ thể trên website thì thanh Breakrum thg đc viết nhằm mục đích thông báo chọn lựa hiện thi chức năng 
+    trang đang chọn-> giống như một cái map thông báo mình đang chọn trang page nào-->
+
+    <!--III/ thành phần Sidebar -> một thành phần nằm ở một góc trái hay phải do người thiết kế đăt
+    mục đích là để các menu điều hướng con  -->
+
+
+    <!-- IV/ Thành phần Slider -> một cái khung chuyển ảnh auto qua lại, tạo quảng cáo..  -->
+
+    <!--V/ Content-> nội dung chính của website -->
+
+    <!--VI/ footer chân trang của website-->
+    <footer></footer>
+</body>
+</html>

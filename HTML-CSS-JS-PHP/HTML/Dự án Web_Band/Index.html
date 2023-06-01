@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- chèn liền kết file css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Dự án Website_Band đầu tay</title>
+</head>
+<body>
+    <!-- thẻ div lớn bao hết web -->
+   <div id="Wraper">
+
+        <!-- phần Header -->
+         <div id="header">
+             <!-- cách viết tắt nhanh:
+                tạo ul có 5li kèm thẻ a
+                thèo sao mỗi li và trong
+                ul có id = nav
+                ==> gõ: ul#nav>li*5>
+            -->
+             <ul id="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Band</a></li>
+                <li><a href="">Tour</a></li>
+                <li><a href="">Contact</a></li>
+                <li>
+                    <a href="#">More</a>
+                    <!-- mục tiêu tạo class
+                    thay vì tạo id là vì có thể
+                    tái sử dụng nếu muốn thêm 
+                    một mục tương tự
+                    -->
+                    <ul class="subnav">
+                        <li><a href="">Merchandes</a></li>
+                        <li><a href="">Extras</a></li>
+                        <li><a href="">Media</a></li>
+                    </ul>
+                </li>
+             </ul>
+         </div>
+         
+
+         <!--Phần slider-> ảnh chuyển động-->
+         <div id="sider">
+
+         </div>
+
+         <!-- content-> nội dung -->
+         <div id="content">
+
+         </div>
+
+         <!-- chân footer -->
+         <div id="footer"></div>
+   </div>
+
+
+
+</body>
+</html>

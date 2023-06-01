@@ -1,4 +1,4 @@
-                         ******PSEUDO ELEMENTS THUẬT NMGUWX PHẦN TỬ GIẢ***********
+                         ******PSEUDO ELEMENTS THUẬT NG PHẦN TỬ GIẢ***********
 
 
 - Phần tử giả Pseudo-elements được sử dụng để tạo kiểu cho các phần tử của một phần tử cụ thể nào đó. 
@@ -22,7 +22,7 @@ pseudo-elements phần tử giả của CSS gần như có thể viết ra để
    ::first-letter      h1::first-letter   thuộc tính dùng để thêm kiểu đặc biệt cho chữ cái đầu tiên của một văn bản
    ::first-line        p::first-line      thuộc tính dùng để thêm kiểu đb vào dòng đầu tiên của văn bản. 
    ::selection         a::selection       thuộc tính sự lựa chọn khi bạn bôi chuột copy văn bản
-                                           ----> (Chọn phần của phần tử do người dùng chọn)
+                                           ----> (Chọn hiệu ứng màu sắc do người viết định không auto tự chọn)
 
    ::maker             a::maker           Chọn điểm đánh dấu của các mục danh sách
 

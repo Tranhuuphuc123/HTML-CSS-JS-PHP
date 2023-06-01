@@ -1,6 +1,7 @@
 Cách sử dụng biến trong CSS, hay còn gọi là CSS Varibales ( kỹ thuật đặt biến giả trong CSS)
-mục đích của cách sử dụng biến CSS variable nhằm mục đích thống nhất một kiểu CSS tùy biến cho nhiều id, class, CSS trong lúc gáng giáng trị
-để khi muỗn thay đổi về thuộc tính ta chỉ cần thay đổi trong biến CSS là xong không cần thay đổi từng class hoặc ID của CSS.
+mục đích của cách sử dụng biến CSS variable nhằm mục đích thống nhất một kiểu CSS tùy biến cho nhiều 
+id, class, CSS trong lúc gáng giáng trị để khi muỗn thay đổi về thuộc tính ta chỉ cần thay đổi trong 
+biến CSS là xong không cần thay đổi từng class hoặc ID của CSS.
 
 *** cú pháp:
   :root{
