@@ -1,0 +1,88 @@
+﻿******************HƯỚNG DẪN THIẾT LẬP TRUY CẬP TRANG CHỦ LARAVEL HOPMEPAGE LOCAL********************
+- Trong phần này ta sẽ tiềm hiểu về cách thiết lập project Laravel và kết nối với trang chủ laravel
+==> nghĩa là dùng địa chỉ local do ta định nghĩa truy cập vào trang chủ thông qua port trên internet.
+
+>>>>>> CÁC BƯỚC TIẾN HÀNH:
+ ### Bước 01: 
+ -> sau khi tạo Project Laravel-> tiến hành truy cập vào homepage laravel bằng địa chỉ do người lập trình
+thiết lập:
+     
+     vd: 
+           trangchu.local...
+
+
+
+ ### Bươcs 02: Install Laravel UI
+  -> truy cập trên git pash vao project do ltv tạo ra
+   vd: 
+     ~ cd code/project_name.
+
+  -> Install Laravel UI
+    gõ: composer require laravel/ui
+
+ ### Bước 03: Setup Boostrap UI
+  -> gõ: php artisan ui boostrap   --auth
+
+
+ ### Bước 04: xử lý phân quyền
+  -> lưu ý cần update bản npm mới nhất:
+   gõ: npm Install -g npm@latest
+         
+         hoặc
+
+      npm update -g npm
+  
+
+  -> trong module project cá nhân:
+   + kiêm tra file: gõ ls or LOCAL
+   + nếu có file node_modules, package-lock.json thì tiến hành xóa đi
+     gõ: rm -rf node_modules
+	     rm package-lock.json
+    + nếu chỉ không thì xóa node_modules đi
+     gõ:  tm -rf node_modules
+
+
+   -> tiến hành xóa cache và chạy lại npm Install
+    + gõ: sudo(áp dụng với trình linux-> quyền cao nhất)
+
+          sudo npm cache clean --force
+          sudo npm install --no-bin-links  
+
+    ### Bước 05: tiến hành thoát ra homestaed và lưu cahyj lại file
+      -> chạy ra homestead
+      -> vagrant suspend
+      -> vagrant up --provision
+
+    ### Bước 06: thực thi npm install  
+      -> truy cập lại vào project cá nhân
+      -> gõ tiếp
+            
+             sudo npm clean-install
+        hoặc
+             npm install
+
+      -> gõ chạy thực thi:
+
+            sudo npm run build
+
+         hoặc
+
+            npm run build
+
+     ### Bước 07: truy cập lại vào trang homepage laravel
+      -> tiens hành truy cập lại trang homepage kiểm tra và register tài khoản laravel.
+
+
+
+   ****************Noe:
+    -> sẽ có nhiều lỗi do quá trình thiết đặt 
+    -> hướng giải 1: chạy lt qua lại giữa các lệnh:
+    -> lưu ý đặc biệt ở bước 04 05 06
+    -> nên restart lại máy nếu vẫn không chạy thành công.
+    -> sau restart chạy lại bước 06 tiens hảnh install npm
+                 
+
+    
+
+
+

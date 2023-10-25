@@ -1,0 +1,53 @@
+﻿-- cau hinh prject 
+
+--vagrant plugin install --plugin-clean-sources --plugin-source https://rubygems.org vagrant-winnfsd
+
+
+-- laravel/ui
+-- bootstrap
+
+
+-- npm install 
+-update ban moi nhat
+ npm install -g npm@latest
+
+-- vagrant ssh
+
+-- ls
+nếu có node_modules, package-lock.json  thì xóa
+	rm -rf node_modules
+	rm package-lock.json
+
+	lệnh đây thay cái tên thư mục/file
+rm -rf composer.json composer.lock  (xóa liền 2 file)
+
+
+nếu không có: 
+	rm -rf node_modules
+sudo npm cache clean --force
+sudo npm install --no-bin-links
+
+-- vagrant suspend
+-- vagrant up --provsion
+
+
+
+
+sudo npm clean-install
+
+sudo npm run build
+
+
+------
+npm install -g yarn
+yarn install
+
+- xóa file trong node_modules
+rm -rf @esbuild
+
+
+
+--------------
+nano .env
+luu: ctrl+s
+vthoat ctrl+z

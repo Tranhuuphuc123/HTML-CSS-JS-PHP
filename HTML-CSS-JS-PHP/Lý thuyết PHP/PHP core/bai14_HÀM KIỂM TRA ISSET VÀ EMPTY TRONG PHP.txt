@@ -1,0 +1,59 @@
+***************HÀM KIỂM TRA BIẾN CÓ TỒN TẠI? ISSET VÀ EMPTY TRONG PHP**************
+>>>> Khái niệm:
+ ## HÀM ISSET:
+  - Hàm ISSET kiểm tra biến có tồn tại hay không.
+  - Không kiểm tra về dữ liệu của biến
+  - Không kiểm tra được trường hơp null
+
+ ## hàm Empty():
+  - Kiểm tra biến có tồn tại không và kiểu dữ liệu.
+  - Chỉ trả về về kiểu dữ liệu boolean
+  - Trả về true nếu: không tồn tại hoặc rỗng, =0, '0', trống, null, array
+  , rỗng, object rỗng, false.
+
+
+====> cùng với các hàm kiểm tra sự tồn tại hay nó có phải là một số nguyên, thực.. hay không:
+is_int, is_float, is_String....
+====> với các hàm kiểm tra xem nó có phải là một function và có đc khai báo hay tồn tại chưa
+function_exist(<tên function cần kiểm tra>)
+===> thì để kiếm tra một biến có đc khai báo hay có giá trị gì không ta cũng có:
+isset và empty.
+
+
+
+  vd:
+
+     ## iset:
+                    
+                    if(isset($bien1)){
+                        echo $bien1;
+                        
+                    }else{
+                        $bien1 = 'Hello tao nè' ;
+                        echo $bien1;
+                    }
+
+                    ==> trong đoạn code ta tháy $bien1 chưa đc khởi tạo nếu in sẽ error ngay
+                    ==> dùng isset để text nếu nó tồn tại thì in nó ra
+                    ==> nếu nó chưa có thì khởi tạo rồi in nó ra
+                    ===> kww: vẫn in ra đc: 'Hello tao nè'
+             **Note: tóm lại ta thấy với isset ta có thể kiểm tra đc sự tồn tại của nó để thực thi các đoạn code theo ý của ta
+
+
+
+  vd:
+
+      ## empty:           
+        
+
+                    $bien2 = 0;
+                    if(empty($bien2)){
+                        echo 'biến này rỗng';
+                    }else{
+                    echo 'biến này không rỗng <br>';
+                    echo $bien2;
+                    }
+
+                    ==> bạn nghĩ kết quả là gì 
+                    ==> xem lại các trường hợp đc xme là rỗng
+                    ==> kw: biến này rỗng vì = 0

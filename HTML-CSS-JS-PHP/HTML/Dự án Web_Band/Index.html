@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- chèn liền kết file css -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- dẫn file css của themify icons.css -->
+    <link rel="stylesheet" href="../Dự án Web_Band/assets/img/themify-icons/themify-icons.css">
     <title>Dự án Website_Band đầu tay</title>
 </head>
 <body>
+
+ <!-- ===================================================================== -->
     <!-- thẻ div lớn bao hết web -->
    <div id="Wraper">
-
         <!-- phần Header -->
          <div id="header">
              <!-- cách viết tắt nhanh:
@@ -25,7 +28,11 @@
                 <li><a href="">Tour</a></li>
                 <li><a href="">Contact</a></li>
                 <li>
-                    <a href="#">More</a>
+                    <a href="#">
+                        More
+                        <!-- chèn icon -->
+                        <i class="edit-icon-down ti-angle-down"></i>
+                    </a>
                     <!-- mục tiêu tạo class
                     thay vì tạo id là vì có thể
                     tái sử dụng nếu muốn thêm 
@@ -38,19 +45,91 @@
                     </ul>
                 </li>
              </ul>
-         </div>
-         
 
+              <!--div sear-->
+              <div class="search-btn">
+                 <i class="edit-icon-search ti-search"></i>
+              </div>
+         </div>
+
+        
+
+<!-- ===================================================================== -->
          <!--Phần slider-> ảnh chuyển động-->
-         <div id="sider">
-
+         <div id="slider">
+            <div class="text-content">
+                <h2 class="text-heading">MUSIC</h2>
+                <div class="text-description">listen music help relax!...try together</div>
+            </div>
          </div>
 
-         <!-- content-> nội dung -->
-         <div id="content">
 
-         </div>
 
+
+<!-- ===================================================================== -->
+        <!-- content-> nội dung -->
+        <div id="content">
+            <!-- about -->
+            <div class="content-section">
+               <h2 class="section-heading">THE BAND</h2>
+               <p class="section-subheading">We are the one!</p>
+               <p class="about-content">"The Harmonics" is a four-piece band comprising lead vocalist Sarah, guitarist Alex, 
+                bassist Mark, and drummer Lisa. Each member brings their own distinct musical background and influences, resulting
+                 in a sound that is both eclectic and harmonious.
+
+                With a repertoire that spans various genres such as rock, pop, and alternative, "The Harmonics" effortlessly combines 
+                catchy melodies, heartfelt lyrics, and energetic rhythms. Their music resonates with listeners of all ages, appealing 
+                to both mainstream and indie music enthusiasts.</p>
+
+                <!-- member các thành viên ban nhạc -->
+                <div class="member-list">
+                    <div class="member-item">
+                        <p class="member-text">Name</p>
+                        <img src="../Dự án Web_Band/assets/img/band_new.jpg" alt="" class="member-img">
+                    </div>
+
+                    <div class="member-item">
+                        <p class="member-text">Name</p>
+                        <img src="../Dự án Web_Band/assets/img/band_new.jpg" alt="" class="member-img">
+                    </div>
+                    
+                    <div class="member-item">
+                        <p class="member-text">Name</p>
+                        <img src="../Dự án Web_Band/assets/img/band_new.jpg" alt="" class="member-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour -->
+            <div class="content-section">
+                <h2 class="section-heading">TOUR</h2>
+                <p class="section-subheading">Tour on the world</p>
+
+                
+             </div>
+             
+
+              <!-- Contact -->
+            <div class="content-section">
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="section-subheading">Let contact with us</p>
+                
+             </div>
+
+              <!-- Image -->
+            <div class="content-section">
+                <h2 class="section-heading">IMAGE</h2>
+                <p class="section-subheading">Collect Image the Band</p>
+                
+             </div>
+ 
+
+            
+        </div>
+
+
+
+<!-- ===================================================================== -->        
          <!-- chân footer -->
          <div id="footer"></div>
    </div>

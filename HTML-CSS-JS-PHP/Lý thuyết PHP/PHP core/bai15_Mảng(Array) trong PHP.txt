@@ -1,0 +1,104 @@
+*******************TIỀM HIỂU VỀ MẢNG ARRAY TRONG PHP*****************
+>>> Khái niệm:
+ - Mảng là một cấu trúc dữ liệu mà lưu trữ một hoặc nhiều kiểu giá trị giống nhau
+  trong một tập hợp.
+ - mảng có thể là mảng 1 chiều hoăc đa chiều
+ - Mảng trong PHP thì # các Array trong các ngôn ngữ ở chỗ: nó có thể chứa nhiều giá trị
+ ở các kiểu dữ liệu khác nhau.
+
+   vd:
+       $arr = [1,2, 2.5, 'a', 'b'];
+       echo $arr[3];
+       -> kww: in ra đc chữ a.
+
+
+
+
+==================================================================================
+ >>>> SYNTAX:
+- Khai báo mảng: dùng từ khóa array() hoặc [](phiên bản php 5.4 trở lên).
+
+    vd:
+        
+           $arr = array(1,2,'a');
+              or
+           $arr = [1,2,'a']
+
+
+
+==================================================================================
+>>>> THÊM PHẦN TỬ VÀO MẢNG:
+ ## thêm phần tử mảng khi chỉ rõ vị trí cần thêm
+   > syntax:  $<tên mảng>[index] = value;
+        + trong đó:
+           ++ index: là số phần tử Mảng cần thêm chỉ rõ ra
+           ++ value: giá trị cần gáng
+
+         + vd:
+
+                        $arr = [1,2,'a'];
+                        print_r($arr);
+                        --> kw: 1 2 a
+
+                        // thêm phần tử b vào mảng
+                        $arr[4] = 'b';
+                        print_r($arr);  
+                        --> kw: 1 2 a b
+
+
+ ## thêm phần tử với key:
+    > syntax:  $<tên mảng>[key => value1,value2];
+                $<tên mảng>[key] = value3;
+
+        + trong đó:
+           ++ key: key là mã đặt cần thêm
+           ++ value: giá trị cần gáng
+
+         + vd:
+
+                        $arr = ['id' => 1,2,'a'];
+                        print_r($arr);
+                        --> kw: 1 2 a
+
+                        // thêm phần tử b vào mảng
+                        $arr['id'] = 'b';
+                        print_r($arr);  
+                        --> kw: 1 2 a b
+
+
+ ## thêm phần tử không key:
+    > syntax:  $<tên mảng>[] = value;
+       + trong đó:
+           ++ []: không cần gáng nó vẫn hiểu
+           ++ value: giá trị cần gáng
+
+       + vd:
+                        $arr = [1,2,'a'];
+                        print_r($arr);
+                        --> kw: 1 2 a
+
+                        // thêm phần tử b vào mảng không cần chỉ rõ key
+                        $arr[] = 'b';
+                        print_r($arr);  
+                        --> kw: 1 2 a b
+
+               
+       
+ ## dùng thông qua hàm array_push:
+   > Syntax: array_push($<tên mảng>, value..):
+     + trong đó:
+       ++ value: giá trị cần thêm:
+
+      + vd:
+                        $arr = [1,2,'a'];
+                        print_r($arr);
+                        --> kw: 1 2 a
+
+                        // thêm a vào pt tiếp theo bằng thuộc tính push_array()
+                        array_push($arr,'b');
+                        print_r($arr);
+                        -> kw: 1 2 a b
+
+
+
+==================================================================================

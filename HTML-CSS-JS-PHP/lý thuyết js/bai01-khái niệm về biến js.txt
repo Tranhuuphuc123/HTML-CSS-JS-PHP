@@ -20,8 +20,8 @@
 
 
 3/ lệnh xuất trong javasript: 
-   + alert()
-   + document.write();
+   + alert(): xuất thông báo trên trình duyệt dưới dạng hộp thoại
+   + document.write(): xuất thông báo mà nội dung sẽ hiển thị ngay trên trang web
 
 4/ ghi chú trong javasript
   + dùng dấu: //   coment 1 dòng

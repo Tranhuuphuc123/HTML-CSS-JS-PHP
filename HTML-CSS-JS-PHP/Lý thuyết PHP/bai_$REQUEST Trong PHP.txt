@@ -1,6 +1,0 @@
-******************************TIỀM HIỂU VỀ PHƯƠNG THỨC $_REQUEST********************
->>> Khái niệm:
- - <!-- tiềm hiểu về $_REQUEST Trong php
-nó có chức năng là liên kết đến đg dẫn file chạy php.. thay vì gáng mạc định thông qua biến $_REQUEST
-ta có thể liên kết dễ dàng mà không cần thay đỏi địa chỉ đg dẫn
--->

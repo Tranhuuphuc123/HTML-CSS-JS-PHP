@@ -1,0 +1,14 @@
+************************CÁCH NỔI BIẾN TRONG PHP************************
+>>>> KHÁI NIỆM:
+ - Syntax:
+     <$tiên biến1>.<$tên biến 2>
+
+     vd:
+         $a = 'Hữu';
+         $b = 'Phúc';
+         echo $a.$b;
+         -> kw: Hữu Phúc
+
+
+
+         

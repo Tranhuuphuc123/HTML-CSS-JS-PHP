@@ -1,4 +1,4 @@
- *****TỔNG HỢP TẤT CẢ CÁC THẺ THUỘC TÍNH, VALUE TRONG CSS THƯỜNG DÙNG*********
+ ******************TỔNG HỢP TẤT CẢ CÁC THẺ THUỘC TÍNH, VALUE TRONG CSS THƯỜNG DÙNG********************
  
  
 >>>>>> KIỂU FONT CHỮ <<<<<<<<
@@ -52,8 +52,38 @@
      
   5/ font: italic 30px " Time New Roman";
   ---> đây cũng là một cách khai báo kiểu font chữ và kích thước tổng hợp nên tham khảo
-  
-  
+
+  6/ Đổ bóng shadow cho text content:
+   - syntax: text-shadow <h-ofsset> <v-offset> <blur> <spread> <color>
+      # trong đó:
+        + h-ofsset: đổ nghiên theo chiều ngang theo trục xem
+        + v-ofsset: đổ theo chiều dọc theo chục y
+        + blur: độ mờ của bóng
+        + spread: đô lan bóng
+        + color: màu của bóng
+
+          vd:  text-shadow: 0 0 10px #000; // bỏ độ lan spread
+
+    7/ Giãn khoảng cách chữ trong một câu với letter-spacing
+      -> vd: huu phuc -> các chữ quá sát nhau
+      -> dùng letter-spacing: <index value>  để giãn chữ
+         vd:
+           letter-spacing: 4px:
+           -> kw: h u u  p h u c
+           -> nó sẽ giản ra tùy thẹo giá trị px.
+       
+    8/ làm mờ câu chữ với opacity: <index value>
+     - opacity: <index value>
+       + trong đó:
+         ++ index value là độ mờ: có thể 0.1,0.2.. hoặc phần trăm %..
+           vd: 0.1 0.2 0.3 0.4 ... tùy chỉnh ao cho vừa ý
+
+    9/ Thuộc tính căn chỉnh lề trái, lề phải căn đều văn bản 
+     # text-align: 
+        + justify   -> thuộc tính căn đều văn bản
+        + center
+        ....
+
 ===========================================================================================================================================
 >>>>>>> KIỂU THUỘC TÍNH HOVER>>>>>
  1/ Hover:
@@ -66,6 +96,9 @@
   1/ Display:
     + inline-blocK: xếp các thuộc tính nằng ngang hàng
     + none: ẩn đi thuộc tính cần hiển thị
+    + flex: tạo khối container theo mô hình flexbox, giúp linh hoạt sắp xếp
+    các thành phần bỗ cục bên trong thành một khối và có thể điều chình các 
+    vị trí sắp xếp(flex-direction(sắp xếp theo hàng ngang dọc), justifycontent, alight-items)....
 
 
 ===========================================================================================================================================
@@ -73,6 +106,22 @@
  - line-heigth: thuộc tính căn giữ nội dung chữ so với k/c padding 
  với box bao quanh chữ.
   
+===========================================================================================================================================
+ >>>>>>>>THUỘC TÍNH HIỂN THỊ HÌNH DẠNG CHUỘT KHI HOVER CURSOR<<<<<<<<<<<<<<<<<<<<
+  ## Khái niệm:
+   - Cursor là thuộc tính hiển thị chuột hình dáng này nọ khi hover chuột vao đối tượng
+   - tham khảo cÁC DẠNG hiển thị khác nhau:
+    + google: gõ css cursor properties
+    --> sẽ truy cập vào trang cursor của w3shool để tham khảo rất nhiều thuộ tính hiển thị chuột hình dạng
+    khi hover vào
+
+   - một vài hình dáng tiêu biểu:
+    + cell: dấu chữ thập trắng
+    + default: mạc định
+    + move: kiểu chữ thập có dấu mũi tên ở mõi gốc
+    + pointer: hình bàn tay người
+    ...... và còn rất nhiều
+     
 
 
 ===========================================================================================================================================
@@ -84,8 +133,66 @@
  2/ Text-transform: Uppercase;
   -> thuộc tính giúp viết in hoa bất kỳ ký tự nào  
 
+ 3/ line-height: tùy chỉnh chiều cao nhưng là chiều cao padding nghĩa là chiều cao 
+ đối tượng tưng đối cẫn xứng trên dưới trong padding
 
 
+4/ thuộc tính transform
+ - mục đích: sử dụng để thay đổi hình dạng, vị trí và kích thước của một phần tử HTML mà không làm thay đổi
+  luồng dữ liệu của trang web.
+  -->Có nhiều giá trị khác nhau cho thuộc tính "transform" như sau:
+    + translate(): di chuyển phần tử theo trục xác định
+      vd: translateX(-50px), translateY(), translateZ()
+
+    + rotate(): Xoay phần tử theo một góc xác định
+      vd:
+           rotate(45deg)
+
+     + scale(): Thay đổi kích thước của phần tử theo một tỷ lệ xác định
+        vd:
+           scale(1);
+
+     + skew(): Nghiêng phần tử theo một góc xác định
+         vd:  skew(30deg);
+
+     + matrix(): Thực hiện một phép biến đổi tùy chỉnh sử dụng ma trận 3x2.
+     --> ???
+
+  5/ overflow: hidden;   
+    vd:    
+    
+           <div class="member-item">
+                <p class="member-text">Name</p>
+                <img src="../Dự án Web_Band/assets/img/band_new.jpg" alt="" class="member-img">
+            </div>
+
+
+   -->  khi định vị trí bằng float: thì thẻ cha member-list cũng mất định tính bao các thẻ con-> nên dùng margin-bottom:
+    bao nhiêu cũng mất đi định vị đó.
+   -->  overflow: hidden làm khắc phục điều đó giúp thẻ member-list vẫn giữ đc khối bao các
+     thẻ con bên trng nên định marin không bị lỗi */
+   
+
+ 6/ thuộc tính căn chỉnh vị trí trong một khối(hình vuông, tam giác hình tròn)
+  ## align-items:
+   -> là thuộc tính sử dụng để căn chỉnh các phần tử con theo hướng dọc (trục y) 
+   -> cắc thuộc tính liên quan
+    + flex-start (đẩy lên đầu)
+    + flex-end (đẩy xuống đáy)
+    + center (căn giữa)
+    + baseline (theo đường cơ sở)
+    + và stretch (kéo căng)
+   ...
+
+  ## justify-content:
+   -> là thuộc tính sử dụng để căn chỉnh các phần tử con theo hướng ngang (trục x)  
+   -> Giá trị của justify-content bao gồm: 
+     + flex-start (đẩy lên đầu)
+     + flex-end (đẩy xuống đáy)
+     + center (căn giữa)
+     + space-between (chia đều giữa)
+     + space-around (chia đều xung quanh)
+     + và space-evenly (chia đều đều cả xung quanh).
 
 
 

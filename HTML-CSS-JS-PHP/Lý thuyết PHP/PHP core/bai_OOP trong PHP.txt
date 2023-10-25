@@ -1,0 +1,65 @@
+***************************TIỀM HIỂU VỀ LẬP TRÌNH OOP TRONG PHP***********************
+>>>> KHÁI NIỆM:
+ - 
+
+>>>>> CLASS
+ - member proerties: thuộc tính thành viên, tức khai báo các biến để mô tả các
+ object trong một class.
+ - Member methods: các phương thức hàm chức năng cho class dùng để mô tả một chức
+ năng cụ thể nào đó cho class đó.
+ - Contructor trong class:
+  + Khai báo contrcutor:
+     phải có dấu _ _contruct(<tham số>,<tham số>.)
+  - để tham chiếu biến trong PHP thay vì dùng dấu '.' ta dùng dấu '->'
+    vd:
+       this.name = name;
+       ==> trong PHP viết
+       this->$name = $name;
+
+   - Hàm hủy Deytructor
+
+>>>>> OBJECT  
+...??
+
+>>>> TRAIT
+ - khái niệm: 
+    + tương tự như khi báo class có thể kế thừa các tính năng của nó thông qua từ khóa use
+    + Giải quyết tính đa kế thừa trong PHP(nan ná implement interface)
+    + trait chỉ tạo ra đc một method nhưng không khởi tạo các object đc.
+    + trait bản chất là một class nhưng khai báo vói từ khóa trait
+    + trong một class có thể sử dụng nhiều trait sau dấu ,
+        vd:
+        class A{
+           use t1, t1;
+           // t1, t2 là hai trait khai báo trc đó.
+        }
+    ...??
+
+  ***Note***:
+     + ta có định nghĩa method và đc kế thừa, sử dụng cho nhiều class khác nhau
+     + 
+
+
+
+>>>> NAMESPACE:
+ - được sinh ra để giải quyết các xung đột về method, 
+ - được hiểu chính xác là package trong một project
+
+
+
+>>>>> Iterables
+ - ???
+ ## Arrays
+ ## Iterators
+  - Current(): trả về giá trị con trỏ đang chỉ đến
+  - key(): Trả về vị trí phần tử mà pointer con trỏ đang chỉ đến.
+  - next(): Dịch chuyển con trỏ qua phần tử kế tiếp
+  - rewind(): Trả con trỏ quay lại vj trí ban đầu tiên.
+  - valid(): kiểm tính hợp lệ: trả về giá trị true or false.
+
+  >> Iterators Methods:
+   - 
+
+   
+
+

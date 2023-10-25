@@ -1,0 +1,86 @@
+*******************VÒNG LẶP TRONG PHP******************
+
+>>>> FOR LOOP:
+ - Khái niệm: là một cấu trúc lặp được sử dụng để thực thi số lần lặp cụ thể.
+ - syntax:
+   for($<tên biến = values; <điều kiện dừng>; biểu thức tăng giảm){
+    // nội dung
+   }
+
+      ++ ví dụ: code
+       for($i=0;$i<10;$i++){
+        echo $i.'<br>';
+       }
+              
+  
+
+ >>>>Do-while Loop:
+  - Khái niệm: Không giống như vòng lặp for và while, trong đó kiểm tra điều kiện lặp ở đầu vòng lặp, vòng lặp
+  do-while trong C++ kiểm tra điều kiện lặp của nó ở dưới cùng của vòng lặp. Vòng lặp do-while tương tự như một 
+  vòng lặp while, ngoại trừ nó được đảm bảo để thực hiện ít nhất một lần. 
+
+  -Syntax:
+
+       $<tên biến khởi tạo> = value ban dầu loop;
+       do {
+            // Khối lệnh được thực thi
+            $<tên biến>++;
+        } while(condition); 
+
+
+        ++ ví dụ:
+
+               $k = 0;
+                do{
+                    echo $k . ' ';
+                    $k++;
+                }while($k<10);
+
+
+              
+
+>>>> WHile loop:
+  - Khái niệm: Vòng lặp while trong C++ được sử dụng để lặp một phần của chương trình một vài lần. Nếu số lần 
+  lặp không được xác định trước thì vòng lặp lặp while được khuyến khích sử dụng trong trường hợp này. 
+
+  -Syntax:
+       $<tên biến khởi tạo> = value ban dầu loop;
+        while(condition) {
+            // Khối lệnh được lặp lại cho đến khi condition = False;
+            $<tên biến>++;
+        }
+
+        ++ ví dụ:
+
+            $j = 0;
+            while($j<10){
+                echo $j . ' ';
+                $j++;
+            }
+         
+
+
+>>> FOREACH trong C++:
+ - Khái niệm:Trong C++, vòng lặp foreach được gọi là vòng lặp for each. Nó được sử dụng để lặp qua từng phần tử 
+ của một tập hợp (array, vector, list, set, map, ...) và thực hiện một hành động nào đó trên từng phần tử đó. 
+
+ -Syntax:
+
+      foreach($<tên biến> as $<tên biến đại diện foreach>)
+
+     ++ trong đó: 
+        > tên biến đại diện foreach: do người dùng đặt
+        > tên biến: tên mảng hay giá trị ban đầu được khởi tạo
+        -> thường là tên mảng hay List, arrayList...
+        ==> lưu ý foreach thường đc dùng để truy cập và xuất mảng
+
+     ++ ví dụ:
+
+            echo '<br/>';
+            echo '===============for earch==============<br>';
+            $arr = [1,2,3,4,5,6,7,8,9,10];
+            // dùng foreach xuất từng phần tử mảng thay vị phải in ra từng mảng một thủ công
+            foreach($arr as $item){
+                echo $item . ' ';
+            }
+          

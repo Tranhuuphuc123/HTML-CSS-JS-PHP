@@ -27,14 +27,34 @@ html{
 
 
 
-
+/* *********************************************************************************************************************** */
 /* ===================================HEADER(NAV)=============================================== */
+/* *********************************************************************************************************************** */
 /* phần thẻ header */
 #header{
    height: 46px;
    background-color: black;
+   /* thuộc tính position: fixed giúp giữ nguyên vị trí thanh nav header
+   dù scroll tới cúi trang */
+   position: fixed;
+   /* tùy chỉnh vị trí giúp tránh mất khối khi dùng posotion 
+   khi dùng position: fixed thì nó sẽ khuyết khối do các đinh nghĩa 
+   trc đó nên dùng left, right, top để định lại vj trí cố định 
+   cho thanh nav hỗ trợ position
+   */
+   left: 0;
+   right: 0;
+   top:0;
+
+   /*z-index độ ưu tiên thứ tự hiển thị giúp phần header luôn nỏi không bị đè bởi slider... */
+   z-index: 1;
 
 }
+/* tùy chỉnh thẻ nav inline-block để thẻ nav chỉ lấy đúng phần cần lấy không chiếm hết khối */
+#nav{
+    display: inline-block;
+}
+
 #nav, .subnav{
     /* giúp xóa các dấu chấm tròn của các ul>li */
     list-style-type: none;
@@ -64,6 +84,7 @@ html{
     padding: 0px 24px;
     /* bỏ gạch chân của nội dung text mục */
     text-decoration: none;
+    font-size: 15px;
 }
 
 /* tạo hiệu ứng hover khi nhấn vào các mục tên trên nav-> lưu ý dùng dâu > chỉ hiển thị ở li a của #nav thui */
@@ -111,6 +132,33 @@ html{
 
 }
 
+/* themify icons support web */
+#nav .edit-icon-down{
+    /* tùy chỉnh kích thước icon down */
+    font-size: 10px;
+}
+
+/* tùy chỉnh thẻ bao cho nút search */
+#header .search-btn{
+   float: right;
+   padding: 0 20px;
+}
+/* sữa icon themify icon search */
+#header .edit-icon-search{
+   color: white;
+   font-size: 20px;
+   /* căn chỉnh đều nội dung theo chiều cao  */
+   line-height: 46px;
+}
+/* tuyef chỉnh over: icon search */
+#header .search-btn:hover{
+    background-color: #f44336!important;
+    display: block;
+    /* thuộc tính hiển thị icon chuột khi hover vào đối tượng
+    ngoài all-scroll có thể tham khảo rất nhiều cái khác
+    */
+    cursor: all-scroll;
+}
 
 
 
@@ -119,27 +167,182 @@ html{
 
 
 
+/* *********************************************************************************************************************** */
 /* =====================================Slider(ảnh động chuyển )=========================================== */
+/* *********************************************************************************************************************** */
 /* tạo ảnh chuyển */
-#sider
+#slider
 {
-  min-height: 800px;
-  /* background-color: grey; */
+ /* xác định đây là vị trí cha với các thuộc tính cố định đc thiết lặp ở trên */
+  position: relative;
+  margin-top: 46px;
+  /* tùy chỉnh kích thước thẻ slider chiếm 50% chiều ngang của chính nó
+  để khi co giãn thu nhỏ phóng to nó tự điều chỉnh bằng 50% kích thước ban đầu
+  tạo độ tương thích
+  */
+  padding-top: 50%;
+  /*cách viết tắt: 
+   background: url('../img/band4.jpg') top center / cover no-repeat;
+    + trong đó:
+      ++ top center: giúp canh giữa
+      ++ cover: được sử dụng để chỉ định kích thước của hình nền (background) sao
+       cho nó bao phủ hoàn toàn phần nội dung của phần tử.
+      ++ no-repeat: tránh lặp lại ảnh
+  */
+
+  /* dẫn url ảnh */
+  background-image: url('../img/band3.jpg');
+  /* vị trí đc canh đều giữa */
+  background-position: top center;
+  /* tùy chỉnh độ phủ kích thước bao hết slider */
+  background-size: cover;
+  /* tránh lặp ảnh */
+  background-repeat: no-repeat;
+
 }
 
 
 
+
+/* tùy chỉnh content cha */
+#slider .text-content{
+  /* xác định position:absoblue để nó hiểu rằng thuộc tính vị trí
+  phụ thuộc vào thẻ cha position:relative mà cụ thể là
+  #slider của nó ở trên */
+  position: absolute;
+  /* thiết lập k/c dưới 47px */
+  top: 47px;
+  /* canh lề từ trái qua 50% chiều ngang của thẻ div = text-content */
+  /* left: 50%; */
+  /* chỉnh vị trí lùi lại theo trục x là chiều ngang width */
+  /* transform: translateX(-50%); */
+
+  /*==>  cách đơn gian hơn là chỉnh width: 100% hoặc right 0, left 0 */
+  /* right: 0px;
+  left: 0px; */
+  width: 100%;
+
+  /* cho nội dung cảnh đêu giữa-> lưu ý nội dung không phải thẻ div chưa nộindung */
+  text-align: center;
+  color: #f44336;
+  font-weight: bold;
+  /* đổ bóng cho chữa */
+  text-shadow: 0 0 10px #000;
+}
+/* tùy chỉnh content con */
+#slider .text-heading{
+   margin-bottom: 10px;
+   font-size: 60px;
+}
+
+/* tuy chỉnh mô tả */
+#slider .text-description{
+    margin-top: 10px;
+    font-size: 40px ;
+}
+
+
+
+
+/* *********************************************************************************************************************** */
 /* =================================Content(Nội dung chính-phần thân web)================================================= */
+/* *********************************************************************************************************************** */
 /* nội dung phần thân */
-#conten{
 
+
+
+/* ======== */
+/* >>>> About */
+#content{
+   
+}
+
+#content .content-section{
+  width: 800px;
+  /* Tự căn chỉnh phần hộp bao content đều hai bên trái phải
+  --> mặc nhiên nó sẽ ra giữa
+  */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* căn chỉnh đều nội dung  trong hộp div content */
+  padding:64px 0px ;
+}
+
+/* căn chỉnh vị trí và tùy chỉnh cho 2 mục heading và subheading của thẻ div content */
+#content .section-heading,
+#content .section-subheading{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    /* thuộc tính letter-spacng: giúp giản các chữ ra trong một dòng */
+    letter-spacing: 6px;
+  
+}
+
+#content .section-subheading{
+    font-size: 15px;
+    font-style: italic;
+    /* tạo độ mờ của chữ */
+    opacity: 0.6;
+}
+
+/* tùy chỉnh content chính của about */
+#content .about-content{
+    /* justify thuộc tính căn đều  văn bản */
+  text-align: justify;
+  font-size: 18px;
+  /* line-height căn chỉnh độ cao và rộng của chữ văn bản */
+  line-height: 1.5;
+}
+/* các member thành viên */
+#content .member-list{
+   margin-top: 48px;
+   margin-bottom: 10px;
+   /* khi định vị trí bằng float: thì thẻ cha member-list
+   cũng mất định tính bao các thẻ con-> nên dùng margin-bottom: bao nhiêu cũng mất đi định vj đó
+   overflow: hidden làm khắc phục điều đó giúp thẻ member-list vẫn giữ đc khối bao các thẻ con bên trng
+   nên định marin khộng bị lỗi */
+   overflow: hidden;
+}
+
+#content .member-item{
+    float: left;
+    /* sử dụng hàm chia để phân điều bố cục 3 ảnh cho đều với thẻ div cah content */
+    width: calc(100%/3);
+    /* căn giữ ảnh và text */
+    text-align: center;
+}
+
+#content .member-text{
+    font-size: 15px;
+
+}
+
+#content .member-img{
+    margin-top: 15px;
+    width: 154px;
+    /* bo ảnh gốc tròn */
+    border-radius: 4px;
 }
 
 
 
+/* ======== */
+/* Tour */
+
+
+
+/* *********************************************************************************************************************** */
 /* ======================================Footer(phần nội dung cuối trang)=========================================== */
+/* *********************************************************************************************************************** */
 /* thẻ tiêu đề cúi trang */
 #footer{
-
+  background-color: #ccc;
+  height: 250px;
 }
 

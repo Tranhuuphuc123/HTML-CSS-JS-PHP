@@ -1,0 +1,37 @@
+﻿-> không chạy đc lệnh: php artisan db_seed
+
+-> phát sinh lỗi
+ + 
+   Illuminate\Database\QueryException
+
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'users.PRIMARY' (Connection: mysql, SQL: insert into `users` (`id`, `name`, `email`, `password`, `updated_at`, `created_at`) values (1, Edwina Wisoky, dixie40@example.com, $2y$10$GQ1gurrFiDZYWcA2SPDqmOOBFa1kKkZl1mn4ViDPJyyXk/Nuq4.Oy, 2023-06-19 17:30:51, 2023-06-19 17:30:51))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:795
+    791▕         // If an exception occurs when attempting to run a query, we'll format the error
+    792▕         // message to include the bindings with SQL, which will make this exception a
+    793▕         // lot more helpful to the developer instead of just the database's errors.
+    794▕         catch (Exception $e) {
+  ➜ 795▕             throw new QueryException(
+    796▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    797▕             );
+    798▕         }
+    799▕     }
+
+      +18 vendor frames
+
+  19  database/seeders/UsersTableSeeder.php:21
+      Illuminate\Database\Eloquent\Model::__callStatic()
+      +8 vendor frames
+
+  28  database/seeders/DatabaseSeeder.php:16
+      Illuminate\Database\Seeder::call()
+
+
+
+
+===> hướng giải quyết
+1/ sữa lại các file chính tả như báo lỗi
+2/ chạy lệnh refresh:
+  gõ: 
+   php artisan migrate:refresh
+3/ tiến hành chạy lại lệnh: php artisan db:seed

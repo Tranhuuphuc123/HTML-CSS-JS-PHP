@@ -1,0 +1,11 @@
+********************THUỘC TÍNH CHỈ ĐỊNH THỨ TỰ HIỂN THỊ Z-INDEX*********************
+>>> khái niệm:
+ -  Thuộc tính "z-index" trong HTML được sử dụng để xác định thứ tự hiển thị của các phần tử HTML trên một trang web.
+ Nó quy định vị trí "sâu" hay "cao" hơn của một phần tử trong lớp xếp chồng (stacking context).
+
+ - Khi các phần tử HTML chồng lên nhau (overlapping), thuộc tính "z-index" cho phép bạn kiểm soát phần tử nào được 
+ hiển thị trước và phần tử nào được hiển thị sau đó. Giá trị của "z-index" là một số nguyên và có thể âm, và phần 
+ tử có giá trị "z-index" lớn hơn sẽ được hiển thị trước so với phần tử có giá trị nhỏ hơn.
+
+  vd: z-index: 1
+  -> có thể tăng đến khi đat yêu cầu

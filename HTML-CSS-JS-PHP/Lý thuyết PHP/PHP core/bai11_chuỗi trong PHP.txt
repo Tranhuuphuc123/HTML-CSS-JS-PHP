@@ -1,0 +1,32 @@
+*********************TỔNG QUAN VỀ CHUỖI STRING TRONG PHP**************
+>>> KHÁI NIỆM:
+ -  Trong các bài học trước về chuỗi ta đã có học qua String, là tập hợp một dãy các ký tự 
+ có cùng kiểu dữ liệu là String
+    vd:
+      
+         $chuoi = 'abcxyz..';
+         $chuoi = "abcxyz..";
+
+>>> Gáng chuỗi String cho hằng:
+ - Syntax:
+      define('<tên hằng>', '<giá trị chuỗi>');
+
+      vd:
+          define('HANG', 'abxxyz...')         ;
+          var_dump(HANG);
+          -> kẾT QUẢ KIỂU DỮ LIỆU LÀ STRING: CÓ VALUE LÀ abxxyz.....
+
+  ## NGUYÊN TẮC VỚI CHUỖI:
+   - nếu muốn thể hiện dấu ' trong chuỗi có dâu "" thì dùng dấu \
+   ==> tức trùng dấu thì dùng ký tự \ để xét các dấu trong chuỗi.
+   vd:
+      $chuoi ="abx \'ab\' ";
+      -> kw: abx 'ab'
+
+   - Nếu chuỗi được đặt trong dấu nháy kép mà có biến thì không cần dùng dot '.'
+   để nối chuỗi.
+
+   -=========================================================================================================
+   *************CÁC HÀM XỬ LÝ CHUỖI****************
+               
+

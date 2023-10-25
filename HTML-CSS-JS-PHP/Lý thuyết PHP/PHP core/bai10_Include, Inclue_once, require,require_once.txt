@@ -1,0 +1,49 @@
+********************LỆNH INCLUDE - INCLUDE_ONCE - REQUIRE - REQUIRE_ONCE*****************
+>>>>> kHÁI NIỆM:
+## INCLUDE:
+ - import file khác, nếu import lỗi => các câu lệnh bến dưới vẫn chạy bình thường
+
+   vd:
+
+                <?php
+                // kiểu include
+                include "Kieu_DULIEU.php"
+                /* cũng có thể viết
+                - include('Kieu_DULIEU.php')
+                        hoặc
+                - include 'Kieu_DULIEU.php'      
+                */
+
+              ==> lúc này nó sẽ imporrt tất cả method biến.. từ file Kieu_DULIEU.php nay
+              vào file trên và thực thi bình thường như file đc import dậy/  
+  
+?>
+## INCLUDE_ONCE:
+ - import các file khác, chỉ import 1 lần
+ ==> nếu import lỗi các câu bên dưới vẫn chạy
+
+      vd:
+              <?php
+                // kiểu include
+                include_once "Kieu_DULIEU.php"
+                /* cũng có thể viết
+                - include('Kieu_DULIEU.php')
+                        hoặc
+                - include 'Kieu_DULIEU.php'      
+                */
+
+                ===> cũng tg tự như include-> có điều nó chỉ gọi đc 1 lần thui.
+
+## REQUIRE:
+ - import file khác
+ ==> nếu import lỗi các lệnh bên dưới sẽ dừng lại
+
+## REQUIRE_ONCE:
+ - import file khác, chỉ import 1 lần
+ ==> nếu import lỗi các câu lệnh bên dưới sẽ Dừng
+
+
+ ===> tóm lại đây là các cách import file vào trong một file khác: lib, class nào đó
+ --> để sử dụng đc tính năng của class đó
+ ===> tiềm hiểu hiệu năng khi thực hành nhiều hơn.
+ 

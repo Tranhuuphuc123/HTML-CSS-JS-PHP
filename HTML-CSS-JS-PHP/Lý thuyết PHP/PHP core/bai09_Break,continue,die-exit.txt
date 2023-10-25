@@ -1,0 +1,54 @@
+******************TIỀM HIỂU VỀ CÁC ĐIỀU KIỆN DỪNG*********************
+>>> BREAK VÀ CONTINUE:
+ - trong các ngôn ngữ khác nó đã quá quen thuộc
+# với break: khi vòng lặp, hay điều kiện gặp break nó sẽ kết thúc và khoogn thực thi nữa
+# với continue: khi đk hay vòng lặp gặp continue nó sẽ bỏ qua đk hay giá trị đó
+
+==> vd:
+                        for(int i=0;i<10;i++){
+                            if(i=5){
+                                break;
+                            }
+                            echo $i . ' ';
+                        }
+                        --> kết quá: 0 1 2 3 4 
+
+
+                vd2:
+                    
+                        for(int i=0;i<10;i++){
+                            if(i=5){
+                                continue
+                            }
+                            echo $i . ' ';
+                        }
+                        --> kết quá: 0 1 2 3 4  6 7 8 9
+                        --> nó sẽ bỏ qua 5.
+
+
+                        
+
+>>> DIE AND EXIT: Dừng hẳn
+- ví dụ có nhiều đoạn chương trình hay vòng lặp nếu như gặp die hoặc exit thì nó sẽ dừng hẳn và kết thúc chương trình
+
+--> vd:
+                
+                    for(int i=0;i<10;i++){
+                            if(i=5){
+                                break;
+                            }
+                            echo $i . ' ';
+                        }
+                      
+                        exit();              // hoặc dùng die();
+                    
+                        for(int i=0;i<10;i++){
+                            if(i=5){
+                                continue
+                            }
+                            echo $i . ' ';
+                        }
+                        --> kết quá: 0 1 2 3 4 
+                        --> nghĩa là sau khi thực hiện vòng lặp đầu tiên, gặp die()/exit()
+                        thì nó sẽ dừng chương trình và in ra kết quả vòng lặp trên, kết thúc
+                        luôn chương trình từ đó.

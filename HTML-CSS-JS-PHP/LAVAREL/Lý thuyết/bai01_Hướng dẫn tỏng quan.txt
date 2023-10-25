@@ -1,0 +1,220 @@
+***************************TỔNG QUAN VỀ MỘT DỰ ÁN WEB VỚI PHP VÀ FRAMEWORK**************************
+>>>> set up lavarel  
+
+ ## Bước 01  : cài đặt PHP: 
+   - cài PHP 8.2.7:
+
+     link rel: " https://windows.php.net/download#php-8.2/ " chọn bản Zip 
+
+
+
+
+ ## Bước 02:  Cài composer:
+    - cài composer:
+      link rel: "https://getcomposer.org/download/"
+
+
+
+
+
+ ## Bước 03: cài viturbox:
+   - cài viturbox: 
+     linke rel: "https://www.virtualbox.org/wiki/Downloads/" chọn windown host
+
+
+ ## Bước 04: vargant thiết lập vargant trên virtualbox
+   - kHái niệm:
+    + Vagrant là một công cụ quản lý môi trường phát triển dựa trên máy ảo (virtual machine) và các công cụ cấu hình tự động.
+     Nó cho phép bạn tạo và quản lý các môi trường phát triển đồng nhất trên nhiều nền tảng khác nhau.
+
+    + Với Vagrant, bạn có thể xây dựng và cấu hình môi trường phát triển của mình bằng cách sử dụng mã cấu hình gọi là
+     Vagrantfile. Vagrantfile mô tả cách tạo và cấu hình máy ảo, bao gồm việc chọn hệ điều hành, cài đặt phần mềm và 
+     cấu hình mạng.
+
+    ===> Với Vagrant, bạn có thể nhanh chóng tạo và chia sẻ môi trường phát triển, đảm bảo rằng toàn bộ đội phát triển 
+    của bạn sử dụng cùng một môi trường và giúp giảm sự khác biệt và xung đột giữa các môi trường phát triển khác nhau. 
+
+   - tiến hành thiết lặp vargant:
+    + download vargant: 
+      link rel: "https://developer.hashicorp.com/vagrant/downloads?product_intent=vagrant" 
+    + tiền hành setup  
+
+
+
+
+ ## Bước 05: tải và thiết lập homestead
+  >> Khái niệm:
+   --> Homestead là một môi trường phát triển địa phương (local development environment) được xây dựng trên nền tảng 
+   Vagrant và VirtualBox. Nó được sử dụng để thiết lập một môi trường phát triển đồng nhất và cung cấp một cách dễ 
+   dàng để triển khai ứng dụng Laravel.
+
+   --> Khi bạn sử dụng Homestead, bạn có thể cấu hình các tệp cấu hình của máy ảo thông qua một tệp cấu hình YAML. 
+   Bằng cách chỉ định các thư mục chia sẻ, tên miền cục bộ và các thiết lập khác, bạn có thể tạo ra một môi trường 
+   phát triển đồng nhất cho ứng dụng Laravel của mình trên mọi máy tính.
+
+   --> Tóm lại, Homestead giúp bạn dễ dàng thiết lập một môi trường phát triển đồng nhất và tiện lợi cho ứng dụng
+    Laravel bằng cách sử dụng Vagrant và VirtualBox. Nó cung cấp một máy ảo đã được cấu hình sẵn với các công cụ
+     và phần mềm cần thiết để phát triển ứng dụng Laravel một cách hiệu quả.
+
+
+
+  - vào link rel: "https://laravel.com/"
+  - vào mục search: homestead và truy cập vào trang đó
+  - kéo xuống tới mục Installing Homestead: copy link : "git clone https://github.com/laravel/homestead.git ~/Homestead"
+  - mở git pash và tiền hành thiết lập homstead như sau:
+    + chọn ổ đĩa/tạo folder trên gitpash:
+      -> gõ mkdir Homestead.
+
+    + gõ 'git clone https://github.com/laravel/homestead.git ~/Homestead'
+      -> để clone source github homestead về 
+      -> lưu ý với ~homestead  -> nó sẽ lưu ở:C:\Users\Tran Huu Phuc\Homestead mặc định
+      vì vậy nếu mún lưu ở ổ đĩa theo ý mún thì bò ~Homestead. là ok!
+       -->vd:  https://github.com/laravel/homestead.git D:\homestead.
+
+    + tiếp tục gõ: git checkout release
+     -> để chuyển đến nhánh branch release.
+
+    + tiến hành khởi tạo homstead
+     -> trong folder Homestead trên git pash  gõ 
+
+        ./init.sh
+
+        -> tiền trình khởi tạo Homestead sẽ thông báo thành công ngay sau đó
+
+     + Cấu hình cho Homestead:
+      -> tiến hình gõ trên git pash: start .   -> mở folder chứa các tệp tin của Homestead
+      -> tiến hành mở file: Homestead.yaml
+      -> tạo project hay folder dự án -> lưu dg dẫn ở mục folder/map trong Homestead.yaml
+
+
+
+
+      
+ ## Bước 06: Chạy máy ảo với vargant:
+  - truy cập vào đúng folder Homestead:
+     -> có thể gõ cho chính xác ở trên git pash: cd ~/Homestead
+
+  - tạo khóa key để tg tác máy ảo và lib lavarel
+    mở homstead bằng cmd
+    gõ tạo key trên git pash
+      ssh-keygen -t rsa -C '<tên đại diện gmail giả>'
+      
+         
+  - khởi động vargant:
+      -> gõ vagrant up   -> tiến hành thiết lập máy ảo unbtu chạy vagrant
+
+  - kiêm tra trạng thái :
+   -> gõ trên git pash: vargant status    
+
+
+ ## Bước 07: Khởi động và tắt vagrant bằng lênh
+  - Khởi động vargant:
+    -> trên git pash:
+       gõ:  vagrant ssh
+
+  - tắt dừng vagrant:
+    -> gõ it pash
+      gõ: vagrant halt     
+  
+
+## Bước 08: add lavarel Project vào máy ảo
+ ->- mỏ mục Homestead.yaml lên trong phần Sites dưới folder: tạo <tên project>.com
+    vd: trên là Demo1 -> Demo.com
+
+ --> thiết lập đg dẫn lưu url tí
+    ở mục folder and Sites: ở chỗ map toàn--->(xem file homestead.yaml )
+
+      vd:
+
+                          folders:
+                              - map: G:\PRATICE_CODE\lavarel
+                                to: /home/vagrant/code
+
+                          sites:
+                              - map: Demo1.com
+                                to: /home/vagrant/code/Demo1/public
+ --> chạy lại vagrant up  
+   gõ: vagrant reload --provision   
+
+
+
+
+
+
+## Bước 09: sau khi thiết lập tiến hành tạo project lavarel:
+ --> bật lại vagrant:
+
+     gõ   : vagrant ssh
+
+ --> xong truy cập:
+    
+    gõ:  cd  /home/vagrant/code/Demo1 (đg dẫn nãy thiết lập ở map-Sites) -> enter 
+
+ --> tiếp tục tiến hành tạo trình soạn thảo    
+
+   gõ:  composer create-project laravel/<name project lavarel> .
+      + trong đó:
+        ++ <name project lavarel>: tên tự đặt
+
+
+ 
+
+
+
+
+
+
+### Bước 10: Tiến hành tạo windown Htdoc
+ --> sites:
+    - map: Demo1.com
+      to: /home/vagrant/code/Demo1/public
+      
+      => trên là đg thiết lập Url project của mình
+      => vấn đề là khi truy cập Demo1.com nó gần như không tồn tại, hoặc nó tự định 
+      tuyến san sang trang web #.
+      => nên ta cần thiết lặp lại htdoc windown để truy cập đc vào Demo1.com như ta 
+      thiết lập
+
+ --> tiến hành thiết lặp lại đg url:
+     
+       sites:
+        - map: dev-Demo1.com
+          to: /home/vagrant/code/Demo1/public
+          => thêm dev-Demo1.com
+
+ --> mở gitpash (lưu ý lun mở sẵn ở homestead)
+      
+ --> chạy lại vagrant up  
+
+       gõ: vagrant reload --provision   
+           
+
+ -> tiến hành thiết lập htdoc windown:
+  +  truy cập đến địa chỉ: C:\Windows\System32\drivers\etc ->mở file Host->ở mục chọn all files
+  -> chọn lấy file host để open trên notepad 
+
+  + vào lại homestead.yaml -> ở chỗ ip-> copy địa chỉ ip trong mục homestead.yaml
+  + cũng ở mục đó copy url ở mục map của Sites trong homestead.yaml
+
+  + dán nó vào host mở ở notepad
+            vd:
+              127.0.0.1   dev-Demo1.com
+
+
+
+
+
+ #### BƯớc 11: tiến hành chạy trình duyệt project trên lavarel:
+  -> truy cập google/ nhập dev-Demo1:8000
+  ==> sẽ dẫn đến trang chủ lavarel project mà mình tạo 
+  -> trên git tiếp tục gõ: 
+  
+       php artisan key:gen
+
+      --> lúc này  INFO  Application key set successfully. Thông báo thành công kết nối
+
+
+          
+ 
+
+

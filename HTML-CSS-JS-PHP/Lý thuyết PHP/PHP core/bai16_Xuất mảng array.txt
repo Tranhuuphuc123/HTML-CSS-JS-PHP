@@ -1,0 +1,21 @@
+****************************XUẤT MẢNG ARRAY******************
+>>>> XUẤT MẢNG           
+  # XUẤT TỪNG PHẦN TỬ MẢNG:
+     VD:
+         $arr = [1,2,'a']
+
+         echo $arr[0];
+         echo $arr[1];
+         echo $arr[2];
+
+  # XUẤT HẾT MẢNG:
+    - xuất hết mảng ra với Print_r($<tên mảng>);
+
+      vd:  
+                $arr = [1,2,'a']
+
+                Print_r($arr);
+                -> kw: in ra hết mảng.
+
+
+   # DÙNG VÒNG LẶP FOR               

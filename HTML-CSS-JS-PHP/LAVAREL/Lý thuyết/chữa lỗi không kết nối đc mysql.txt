@@ -1,0 +1,8 @@
+﻿*******SỮA LỖI NOT CONNECT MYSQL********
+1/ MỞ CÔNG CHUYỂN ĐỔI TỪ 33060-3306
+2/ Thiết lập lại : DB_PORT=3306
+3/ dùng lệnh xóa cache các lênh php artisan migrate chạy trc đó
+  gõ:  php artisan config:clear
+
+
+4/ tiến hành chạy lạ bình thường

@@ -1,0 +1,10 @@
+*****************CÁC HÀM TOÁN SỐ HỌC TRONG PHP*******************
+>>>>>>>>TOÁN TỬ LŨY THỪA
+ - SYNTAX:
+   + thuộc tính: **
+   vd:
+      $a = 2;
+      $b = 3;
+      -> tính lũy thữa 2^3
+      $luythua = $a ** $b;
+      -> kw: 2^3

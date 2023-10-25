@@ -1,0 +1,65 @@
+***************TIỀM HIỂU VỀ FUNCTION TRONG PHPH*********************
+>>> KHÁI NIỆM:
+ - Hàm là một chương trình con thực hiện một khối cong việc được lặp đi lặp lại
+ nhiều lần trong khi chương trình đang chạy
+ - hàm dùng tách một khối công việc cụ thể để chương trình đỡ phức tạp
+
+  ## Lợi ích của hàm:
+   + Dễ bảo trì, quản LÝ
+   + có thể tái sử dụng code.
+
+ ## Syntax khái báo:
+  
+       function <tên hàm>(tham số..){
+           // nôi dụng hàm
+       }
+
+       + trong đó:
+         ++ tên hàm : do người dùng đặt
+         ++ tham số: danh sách các biến cách nhau bởi dấu phẩy ','
+
+
+  ## Syntax gọi hàm:
+
+    --> để gọi và sử dung lại hàm đó:
+      <tên hàm>(đối số);
+
+         vd:
+                        
+                        <?php
+
+                        // tạo function
+                        function total($a, $b){
+                            return $a+$b;
+                        }
+
+
+                        // gọi hàm và thực thi
+                        echo 'tong: ' . total(4,5) . '<br>';
+
+
+                        $bien1 = 4;
+                        $bien2 = 5;
+
+                        echo 'tong '. $bien1 . '+' . $bien2 . ' = ' . total($bien1,$bien2);
+
+                        ?>
+
+
+
+
+
+
+  ## FUNCTION_EXISTS: KIÊM TRA XEM MỘT FUNCTION CÓ ĐƯỢC ĐỊNH NGHĨA CHƯA.
+   - syntax:
+
+       function_exists('<tên hàm muốn kiểm tra>');
+
+          vd:
+                    // tiến hành kiểm tra xem hàm Sum có được định nghĩa chưa nếu chưa thì định nghĩa cho nó
+                    if(function_exists('Sum')){
+                        function Sum($a, $b){
+                            return $a+$b;
+                        }
+                    }
+             

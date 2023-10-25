@@ -69,3 +69,10 @@ h3, h4 {
 .class-10 ~ p {
     color: limegreen;
 }
+
+
+
+.demo{
+    color: rgb(255, 0, 21);
+}
+

@@ -1,0 +1,71 @@
+*********************GIẢI THUẬT ĐỆ QUY TRONG PHP********************
+>>>> Khái niệm:
+ - Đệ quy trong PHP là quá trình trong đó một phương thức gọi lại chính nó một cách liên tiếp.
+ sử dụng đệ quy giúp code chặt chẽ hơn sẽ khó dễ hiểu hơn.
+ - Khi dùng đệ quy luôn cần  có một điểm neo:
+  + điểm neo là điều kiện dừng cho đệ quy
+ - Bản chất đệ quy + điểm neo => hoạt động tượng tự mọt vòng lặp, lặp đến khi nào điều kiện 
+ dừng đạt thì kết thúc và xuất ra kết qủa 
+
+  ## bài tập thực hành:
+
+       // bài tập để quy vòng lặp: in ra từ n -> 0
+
+            function printvalue($a){
+                // điểm neo để kết thúc đẹ quy
+                if($a == 0){
+                    return $a;
+                }
+                echo $a . ' ';
+                printvalue($a-1);
+            }
+
+            printvalue(5);
+            echo '<br>';
+
+            ==> truyên a = 5, 
+            ==> xét 5 # 1 -> in ra 5-> đệ quy printvalue(5-1)-> xét tiếp printvalue()
+            ==> tiếp tục 4 # 1 -> in ra 5  4 -> xét  printvalue(4-1)-> xét tiếp printvalue(3)
+            ==> tiếp tục 3 # 1 -> in ra 5 4 3 -> xét printvalue(3-1)-> xét printvalue(2) 
+            ==> tiếp tục 2 # 1 -> in ra 5 4 3 2 -> xét printvalue(2-1)-> xét printvalue(1)
+            ==> tiếp tục 1==1->trả về 1 -> in ra 5 4 3 2 1
+
+     ****==> đây chính là đệ quy**********
+
+
+
+
+     // bài tập đệ quy tính tổng
+       
+            // bài tập đệ quy tính tổng
+            function Sum($n){
+                // điểm neo
+                if($n==1){
+                    return 1;
+                }
+                return $n + Sum($n-1);
+            }
+
+
+            $temp = Sum(5);
+
+            echo 'tong = ' . $temp;
+
+            ?>
+
+            == giait thích tương tự ở trên:
+            => 5 -> xét 5#1 -> in ra 5 + Sum(4)
+            => 4 -> xét 4#1 -> in ra 5 + 4 +Sum(3)
+            => 3 -> xét 3#1 -> in ra 5 + 4 + 3 + Sum(2)
+            => 2 -> xét 2#1 -> in ra 5 + 4 +3 + 2 + Sum(1)
+            => 1 -> xet 1 == 1 -> in ra 5 + 4 + 3 + 2 + 1 =15
+            vậy tổng là 15
+
+
+       ===> đó là 2 ví dụ về hoạt động của đẹ quy
+       ===> đệ quy cần có điểm neo(điều kiện kết thúc)
+       ===> đệ quy hoạt động như một vòng lặp
+       ===> nó dùng chính nó để gọi lại và thực thi cho đến hết điều kiện điểm neo thì cuất kết quả.     
+
+                
+

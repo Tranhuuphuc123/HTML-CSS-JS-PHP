@@ -3,6 +3,7 @@ var a =10;
 var hack = 'alo 123 tao là đại ca';
 // hàm alert xuất thông báo bằng hộp thoại hiển thị trên web
 alert(hack);
+document.write(hack);
 
 /* hàm chạy thông báo console chạy thông báo console trên web bấm f12 mở tab console để text*/
             //.log();

@@ -1,0 +1,40 @@
+***********************HẰNG SỐ TRONG PHP**********************
+>>>> KHÁI NIỆM:
+ - Hằng số trong PHP là tên hoặc mã định danh không thể thay đổi trong khi thực thi 
+ chương trình.
+
+## CÁC LOẠI ĐỊNH NGHĨA HẰNG SỐ TRONG PHP:
+ - Từ khóa define()
+ - Từ khóa const.
+
+## Cách khai báo:
+ - Syntax:
+   + define('<tên hằng>','giá trị') 
+   + const <tên hằng> = <giá trị>;
+  
+   vd:
+        <!-- tiềm hiểu về hằng số trong php -->
+        <?php
+        // khai báo hằng với define
+        define('HUU_PHUC', 10);
+        echo 'hằng số define: '.HUU_PHUC.'<br>';
+
+        // khai báo với const
+        const HU = 20;
+        echo 'hằng số const: '.HU;
+
+        ?>
+
+
+## QUY TẮC ĐẶT TÊN HẰNG:
+ - Chứa các chữ cái, số, dấu gạch dưới
+ - Nên bắt đầu bằng chữ cái và dấu gạch dưới
+ - Phân biệt hoa thường
+ - Nên đặt theo quy tắc underscore nhưng viết hoa
+   vd:
+       TEN_BIEN
+       WEB_HOST_ROOT
+       APTECH_SERVLET
+       ....     
+
+

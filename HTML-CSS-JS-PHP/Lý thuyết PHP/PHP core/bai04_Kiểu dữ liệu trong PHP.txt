@@ -1,0 +1,106 @@
+******************TIỀM HIỂU CÁC KIỂU DỮ LIỆU CƠ BẢN TRONG PHP***************
+>>>>KHÁI NIỆM:
+  ## KIỂU INT:
+   - syntax: trong PHP không cần kèm types khi khai báo biến
+      $<tên biến> = values
+   - var_dump($<tên biến>): kiểm tra biến có kiểu dữ liệu gì
+   - ép kiểu sang int:
+     + (int)$<tên biến>;
+      vd:
+       
+            $a ='10';
+            $epkieu = (int)$a;
+
+   - kiểm tra xem nó có phải là kiểu nguyên int hay không?
+     + dùng thuộc tính is_int:
+       @a =10;
+       echo is_int($a);
+       ->1 là true đúng
+       -> 0 là false sai       
+
+
+
+
+********************************************************************
+  ## KIỂU FLOAT/DOUBLE
+   - Syntax khai báo:
+     $<tên biến> = 10.2... values có dấu ',' - số thập phân
+
+   - ép kiểu:
+     + dùng thuộc tính: (float)$<tên biến>
+            vd:
+              @a = 10;
+              $epkieu = (float)$a;
+              -> kw: 10.0
+
+   - kiểm tra kiểu số thực ?
+    + thuộc tính: is_float($<tên biến>);
+              vd:
+                $ a 10.5;
+                echo is_float($a);
+                -> 1 là đúng
+                -> 0 là false        
+
+
+********************************************************************  
+  ## KIỂU STRING
+   - Syntax cú pháp:
+    $<tên biến> = 'values';
+
+   - ép kiểu String:
+    + thuộc tính: (string)$<tên biên> ;
+      vd:
+         $a = 10;
+         $epkieu = (string)$a;
+         -> kw: '10'
+
+    - Kiểm tra kiểu chuỗi?
+     + thuộc tính: is_string($<tên biến>);
+       vd:
+         $a = 'abc';
+         echo is_string($a);
+         --> 1 là đúng
+         --> 0 là false     
+
+
+********************************************************************  
+  ## KIỂU BOOLEAN
+   - syntax:
+     khai báo:
+          $<tên biến> = true/false;
+
+    - ép kiểu:
+      + (bool)$<tên biến> / or (boolean)$<tên biến>
+        vd:
+             // ép kiểu bool
+                $c = 'true';
+                $epkieu_bool = (bool)$c;
+                echo $epkieu_bool . ' đây là kiểu bool đích thị <br>';
+
+    - kiểm tra xem nó cóa phải kiểu boolean hay không?
+     + dùng is_bool($<tên biến>)    ;
+       vd:
+           $a = true;
+           echo is_bool($a);
+           -> nếu 1 là true còn 0 là không phải kiểu bool
+
+
+  ********************************************************************               
+  ## KIỂU MẢNG:
+   - Syntax khai báo:
+       $<tên biến> = [values1, vlaues 2...];
+
+    - ép kiểu mảng: is_array($<tên biến>);
+    - Kiểm tra kiểu mảng: is_array($<tên biến>);  
+
+
+
+  ********************************************************************
+  ## KIỂU NULL
+   -> nếu khai báo $<tên biến> = null;
+   thì mặc nhiên 
+    + ép sang int - > false
+    + ép sáng string -> null
+    + ép sáng boolean -> false
+   
+   -> ép kiểu: is_null($<tên biến>);

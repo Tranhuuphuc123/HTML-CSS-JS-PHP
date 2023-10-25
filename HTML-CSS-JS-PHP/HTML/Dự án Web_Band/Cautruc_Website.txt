@@ -22,6 +22,10 @@
     <!-- IV/ Thành phần Slider -> một cái khung chuyển ảnh auto qua lại, tạo quảng cáo..  -->
 
     <!--V/ Content-> nội dung chính của website -->
+      1/ About: giứi thiệu 
+      2/ Tour: các nội dung ô mà click vào sẽ ra trang cụ thể chi tiết
+      3/ Contact: liên hệ
+      4/ Image: kho ảnh minh họa, bộ sưu tập.
 
     <!--VI/ footer chân trang của website-->
     <footer></footer>

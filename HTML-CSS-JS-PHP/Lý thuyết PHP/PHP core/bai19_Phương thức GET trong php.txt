@@ -1,0 +1,7 @@
+***********************TIỀM HIỂU VỀ PHƯƠNG THỨC GET TRONG PHP************************
+>>>>KHÁI NIỆM:
+ - GET là phương thức sử dụng để truyền dữ liệu từ một form hoặc từ một URL đến server.
+ server sẽ nhận đường dẫn đó và phân tích trả về kết quả cho client.
+ - Tất cả các dữ liệu mà client gửi lên bằng phương thức GET đều được lưu trong một biến 
+ toàn cục mà PHP tự tạo ra đó là biến $_GET, biến này là kiểu mảng kết hợp lưu trữ danh
+ sách dữ liệu từ client gửi lên theo quy luật  key - value.

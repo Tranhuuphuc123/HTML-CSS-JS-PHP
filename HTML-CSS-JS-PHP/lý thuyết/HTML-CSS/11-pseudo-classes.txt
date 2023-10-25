@@ -17,18 +17,23 @@
 
 ******TẤT CACD CÁC LỚP GIẢ PSEUDO-CLASSES TRONG CSS**
    pseudo-slasses      vd                               mô tả
+   :root                ...                      Nó đóng vai trò như mọt lớp giả hay phần tử giả cũng đúng luôn
+                                                Nó thường được sử dụng để định nghĩa các biến CSS, còn được gọi 
+                                                là "CSS Custom Properties," và chúng cho phép bạn lưu trữ các giá 
+                                                trị mà bạn muốn sử dụng lại trong mã CSS của bạn.
+
    :active            a:active                  định dạng cho lk đang nhấn
-   :checked        input:checked        định dạng cho thẻ kiểm tra input
-   :empty            p:empty                định dạng cho thẻ p không có phần tử con
-   :first-child       P:first-child           thẻ con đầu tiên 
-   :last-child        p:last-child            thẻ con cúi cùng
-   :first-line         a:first-line              dòng đầu tiên của văn bản
-   :first-letter       a:first-letter            ký tự đầu tiên của văn bản
-   :hover             a:hover                 định dạng cho liên kết khi rê chuột qua thẻ a
-   :focus             a:focus                 thẻ khi được thao tác
-   :link                a:link                     định dạng cho liên kết chưa được nhấn
+   :checked        input:checked                định dạng cho thẻ kiểm tra input
+   :empty            p:empty                    định dạng cho thẻ p không có phần tử con
+   :first-child       P:first-child             thẻ con đầu tiên 
+   :last-child        p:last-child              thẻ con cúi cùng
+   :first-line         a:first-line             dòng đầu tiên của văn bản
+   :first-letter       a:first-letter           ký tự đầu tiên của văn bản
+   :hover             a:hover                   định dạng cho liên kết khi rê chuột qua thẻ a
+   :focus             a:focus                   thẻ khi được thao tác
+   :link                a:link                  định dạng cho liên kết chưa được nhấn
    :visited            a:visited                định dạng cho các liên kết đã nhấn
-   :actived           a:actived               định dạng cho các liên kết đang nhấn
+   :actived           a:actived                 định dạng cho các liên kết đang nhấn
 
    ................... con rất nhiều có thể tham khảo khi đụng tới.  
 

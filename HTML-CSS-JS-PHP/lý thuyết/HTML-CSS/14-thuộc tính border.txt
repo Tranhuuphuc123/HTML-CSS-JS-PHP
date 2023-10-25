@@ -12,6 +12,7 @@
            + dotted: nét đứt
            ... tự tìm hiểu thêm khi đụng tới cần sài.
     border-color:value            // tùy chình màu sắc
+    border-radius:value; -> thuộc tính bo đường viền(cạnh tròn..) cho box.
     ...........
 
 

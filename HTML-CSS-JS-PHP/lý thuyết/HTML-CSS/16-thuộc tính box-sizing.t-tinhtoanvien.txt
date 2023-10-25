@@ -17,8 +17,24 @@ note: trong box-sizing: thì phân padding và border không quá lớn để d�
 
 
 
+>>>>các thuộc tính liên quan<<<
+ - box-sizing:
+  + inherit: 
+   -> Khi sử dụng giá trị "inherit," phần tử sẽ kế thừa giá trị của thuộc tính box-sizing từ phần tử cha của nó.
+
+  + content-box:
+   -> (giá trị mặc định): Khi sử dụng giá trị này, kích thước của phần tử sẽ tính toán dựa trên nội dung bên trong 
+   phần tử, và không bao gồm padding và border. Điều này có nghĩa rằng kích thước bề ngoài của phần tử sẽ lớn hơn 
+   nội dung thực tế bên trong nó.
+
+  + border-box: 
+   -> Khi sử dụng giá trị này, kích thước của phần tử sẽ tính toán bao gồm cả nội dung, padding và border. Điều này 
+   đồng nghĩa với việc kích thước bề ngoài của phần tử sẽ bao gồm tất cả các phần, từ nội dung đến border, và không 
+   phải lo lắng về việc phải điều chỉnh kích thước để làm cho nó vừa vặn với nội dung.
 
 
+
+=================================================
 >>code ví du:
 
 
