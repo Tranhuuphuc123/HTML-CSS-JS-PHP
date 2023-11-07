@@ -68,7 +68,7 @@ html{
    position: relative;
 
 }
-/* bieeyr thị dấu > để hiểu là chỉ trực tiếp thẻ li a nào của id #nv mới chịu màu trắng thui */
+/* biểu thị dấu > để hiểu là chỉ trực tiếp thẻ li a nào của id #nav mới chịu màu trắng thui */
 #nav > li > a{
     /* tạo màu chữ cho các tên mục ở thẻ a */
     color: #fff;    

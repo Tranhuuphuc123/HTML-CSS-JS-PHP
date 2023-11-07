@@ -1,0 +1,168 @@
+********************TIỀM HIỂU VỀ BEEM TRONG CSS***************
+>>>KHÁI NIỆM<<
+    ==> cách đặt class toast__<tên class>: đây là cách đặt theo Beem(xem lại kiến thức về Beem trong html css)
+    ==> hiểu đơn giản thì Beem trong css BEM (Block Element Modifier):
+    -> là một phương pháp đặt tên lớp CSS (class names) để quản lý và tổ chức mã CSS một cách có cấu trúc và dễ bảo trì. 
+    -> Phương pháp này giúp tạo ra một hệ thống lớp CSS có cấu trúc và dễ đọc, giúp làm cho việc phát triển và bảo trì mã 
+    CSS trở nên dễ dàng hơn. 
+    -> Cấu trúc tên lớp BEM gồm ba phần chính:
+    + syntax ex:
+           <div class="toast"
+              <div class="toast_a"></div>
+              <div class="toast_b"></div>
+           </div>
+
+        ++ Block (B): Đây là phần tử gốc hoặc "block" của một thành phần trên trang web. Block thường là phần tử gốc có thể 
+    tồn tại độc lập hoặc chứa các phần tử khác. Block có tên duy nhất để chỉ định mục đích hoặc loại thành phần.
+        ex: theo vd trên thì Block(B) chính là toast
+
+        ++ Element (E): Đây là các phần tử bên trong "block" và có mối quan hệ chặt chẽ với block đó. Element được kết nối 
+        với block bằng hai dấu gạch dưới (__) và có tên riêng biệt. Element chỉ có ý nghĩa khi nó được sử dụng trong ngữ cảnh 
+        của block mẹ của nó.
+            ex: __a, __b chính là đại diện Element(E)
+
+        ++ Modifier (M): Modifier là các biến thể hoặc trạng thái của "block" hoặc "element". Chúng cho phép bạn thay đổi giao 
+        diện hoặc hành vi của block hoặc element. Modifier được kết nối với block hoặc element bằng dấu gạch ngang (--) và có tên 
+        riêng biệt.  
+          ex:
+             toast--color, toast--size
+
+
+
+
+===========================
+>>ví dụ thực tiễn<<
+ - Html:
+            ...
+            <div id="toast">
+                <!--Mẫu toast thông báo Success - Warn - Info - Error-->
+                <div class="toast  toast-Success">
+                    <div class="toast__icon">
+                        <!--mục này bạn search trên trang font Awave icon tìm tên và chèn vào html -> lib link trên kia rồi-->
+                        <i class="fa-regular fa-circle-check" style="color: #0fab0d;"></i>
+                    </div>
+                    <div class="toast__body">
+                        <h3 class="toast__title">Success</h3>
+                        <p class="toast__msg">kết nối thành công Successfully - thành công kết nối</p>
+                    </div>
+                    <div class="toast__close">
+                        <!--chèn icon close(dấu x tắt thông báo)-->
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div>
+            ....
+        
+- css:
+      /******************************************************************************/
+            /* ======= Toast message ======== */
+            /*Mục chỉnh css Beem của mục thông báo các mục thong báo thành công, thất bại*/
+            #toast{
+            /* fixed giúp cho toast không bị trôi đi khi scroll tới tận cuối trang */
+            position: fixed;
+            top: 32px;
+            right: 32px;
+            }
+
+            .toast{
+                display:flex;
+                align-items: center;
+                background-color: #fff;
+                border-radius: 2px;
+                padding: 20px 0;
+                border-left: 4px solid;
+                /*Hiệu ứng đổ bóng*/
+                box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+                /*tạo hiệu ứng chuyển mềm mại-> xem lại transition ở trên*/
+                transition: all linear 0.3s;
+                margin-bottom: 10px;
+                min-width: 400px;
+                max-width: 450px;
+
+                /* dùng transform thay đổi hình dạng của thẻ toast -> mục đích
+                tạo hiệu ứng xuất hiện của hộp thoại khi nhấn button thì hôp thoại 
+                toast xuất hiện từ phái bên phải vào phía bên trái một cách mượt mà
+                tạo hiệu ứng chuyển nhẹ nhàng
+                + tranlateX: di chuyển theo trục X với mục đích dịch chuyển toast từ từ 
+                phía phải qua phía trái
+                + calc(100% + 32px) -> là 100% là nó sẽ lấy đúng kích thước gốc của hộp thoại toast
+                + 32px là vì cài #toast cách phải 32px nên + thêm cái này để đảm bảo khi ẩn toast 
+                đi thì nó ẩn đúng bằng kích thước gốc của hộp thoại toast bao gôm cả lề phải mà
+                thẻ bao có id #toast đã khai báo right; 32px, calc là hàm toán học giúp việc tranlateX
+                có thể + thêm px*/
+                /* transform: translateX(calc(100% + 32px)); */
+
+
+                /*để xử lý hiệu ứng chuyển tôi đã tạo một animation là một @keyFrame có tên
+                slideInLeft , sliderRight bên dưới với hiệu chỉnh tranforms như đã giải thích
+                đầy đủ hiệu ứng công dụng của nó ở mục giải thích cho tranforms
+                => ta lôi cái animation @keyFrame vào như sau
+                => slideInLeft ease .8s:display:  
+                + slideInLeft: cái keyFrame thiết kế bên dưới
+                + "ease": Hàm "ease" (là hàm mặc định khi không có hàm nào được chỉ định) tạo ra một hiệu ứng 
+                chuyển đổi mềm mại bắt đầu chậm và kết thúc chậm. Nó làm cho sự thay đổi bắt đầu chậm, sau đó 
+                nhanh chóng và kết thúc chậm, tạo ra hiệu ứng mượt mà.
+                +.8s là sự thay đổi chuyển động trong khoản 8s
+                
+                => fadeOut linear 2s:
+                + fadOut là cai kayframe tạo hiệu ứng mờ viết bên dưới
+                + linear: Hàm "linear" làm cho sự thay đổi trong giá trị thuộc tính diễn ra một cách đều đặn 
+                và liên tục theo thời gian. Điều này có nghĩa rằng tốc độ thay đổi không thay đổi trong suốt 
+                quá trình chuyển đổi.
+                + 2s là thời gian sẽ mờ đi cái hộp thoại toast sau khi nó xuất hiện */
+                animation: slideInLeft ease .8s, fadeOut linear 2s;
+
+            }  
+
+            /*xét màu cho viền border ở mỗi mục khác  border-left khác nhau 
+            =>cái tên kiểu toast--<tên class> chính là Modifier (M) của Beem css: Modifier là các biến thể hoặc trạng thái của "block" 
+            hoặc "element". Chúng cho phép bạn thay đổi giao diện hoặc hành vi của block hoặc element. Modifier được kết nối với block
+            hoặc element bằng dấu gạch ngang (--) và có tên riêng biệt.  */
+            .toast-Success{
+            border-color: #0fab0d;  
+            }
+            .toast-Info{
+            border-color:#12afa5 ;  
+            }
+            .toast-Warn{
+            border-color: #dae817;  
+            }
+            .toast-Error{
+            border-color: #f4372a; 
+            }
+
+
+            .toast__icon{
+            font-size: 24px;
+            }
+
+            .toast__icon, 
+            .toast__close{
+                padding: 0 16px;
+            }
+            .toast__body{
+            /*mục đích là dù cái message trong hộp thông báo có mội dung ngắn
+            thì kích thước chiều ngang của hộ thoại toast thông báo cũng không bị 
+            thu ngắn lại làm xấu đi hộp thoại*/
+            flex-grow: 1;
+            }
+            .toast__title{
+                font-size: 18px;
+                font-weight: 600;
+                color: #333;
+            }
+            .toast__msg{
+            font-size: 15px;
+            color: #444;
+            margin-top: 4px;
+            /* line-heigth xác định k/c giữa các chữ trong đoạn msg*/
+            line-height: 1.6;
+            }
+
+            .toast__close{
+                font-size: 20px;
+                color: rgba(0, 0, 0, 0.3);
+                /*hiệu ứng rê chuột vào hiện ra hình bàn tay*/
+                cursor: pointer;
+            }
+            

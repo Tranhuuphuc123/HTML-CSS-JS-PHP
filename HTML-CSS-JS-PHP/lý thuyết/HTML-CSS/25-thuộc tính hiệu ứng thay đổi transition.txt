@@ -1,0 +1,79 @@
+************************THUỘC TÍNH TRANSITION*****************************
+>>>>>KHÁI NIỆM<<<<
+ =>  thuộc tính "transition" được sử dụng để xác định cách chuyển đổi (transition) hoặc làm mịn (animate) 
+ các thuộc tính CSS khi có sự thay đổi trong trạng thái hoặc hoạt động của phần tử. 
+ => Nó cho phép bạn tạo hiệu ứng chuyển đổi mềm mại và thay đổi dần giữa các giá trị thuộc tính CSS khi 
+ có tương tác từ người dùng hoặc sự thay đổi trong nội dung.
+ ---> Để dễ hiểu thì hãy tưởng tượng bạn có một nút trên trang web của mình và bạn muốn thay đổi màu nền của nút khi 
+ người dùng di chuyển con trỏ chuột qua nó. Bạn muốn thay đổi màu nền một cách mềm mại, chứ không phải một cách
+  đột ngột. Để làm điều này, bạn có thể sử dụng thuộc tính "transition."
+
+    ex:
+            <button class="btn">Hover me</button>\
+
+            // css cho btn
+            .btn {
+                background-color: #3498db;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+            }
+
+            .btn:hover {
+                background-color: #e74c3c;
+            }
+        
+
+
+        ***giải thích code***
+        => Trong ví dụ này, chúng ta đã sử dụng thuộc tính "transition" để tạo hiệu ứng chuyển đổi mềm mại cho màu nền của nút.
+        => Khi người dùng di chuyển con trỏ chuột qua nút, màu nền sẽ thay đổi từ màu xanh (màu nền ban đầu) sang màu đỏ (màu nền
+         khi hover) trong vòng 0.2 giây với hiệu ứng mềm mại (theo hàm "ease").
+
+        => Thay vì thay đổi màu nền một cách đột ngột, hiệu ứng chuyển đổi giúp màu nền thay đổi dần từ màu này sang màu khác khi
+         con trỏ chuột nằm trên nút, tạo ra trải nghiệm trực quan và mềm mại hơn cho người dùng.
+
+
+ =============================================================================
+ >>>>>THUỘC TÍNH TRANSITION<<<<<<<
+  - Thuộc tính "transition" bao gồm ba phần chính:
+  - Syntax demo:
+         ex:
+                transition: opacity 0.2s ease;
+
+    + trong đó:             
+       ++ opacity:  Thuộc tính CSS mà bạn muốn thay đổi hoặc chuyển đổi (ví dụ: "opacity" trong ví dụ 
+       của bạn là tạo hiệu ứng mờ dần). 
+
+       ++ 0.2s: Thời gian chuyển đổi, được xác định bằng giây hoặc mili-giây (ví dụ: "0.2s" trong ví dụ của bạn).
+     
+       ++ hàm ease: Hàm dựng sẵn (timing function) để xác định cách giá trị thay đổi theo thời gian. Hàm "ease" trong 
+       ví dụ của bạn là một trong các hàm thông dụng để làm cho chuyển đổi mềm . 
+       ==> Ý nghĩa của các hàm này 
+            #1/ "ease": Hàm "ease" (là hàm mặc định khi không có hàm nào được chỉ định) tạo ra một hiệu ứng 
+            chuyển đổi mềm mại bắt đầu chậm và kết thúc chậm. Nó làm cho sự thay đổi bắt đầu chậm, sau đó 
+            nhanh chóng và kết thúc chậm, tạo ra hiệu ứng mượt mà.
+
+            #2/ "linear," :  Hàm "linear" làm cho sự thay đổi trong giá trị thuộc tính diễn ra một cách đều đặn 
+            và liên tục theo thời gian. Điều này có nghĩa rằng tốc độ thay đổi không thay đổi trong suốt quá trình
+             chuyển đổi.
+
+            #3/ "ease-in,": Hàm "ease-in" làm cho sự thay đổi bắt đầu chậm và tăng tốc theo thời gian. Nó làm cho 
+            sự thay đổi khởi đầu mềm mại và sau đó tăng tốc, tạo ra hiệu ứng tăng tốc.
+
+            #4/ "ease-out," : Hàm "ease-out" làm cho sự thay đổi bắt đầu nhanh chóng và giảm tốc theo thời gian. 
+            Nó làm cho sự thay đổi khởi đầu nhanh chóng và sau đó giảm tốc, tạo ra hiệu ứng giảm tốc.
+
+            #5/ "ease-in-out," : Hàm "ease-in-out" kết hợp cả "ease-in" và "ease-out." Nó làm cho sự thay đổi bắt đầu chậm, 
+            sau đó tăng tốc, và kết thúc chậm, tạo ra hiệu ứng tăng tốc và giảm tốc.
+
+        ......và nhiều hàm tùy chỉnh khác(tham khảo thêm google và trải nghiệm thực tế)......
+
+
+
+
+
+
+

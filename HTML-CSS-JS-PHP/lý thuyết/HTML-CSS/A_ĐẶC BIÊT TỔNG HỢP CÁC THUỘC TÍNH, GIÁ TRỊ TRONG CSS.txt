@@ -53,16 +53,34 @@
   5/ font: italic 30px " Time New Roman";
   ---> đây cũng là một cách khai báo kiểu font chữ và kích thước tổng hợp nên tham khảo
 
-  6/ Đổ bóng shadow cho text content:
-   - syntax: text-shadow <h-ofsset> <v-offset> <blur> <spread> <color>
+  6/ Đổ bóng box-shadow cho text content:
+   - Box-shadown là một thuộc tính dùng để đổ bóng cho một phần tử HTML, giúp tạo hiệu ứng sâu, nổi hoặc 
+   bóng bên ngoài của phần tử đó. 
+   - syntax: box-shadow: h-shadow v-shadow blur spread color inset;
       # trong đó:
-        + h-ofsset: đổ nghiên theo chiều ngang theo trục xem
-        + v-ofsset: đổ theo chiều dọc theo chục y
+        + h-shadow: đổ nghiên theo chiều ngang theo trục xem
+        + v-shadow : đổ theo chiều dọc theo chục y
         + blur: độ mờ của bóng
-        + spread: đô lan bóng
+        + spread: đô lan bóng (Tùy chọn )hay còn gọi là Độ mở rộng hoặc thu hẹp của bóng. Giá trị dương
+         sẽ làm mở rộng bóng, trong khi giá trị âm sẽ làm thu hẹp bóng.
         + color: màu của bóng
+        + inset: (tùy chọn): Nếu có, nó biểu thị rằng bóng nên nằm bên trong phần tử thay vì bên ngoài. 
+        Nếu bạn sử dụng "inset", bóng sẽ nằm trong phần tử.
 
-          vd:  text-shadow: 0 0 10px #000; // bỏ độ lan spread
+        <==> (tùy chọn:  nghĩa lag cóa hay không cũng đc)
+
+          vd:  
+              text-shadow: 0 0 10px #000; // bỏ độ lan spread
+
+             .box {
+                width: 100px;
+                height: 100px;
+                background-color: #3498db;
+                box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+              }
+
+
+
 
     7/ Giãn khoảng cách chữ trong một câu với letter-spacing
       -> vd: huu phuc -> các chữ quá sát nhau
@@ -109,7 +127,7 @@
 ===========================================================================================================================================
  >>>>>>>>THUỘC TÍNH HIỂN THỊ HÌNH DẠNG CHUỘT KHI HOVER CURSOR<<<<<<<<<<<<<<<<<<<<
   ## Khái niệm:
-   - Cursor là thuộc tính hiển thị chuột hình dáng này nọ khi hover chuột vao đối tượng
+   - Cursor là thuộc tính hiển thị chuột hình dáng này nó khi hover chuột vao đối tượng
    - tham khảo cÁC DẠNG hiển thị khác nhau:
     + google: gõ css cursor properties
     --> sẽ truy cập vào trang cursor của w3shool để tham khảo rất nhiều thuộ tính hiển thị chuột hình dạng
@@ -117,10 +135,19 @@
 
    - một vài hình dáng tiêu biểu:
     + cell: dấu chữ thập trắng
-    + default: mạc định
+    + default: mặc định
     + move: kiểu chữ thập có dấu mũi tên ở mõi gốc
     + pointer: hình bàn tay người
-    ...... và còn rất nhiều
+    + crosshair: Con trỏ có hình chữ "+" và thường được sử dụng để chỉ ra tính năng chọn vùng hoặc trỏ chuột để vẽ.
+    + text: Con trỏ có hình I dọc, thường được sử dụng để chỉ rằng người dùng có thể nhập văn bản.
+    + not-allowed: Con trỏ có dấu chéo, thường được sử dụng để chỉ rằng một hành động hoặc tương tác không được phép.
+    ...... và còn rất nhiều....
+      
+       ex:
+         .btn {
+              cursor: pointer;
+          }
+
      
 
 
@@ -133,8 +160,11 @@
  2/ Text-transform: Uppercase;
   -> thuộc tính giúp viết in hoa bất kỳ ký tự nào  
 
- 3/ line-height: tùy chỉnh chiều cao nhưng là chiều cao padding nghĩa là chiều cao 
- đối tượng tưng đối cẫn xứng trên dưới trong padding
+ 3/ line-height: 
+  -> Thuộc tính line-height trong CSS được sử dụng để xác định khoảng cách giữa các dòng văn bản 
+ trong một phần tử. 
+  -> Nó xác định chiều cao của mỗi dòng văn bản, được đo từ dưới đáy của dòng trên đến đỉnh 
+ của dòng dưới.
 
 
 4/ thuộc tính transform
@@ -147,16 +177,17 @@
     + rotate(): Xoay phần tử theo một góc xác định
       vd:
            rotate(45deg)
+           rotare(360deg) // quay đều 360 độ vòng tròn lun
 
-     + scale(): Thay đổi kích thước của phần tử theo một tỷ lệ xác định
-        vd:
-           scale(1);
+    + scale(): Thay đổi kích thước của phần tử theo một tỷ lệ xác định
+      vd:
+          scale(1);
 
-     + skew(): Nghiêng phần tử theo một góc xác định
-         vd:  skew(30deg);
+    + skew(): Nghiêng phần tử theo một góc xác định
+        vd:  skew(30deg);
 
-     + matrix(): Thực hiện một phép biến đổi tùy chỉnh sử dụng ma trận 3x2.
-     --> ???
+    + matrix(): Thực hiện một phép biến đổi tùy chỉnh sử dụng ma trận 3x2.
+    --> ???
 
   5/ overflow: hidden;   
     vd:    
