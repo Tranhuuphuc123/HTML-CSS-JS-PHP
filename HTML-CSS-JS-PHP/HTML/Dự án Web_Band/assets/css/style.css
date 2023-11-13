@@ -25,6 +25,11 @@ html{
     font-family: 'Times New Roman', Times, serif;
 }
 
+/**********Các mục thiết lập dùng chung có thể tái sử dụng nhiều lần**********************/
+.text-white{
+    /*Lưu ý !important thứ tự ưu tiên trong css thì nó là ưu tiên hàng đầu*/
+    color: #fff !important;
+}
 
 
 /* *********************************************************************************************************************** */
@@ -320,20 +325,64 @@ html{
 
 #content .member-text{
     font-size: 15px;
-
 }
 
 #content .member-img{
     margin-top: 15px;
     width: 154px;
     /* bo ảnh gốc tròn */
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 
 
-/* ======== */
-/* Tour */
+/* ============================================ */
+/* Mục TourDates -> các ljch trình và nơi diễn ra sự kiện âm nhạc */
+.tour-section{
+    background-color: #000;
+}
+.tour-section  ul  li{
+   list-style-type: none;
+}
+
+.ticket-list{
+    background: #fff;
+    margin-top: 40px;
+    padding: 10px;
+}
+.ticket-list .sold-out{
+   
+    width: 50;
+    height: 80;
+    background-color: #f44336;
+    color: #fff;
+    padding: 6px 8px;
+    margin-left: 10px;
+}
+.ticket-list .quanlity{
+    background-color: #000;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 100%;
+    font-weight: bold;
+    float: right;
+}
+
+.ticket-list>li{
+   padding: 11px 16px;
+   font-size: 16px;
+   border-bottom: solid 1px rgb(197, 188, 188);
+   color: #757575;
+}
+
+
+/*các địa điểm du lịch*/
+
+
+
+
+
+
 
 
 

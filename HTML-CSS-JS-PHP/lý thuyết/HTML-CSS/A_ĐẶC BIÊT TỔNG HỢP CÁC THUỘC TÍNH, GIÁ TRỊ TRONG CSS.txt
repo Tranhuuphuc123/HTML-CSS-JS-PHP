@@ -48,6 +48,21 @@
       
   4/ "font-weight" thiết lập độ dày, mỏng của chữ
      - Thuộc tính "font-weight" thiết lập độ dày mỏng của chữ nó có thể nhận các giá trị như: normal, bold, bolder, lighter
+      + normal: là bình thường 
+      + bold: in đậm
+      + lighter: nghĩa là làm cho font chữ trở nên nhẹ hơn so với giá trị font-weight mặc định của nó.
+         vd: 
+           -> Nếu font-weight mặc định là normal (400), thì font-weight: lighter; sẽ làm cho font chữ trở nên 
+         nhẹ hơn, thường là với giá trị khoảng 100 đến 300, tùy thuộc vào cách mà trình duyệt xử lý nó.
+
+      + bolder: nó ngc lại với lighter: nó sẽ làm cho thuộc tính text đó đậm hơn
+         vd:
+           -> cho text: 400 thì nó sẽ lên 500 -700..
+
+
+
+
+
              
      
   5/ font: italic 30px " Time New Roman";
@@ -225,6 +240,17 @@
      + space-around (chia đều xung quanh)
      + và space-evenly (chia đều đều cả xung quanh).
 
+
+7/ Float: được sử dụng để chỉ định cách một phần tử nên được đặt vị trí trong phần tử chứa của nó. 
+Thuộc tính float có thể nhận một trong những giá trị sau:
+ + left
+ + right
+ + none
+ ==> Khi một phần tử được đặt vị trí bằng float, nó sẽ được đưa ra khỏi luồng bình thường của tài liệu và 
+ dịch chuyển sang một bên (trái hoặc phải) cho đến khi tiếp xúc với phần tử chứa hoặc một phần tử khác được 
+ đặt vị trí
+ ==> ex:
+   float: left;
 
 
 
