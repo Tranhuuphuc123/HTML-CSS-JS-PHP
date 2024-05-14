@@ -1,0 +1,155 @@
+*********************KIẾN THỨC SƠ KHAI VỀ FLEXBOX****************
+I/KHÁI NIỆM
+ - flexbox là một cách phân chia bố cục trong web, nó là một tiêu chuẩn code có phép lập trình viên
+ sắp xếp bố cục website hiệu quả và tư duy hơn
+ - Flexbox là một phương pháp layout trong CSS được thiết kế để tạo ra các giao diện linh hoạt và dễ dàng
+  điều chỉnh trên các trình duyệt web. Nó cho phép bạn sắp xếp và căn chỉnh các phần tử trong một container 
+  một cách dễ dàng mà không cần phải dùng đến các kỹ thuật float hay positioning phức tạp.
+
+ - Flexbox hoạt động dựa trên việc xác định một container và các phần tử con bên trong container đó. Bằng cách
+  áp dụng các thuộc tính CSS vào container và/hoặc các phần tử con, bạn có thể kiểm soát cách các phần tử con 
+  được xếp chồng lên nhau, căn chỉnh, và phân phối trong không gian.
+
+
+  *****NOTE******
+   => có thể vào trang này để ôn luyện và hiểu rõ hơn thuộc tính cùa flex-box
+   => truy cập: "https://codepen.io/enxaneta/full/adLPwv/"
+    or truy cập từ khóa Flexbox playground/codePen
+
+
+****************************************************************************
+>>>>>>>>>>>>>>>CÁC THÀNH PHẦN CHÍNH CỦA FLEXBOX<<<<<<<<<<<<
+ 1/ flex container: 
+  -> là thành phần thẻ chứa
+
+ 2/ flex item:
+  -> là thành phần con của flex container
+
+ 3/ hai trục chính trong cấu trúc flexbox là trục main axis là trục chính, truc cross a
+ là trục chéo 
+  -> hai chục này luôn phải vuông gốc với nhau như trục hoành x: main axis
+  và trục tung y là cross axis
+  -> hai điểm đầu và điểm cuối cross start và main end
+    + main end là điểm kết thúc của trục main axis
+    + cross start là điểm bắt đẩu của trục cross axis
+    ...
+
+  ==> nói tóm lại thì ta xem trục main axis là trục x trục hoành nằm ngang
+  còn trục cross axis là trục tung trục y nằm dọc nó luôn phải vuông góc với nhau
+
+  ==> trong mỗi khối flex item thì lại có kích  thước các trục tương ứng là main size và cross size 
+
+***** Note ****
+ ===> lưu ý là các trục co thể dảo chổ vị trí 
+  vd: như main axis đang nằm ngang hoàn toàn có thể đảo vị trí cho nằm dọc
+  tương dương cho cross a
+
+
+
+*****************************************************************************
+
+>>>>>>>>>>>>>>CÁC THUỘC TÍNH CỦA FLEXBOX<<<<<<<<<<<<<<<
+ + display: Để báo cho trình duyệt biết rằng một phần tử là một container flex, bạn sử dụng thuộc tính display 
+ với giá trị là flex hoặc inline-flex.
+  ++ flex: Khi bạn sử dụng display: flex, container sẽ được hiển thị như một block-level element, nghĩa là nó sẽ chiếm hết chiều 
+  rộng của dòng và bắt đầu từ dòng mới (new line) nếu không có các thuộc tính khác được áp dụng. Các phần tử con trong container 
+  sẽ tự động căn chỉnh theo chiều chính (main axis) theo hướng được xác định bởi thuộc tính flex-direction.
+  ++ inline-flex: Trái ngược với display: flex, khi bạn sử dụng display: inline-flex, container sẽ được hiển thị như một inline-level 
+  element, nghĩa là nó sẽ chiếm chỉ một phần của dòng và không bắt đầu từ dòng mới. Điều này cho phép bạn đặt container flex 
+  trong một dòng văn bản hoặc giữa các phần tử inline khác mà không gây ra sự phá vỡ cấu trúc của dòng. [???]
+
+
++ flex-wrap: Xác định liệu các phần tử con có nên xuống dòng khi không còn không gian trong container hay không.
+    # flex-wrap: nowrap:các phần tử con sẽ được tự động co giãn hoặc co lại để phù hợp với container mà không cần phải xuống dòng
+    # flex-wrap: wrap các phần tử con sẽ tự động xuống dòng khi không đủ không gian và tiếp tục xuống dòng dưới dạng các hàng mới.
+    # flex-wrap: wrap-reverse: giúp đảo chiều của flex-wrap (vd: thay vì hết hàn xuống dòng sẽ nhảy xuống dưới
+    thì ta có thể thiết lập nó nó xuống dòng sẽ nhảy lên trên)
+
+  + flex-direction: Xác định hướng của các phần tử con trong container, có thể là hàng ngang (row) hoặc dọc (column).
+    ++ row: hàng ngang
+    ++ column: theo hàng dọc
+    ++ row-reverse: đảo chiều theo chiều ngang
+    ++ column-reverse: đảo chiểu theo chiều dọc
+
+  +flex-basis: được sử dụng để xác định kích thước ban đầu của một phần tử theo chiều rộng (hoặc chiều cao)
+  -> có thẻ dùng để phân chia tỷ lệ k.c margin của các item [???]
+
+ + justify-content: Căn chỉnh các phần tử con theo trục chính main axis (trục x) của container (theo chiều ngang khi flex-direction 
+ là row và theo chiều dọc khi flex-direction là column).
+  ----> nghĩa là chức năng này dùng chính trong việc cân chỉnh k/c khoảng trống giữa các item cho đều nahau
+   ++ flex-start
+   ++ flex-end
+   ++ center
+   ++ space-between: 
+    -> không gian trống sẽ được phân bố đều giữa các phần tử con, nhưng không có không gian trống ở hai đầu của container.
+   ++ space-around" 
+    -> không gian trống sẽ được phân bố đều xung quanh các phần tử con, bao gồm cả ở đầu và cuối container.
+   ++ space-evenly: tg tự các aroun tuy nhiên các k/c đều nhau chứ không phải như around là lướn ở giữ nhỏ
+ ở hai bên
+
+ + justify-self: căn chỉnh các thuộc tính cho phần tử con -> lưu ý nếu đã dung flex-content cho thuộc 
+ tính cha thì mặc nhiên nó sẽ ảnh hưởng lên thèn con nên không càn dùng đến flex-self
+
+ + align-items: Căn chỉnh các phần tử con theo trục phụ cross axis (trục y) của container (ngược lại với trục chính).
+   ++ flex-start
+   ++ flex-end
+   ++ center
+   ++ space-between: 
+    -> không gian trống sẽ được phân bố đều giữa các phần tử con, nhưng không có không gian trống ở hai đầu của container.
+   ++ space-around" 
+    -> không gian trống sẽ được phân bố đều xung quanh các phần tử con, bao gồm cả ở đầu và cuối container.
+   ++ space-evenly: tg tự các aroun tuy nhiên các k/c đều nhau chứ không phải như around là lướn ở giữ nhỏ
+ ở hai bên
+
+
+ + align-self: Căn chỉnh một phần tử con cụ thể trong container, ghi đè lên align-items.
+
+ + flex-grow[???]: giúp thay đổi đc kích thước của mainsize, được sử dụng để xác định tỷ lệ mà một phần tử con trong 
+ container flex tức là kích thước của mỗi một flex-item, co thể chia theo trọng số tỉ lệ 
+  -> Khi một container flex có không gian trống sau khi các phần tử con đã được căn chỉnh theo kích thước ban đầu 
+  của chúng (được xác định bởi flex-basis hoặc width), flex-grow quyết định tỷ lệ mà mỗi phần tử con sẽ mở rộng để 
+  điền vào không gian trống đó.
+  -> Giá trị của flex-grow là một số không âm, xác định tỷ lệ tăng kích thước của phần tử so với các phần tử con khác. 
+  Một giá trị càng lớn, phần tử càng mở rộng nhiều hơn.
+
+ + flex-shrink[???]: là môt tính thu nhỏ lại nó ngc lại với tính năng của flex-grow là mở rông lên 
+
+ + order: thuộc tính vị trị sẽ xuất hiện có chủ đich, nghĩa là thay vì các flex-item sẽ
+ xuất hiện theo các vị trị flex-start hay flex-end thì ta muốn chỉ định một flex-item xuất hiện trc thì dùng
+ order.
+   -> ex:
+        .sidebar-one {
+            flex: 1;
+            /*dùng order để tùy chỉnh vị trí theo mình muốn không theo mặc định ban đàu*/
+            order: 3;
+        }
+
+        .sidebar-two {
+            flex: 1;
+            /*dùng order để tùy chỉnh vị trí theo mình muốn không theo mặc định ban đàu*/
+            order: 1;
+        }
+
+        .main-column {
+            flex: 3;
+            /*dùng order để tùy chỉnh vị trí theo mình muốn không theo mặc định ban đàu*/
+            order: 2;
+        }
+
+     ----> 3 css đại diện thứ tự cho ba đoạn văn băn sẽ xuất hiện tuần tự là sidebar-one - maincolumn - sidebar-two
+     với order ta có thể để vị trí xuất hiện như ta mong muốn là sidebar-two - maincolumn - sidebar-one
+
+
+****NOte*****
+=> khi viết là flex: nghĩa là cách viết tắt của 3 ông flex-basis, flex-grow, flex-shrink
+=> phần này cần tiềm hiểu kỹ hơn - truy cạp từ khóa flex-css|MDN-MOzilla để có nhưng thong tin cụ thể hơn
+...
+
+
+==> Với Flexbox, bạn có thể tạo ra các layout linh hoạt và phản ứng mà không cần sử dụng nhiều code CSS phức tạp. Nó là một 
+công cụ mạnh mẽ trong việc xây dựng các trang web hiện đại và thân thiện với người dùng.
+
+
+
+
+

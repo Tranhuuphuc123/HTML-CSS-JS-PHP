@@ -1,0 +1,47 @@
+*******************TÙY CHỈNH HIỆU ỨNG MÀU SẮC VỚI RBG, RBGA, HSLA************************
+>>>>>>>HSLA<<<<<<
+ => HSLA là viết tắt của Hue, Saturation, Lightness, Alpha. 
+ => Nó là một hệ màu trong CSS để định nghĩa màu sắc, tương tự như HSL, 
+ nhưng bổ sung thêm một thành phần Alpha để xác định độ trong suốt của màu.
+
+ => Dưới đây là ý nghĩa của từng thành phần trong HSLA:
+  1. Hue(Màu sắc): 
+   -> Xác định màu sắc của màu, được đo bằng độ trong không gian màu(tham khảo trên mạng). 
+   -> Giá trị từ 0 đến 360 tương ứng với các màu trong một vòng tròn màu 360 độ:
+    + 0: xuất điểm màu đỏ
+    + 30: vùng màu cam
+    + 60: vùng màu vàng
+    + 90: vùng xanh lợ (kiểu pha trộn giữa vàng và xanh)
+    + 120: xanh lá cây
+    + 150: vùng xanh lợ nước biển
+    + 180: vùng xanh nước biển
+    + 210: vùng chuyển tiếp xanh nước biển lên canh da trời
+    + 240: đến xanh lam 
+    + 270: vùng xanh làm chuyển dần sáng tím
+    + 300: vùng màu tím
+    + 330: vùng màu hồng
+    ....
+    nên tham khảo bảng chọn màu theo dạng đĩa vòng tròn 360 độ màu...
+    vùng này áp dụng cho các hệ  thống rbg, rbga
+
+  2. Saturation (Độ bão hòa): 
+   -> Đo lường mức độ bão hòa của màu sắc. 
+   -> Giá trị từ 0% đến 100%, trong đó 0% là màu xám và 100% là màu sắc đầy
+    đủ.
+
+  3. Lightness (Độ sáng): 
+   -> Xác định độ sáng của màu sắc. 
+   -> Giá trị từ 0% đến 100%, trong đó 0% là màu đen và 100% là màu trắng.
+
+  4. Alpha (Độ trong suốt): 
+   -> Xác định độ trong suốt của màu sắc. 
+   -> Là một giá trị từ 0 đến 1, trong đó 0 tương đương với hoàn toàn trong suốt
+    (không có màu sắc), và 1 tương đương với màu sắc đầy đủ. 
+
+    ++ex:
+           hsla(120, 100%, 50%, 0.5), 
+       Trong đó:
+        + 120: màu là xanh lá v
+        + Với độ bão hòa 100% và độ sáng đều là 50%, 
+        +  độ trong suốt 0.5
+        --->  tức là một màu xanh lá rất sáng và một chút trong suốt.

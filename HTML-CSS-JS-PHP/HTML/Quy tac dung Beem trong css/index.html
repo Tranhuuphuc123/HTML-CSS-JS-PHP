@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Quy tac dung Beem trong css/style.css">
+    <title>luyện tập quy tắc beem trong css</title>
+</head>
+
+<body>
+    <!--cách viết css thông thường-->
+    <!-- <div class="card">
+        <h3 class="heading">Saved</h3>
+        <p class="desc">looks like you got a great idea.</p>
+        <div class="btn">Ok, cool</div>
+    </div> -->
+
+
+    <!--cách viết css với beem
+     + trong div đầu tiên đã có css là card rồi tại sao lại có thêm card--success
+     -> ý nghĩa của việc đó là mình muons bổ sung thêm thuộc tính chẳng hạn là thông 
+     báo thành công hiển thị thêm hiệu ứng màu sắc của trạng thái, tuy nhiên khong ảnh hưởng
+     đến khối block card đã đc viết trc đó ta có thể viết một css mới và để nó đúng với quy tắc
+     beem và có quy chuẩn với block card gốc là css cha thì ta dùng quy chuẩn beem là modifier lk
+     với block css cha là card: 
+        -> đó là lý do tại sao ta đặt tên card--success thêm bên cạnh khối block cha card 
+        mà khong viết thêm css cho block cha đó một cách luôn tuôn không hiệu quả 
+    -->
+    <div class="card card--success">
+        <h3 class="card__heading">Saved</h3>
+        <p class="card__desc">looks like you got a great idea.</p>
+        <div class="card__btn">Ok, cool</div>
+    </div>
+
+    <div class="card card--error">
+        <h3 class="card__heading">Saved</h3>
+        <p class="card__desc">I don't like you got a great idea.</p>
+        <div class="card__btn">So sad, fail</div>
+    </div>
+</body>
+
+</html>

@@ -5,12 +5,15 @@
  ==> làm cách nào để copy nhanh tất cả tên class, id đã khai báo qua bên css một lượt thay
  vì phải copy từng cái
 
- ===> chọn một tên đại diện là mã ID hoăc class:
-   +  bấm: Ctrl + shift + L.   -> di chuyển tới đầu tên class id
-   + bấm: alt + shift + mũi tên   -> di cuyển tới cúi tên class id
+ ===> chọn một tên đại diện là mã ID hoăc class...(có thể tô đên hết cái tên id, class, thẻ cần copy lượt):
+   + bấm: Ctrl + shift + L  -> giúp mình lấy hết cái id, class, hay thẻ, nguyên khối tô giống nhau mà mình chọn 1 lượt một
+   <=> ngoài bấm Ctrld + Shift + L ta có thể thay thế bằng cách: tô khối cần lấy rồi bấm Ctrld + D (bấm 2 lần)
+
+   + bấm: alt + shift + mũi tên  -> di cuyển tới cúi tên class id(nghĩa là giả dụ mà bịu khuyết thiếu tên thì 
+   dùng cách này sẽ tô thêm đc tên thuộc tính cho đủ mà không mất đi hiệu ứng ban đầu)
    + copy tên đầy đủ đồng loạt
    + qua css: bấm Ctrl + V.
    + di chuyển mũi tên đồng loạt ở đầu bấm bấm:
-           alt + mũi tên    ->để chọn hết tên,-> sau đố thêm dấu #, . để tạo class id đồng loạt
+           alt + mũi tên    -> để chọn hết tên,-> sau đố thêm dấu #, . để tạo class id đồng loạt
 
    + di chuyển con trỏ chuột ra sau và bấm {}.. để tạo đồng loạt       

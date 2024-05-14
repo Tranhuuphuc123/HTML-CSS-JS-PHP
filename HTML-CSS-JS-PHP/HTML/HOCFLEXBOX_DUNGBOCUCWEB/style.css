@@ -1,0 +1,289 @@
+/*thiết kế css cho web flexbox*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ccc;
+}
+
+
+/*css cho mục navbar*/
+
+.nav {
+    min-height: 42px;
+    background-color: hsl(33, 91%, 43%);
+    /*đinh nghĩa cho nav thành một flex box container*/
+    display: flex;
+    /*sử dụng justify-content tt flex box dùng để căn chỉnh các tp */
+    justify-content: space-between;
+}
+
+.nav-list {
+    padding-left: 0;
+    margin: auto 16px;
+}
+
+.nav-item {
+    color: #fff;
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+
+/*form layout css*/
+
+.form-container {
+    max-width: 720px;
+    padding: 32px;
+    margin: 36px auto 0 auto;
+    background-color: #fff;
+}
+
+.form-row {
+    padding: 8px;
+    /*xác dịnh flex container thẻ cha chứa bố cục của các flex item là các label và inut*/
+    display: flex;
+}
+
+.form-label {
+    /*căn chỉnh chiều dài tối thiểu của label đều luôn điều nhau*/
+    min-width: 80px;
+}
+
+.form-input {
+    /*mục tiêu của viecj này là giúp cho cái flex item là thẻ input chiếm hết không gian của nó 
+    tuyệt dối */
+    flex: 1;
+}
+
+
+/*phần column layout css - hiểu chỉ để ba đoan văn bnr sắp xếp theo bố cục nằm theo chiều column*/
+
+.column-layout {
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: #fff;
+    /*xác định column layout làm flex container */
+    display: flex;
+}
+
+.column-item {
+    padding: 0 16px;
+}
+
+.sidebar-one {
+    flex: 1;
+    /*dùng order để tùy chỉnh vị trí theo mình muốn không theo mặc định ban đàu*/
+    order: 3;
+}
+
+.sidebar-two {
+    flex: 1;
+    /*dùng order để tùy chỉnh vị trí theo mình muốn không theo mặc định ban đàu*/
+    order: 1;
+}
+
+.main-column {
+    flex: 3;
+    /*dùng order để tùy chỉnh vị trí theo mình muốn không theo mặc định ban đàu*/
+    order: 2;
+}
+
+
+/*nếu để flex: 1 ở mục flex item là column item thì cả 2 coi như phân chia đều nhau
+để mà chia bố cục choc hợp lý main lướn hơn hai cái sidebr ta tạo thêm css và chia flex tương 
+cho hợp lý vd: 1 2 1*/
+
+
+/*feacture tính năng*/
+
+.feature-layout {
+    margin-top: 36px;
+    /*xác định là flex container */
+    display: flex;
+    /*dùng justify-content để căn  chỉnh vi trí với  space-around" 
+    -> không gian trống sẽ được phân bố đều xung quanh các phần tử con, bao
+     gồm cả ở đầu và cuối container.*/
+    justify-content: space-around;
+    /*mặc định flex-dirrection luôn là row hàng ngang nhưng ở  đây tôi cho nó là column
+    -> để tôi dùng quy tắc @media thiết lặp kích thước màn hình khi bằng kích thước mobile thì nó sẽ sắp xếp lại là
+    dạng column còn nếu là pc thì nóp mặc nhiên là sắp xếp dạng row hàng ngàng*/
+    flex-direction: column;
+}
+
+
+/*sử dụng quy tắc áp đặt kích thước media cho css để website mặc định pc từ 740px> thì sắp xếp bố trí theo hàng ngang
+còn nếu nhỏ hơn cỡ màn hình mobile (từ <740px) thì sắp xếp theo hàng dọc
+==> đây là một kỹ thuật đc dùng rất nhiều trong responsive
+*/
+
+@media (min-width: 740px) {
+    .feature-layout {
+        flex-direction: row;
+    }
+}
+
+.feature-item {
+    padding: 12px 16px;
+    margin-top: 16px;
+    /*thay vì tiếp tục dùng margin để căn chỉnh k.c đều giữ các item ta sẽ dùng 
+    tt flex box: flex-bassic để định k.c ban đầu đều cho các item flex*/
+    flex-basis: 30%;
+}
+
+
+/*sử dụng lớp giả pseudo classes ể chọn các phần tử con ở vị trí cụ thể trong phần tử cha. Đối số của :nth-child() chỉ định vị trí của phần tử con mà quy tắc sẽ áp dụng.
+.feature-item:nth-child(1) áp dụng cho phần tử con đầu tiên trong phần tử cha có class .feature-item.
+.feature-item:nth-child(2) áp dụng cho phần tử con thứ hai trong phần tử cha có class .feature-item.
+.feature-item:nth-child(3) áp dụng cho phần tử con thứ ba trong phần tử cha có class .feature-item.
+
+==> Mỗi quy tắc có một giá trị màu sắc nền (background-color) khác nhau, sử dụng giá trị RGB để định nghĩa màu sắc. Điều này cho phép bạn tạo ra các phần tử con với các màu nền khác nhau tùy thuộc vào vị trí của chúng trong phần tử 
+cha, tạo ra hiệu ứng trực quan và đa dạng hóa giao diện.*/
+
+.feature-item:nth-child(1) {
+    background-color: rgb(192, 227, 222);
+}
+
+.feature-item:nth-child(2) {
+    background-color: rgb(227, 200, 192);
+}
+
+.feature-item:nth-child(3) {
+    background-color: rgb(226, 192, 227);
+}
+
+
+/*mục khối wrap layout*/
+
+.wrap-layout {
+    background-color: #fff;
+    margin-top: 36px;
+    padding: 12px 0 32px 0;
+    /*xác đinh là flex container*/
+    display: flex;
+    justify-content: space-around;
+    /*dùng flex-wrap: wrap các item sẽ tự xuống dòng khi không gian không đủ
+    -> ví dụ mình ép web nhỏ lại không gian không đủ nó sẽ tự nhay các item xuống 
+    hàng  thay vì nèn lại trên một hàng*/
+    flex-wrap: wrap;
+}
+
+.wrap-layout__item {
+    width: 140px;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+    line-height: 90px;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 20px;
+    background-color: #ca640a;
+}
+
+
+/*center layout*/
+
+.center-layout {
+    background-color: rgb(192, 227, 194);
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    max-width: 640px;
+    height: 360px;
+    /*xác định là flex container*/
+    display: flex;
+}
+
+.center-layout__item {
+    font-size: 42px;
+    font-weight: 700;
+    /*mặc định căn giữa*/
+    margin: auto;
+}
+
+
+/* Chart layout */
+
+.chart-layout {
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: #fff;
+    /*xác định flex container chọn flex để sắp sếp bố cục các item thành hàng ngàng*/
+    display: flex;
+    justify-content: space-around;
+    /*bieur đồ đang bị tú người láy điểm đich ở vị trí trục phụ cross item là vị trí cross star
+    giờ định điểm trục ở vị trí cross end thì dùng aligh-item*/
+    align-items: flex-end;
+}
+
+.chart-layout__item {
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    height: var(--percent);
+    /*cách tính auto theo phần trăm cột biểu đồ*/
+    background-color: #EF5122;
+    /*sử dụng hiệu ứng animation*/
+    animation: growth ease-in 0.7s;
+}
+
+
+/*tạo keygram của hiệu ứng chuyển ảnh animations */
+
+@keyframes growth {
+    from {
+        opacity: 0;
+        height: calc(var(--percent)-50%);
+    }
+    to {
+        opacity: 1;
+        height: var(--percent);
+    }
+}
+
+
+/* End */
+
+.the-end {
+    margin: 12px auto 48px auto;
+    padding: 32px 0;
+    max-width: 740px;
+    min-height: 360px;
+    display: flex;
+}
+
+.the-end__first {
+    padding: 4px 16px;
+    background-color: #fff;
+    flex: 1
+}
+
+.the-end__second {
+    flex: 1;
+    display: flex;
+    /*đưa hai item con từ trục main asic thành cross asic*/
+    flex-direction: column;
+}
+
+.the-end__second-one {
+    padding: 4px 16px;
+    background-color: rgb(227, 192, 214);
+    flex: 1
+}
+
+.the-end__second-two {
+    padding: 4px 16px;
+    background-color: rgb(192, 210, 227);
+    flex: 1;
+}

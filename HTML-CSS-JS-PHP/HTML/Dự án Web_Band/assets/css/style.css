@@ -25,11 +25,52 @@ html{
     font-family: 'Times New Roman', Times, serif;
 }
 
+
+/*************************COMMON**********************************************************/
 /**********Các mục thiết lập dùng chung có thể tái sử dụng nhiều lần**********************/
 .text-white{
     /*Lưu ý !important thứ tự ưu tiên trong css thì nó là ưu tiên hàng đầu*/
     color: #fff !important;
 }
+
+/*cách phần chia các row và column > tái sử dụng nhiều lần*/
+.row{
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+/*tạo pseudo-element giả để tránh hiệu ứng float:left làm mất lk của thẻ cha bao nó???
+=>  phần tử giả được sử dụng để chèn một số nội dung vào sau(cuối) nội dung của một phần tử.*/
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-third{
+    width: calc(100%/3);
+}
+
+.col-full{
+    width: 100%;
+}
+
+.col-half{
+    width: 50%;
+}
+
+/*canh giữa tất cả nội dung*/
+.text-align{
+    text-align: center;
+}
+
+
 
 
 /* *********************************************************************************************************************** */
@@ -256,7 +297,7 @@ html{
 
 
 
-/* ======== */
+/* ==================================================================*/
 /* >>>> About */
 #content{
    
@@ -315,13 +356,6 @@ html{
    overflow: hidden;
 }
 
-#content .member-item{
-    float: left;
-    /* sử dụng hàm chia để phân điều bố cục 3 ảnh cho đều với thẻ div cah content */
-    width: calc(100%/3);
-    /* căn giữ ảnh và text */
-    text-align: center;
-}
 
 #content .member-text{
     font-size: 15px;
@@ -340,6 +374,8 @@ html{
 /* Mục TourDates -> các ljch trình và nơi diễn ra sự kiện âm nhạc */
 .tour-section{
     background-color: #000;
+    display: flex;
+    flex-direction: column;
 }
 .tour-section  ul  li{
    list-style-type: none;
@@ -376,13 +412,253 @@ html{
 }
 
 
-/*các địa điểm du lịch*/
+/**************************CONTENT TOUR PLACES*******************************/
+/*các địa điểm du lịch tour Places*/
+.place-list{
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+
+.place-img{
+  /*Lưu ý dù có chia tỉ lệ điều như thế nào ở thẻ cha chứa img thì ảnh nó cũng khg
+  tự thu nhỏ lại vì vậy ta cần chỉnh img: width về 100% thì mặc nhiên nó sẽ chiệu
+  ảnh hưởng từ hiệu ứng của thẻ cha place-item với width có tỉ lệ chia 3 như trên*/
+  width: 100%;
+  padding: 0 8px;
+   /*đưa về hiển thị chung khối để img và khối place-body bên dưới dính với nhau thnahf một khối
+   -> khắc phục th nó bị tách ra khoản hở nhỏ*/
+   display: block;
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.place-body{
+    background-color: #fff;
+    margin: 0 8px 0;
+    padding: 16px;
+    font-size: 15px;
+}
+.place-heading{
+    font-size: 15px;
+    font-weight: bold
+}
+.place-time{
+    margin-top: 15px;
+    opacity: 0.7;
+}
+.place-note{
+    margin-top: 15px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+.place-buy-btn{
+   margin-top: 30px;
+   background-color: #0b0909;
+   color: #fff;
+   padding: 10px 15px;
+   text-decoration: none;
+   font-weight: bold;
+}
+.place-buy-btn:hover{
+   background: #8b8787;
+}
+
+
+/*******************************Modal tickets*************************************/
+/**Phần css ticket modal hộp thoại xuất hiện khi nhấn nút but tickets sẽ hiện ra**/
+/*tạo màn mờ khi hiện hộp thoại mkodal tickets lên*/
+.modal{
+    position: fixed; /* tránh trôi mất -> giữ cố định*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /*biến thuộc tính modal thành một container dạng flex để dể dạng sử dụng các thuộc 
+    tính của flexbox, hay định vị trí alignt... -> xem lại kt về phân chia bố cục với flexbox*/
+    /* display: flex; */
+    align-items: center; /* căn chỉnh theo trục dọc y*/
+    justify-content: center; /*căn chỉnh theo trục ngang x*/
+
+    /*********tiến hảnh ẩn đi hộp thoại => để khi nhấn nút buy tickets thì nó mới hiện lên********/
+    display: none;
+}
+
+/*class này để xử lý js khi nhấn button buy tickets thì classlist thêm class này để
+display:flex <=> còn khi không nhấn thì display của modal sẽ mất đi open-modal
+tức mất đi display:none ẩn đi hộp thoại tickets modal*/
+.modal.open-modal{
+    display: flex;
+}
+
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    /*tùy chỉnh reponsive cho hộp thoại tương tích khi bị thu nhỏ lại
+    => xem kiến thức về responsive để 
+    <=>mục tiêu là khi thu nhỏ thì dựa tổng kích thước gốc khi nó thu 
+    nhỏ lạ thì vẫn giữ đc mỗi bên cách trái phải 16px*/
+    max-width: calc(100%-32px);
+
+    min-height: 250px;
+    position: relative; /*định ví trí truyệt đối cho thẻ cha*/
+
+    /*sử dụng hiệu ứng animation với @keyframes để  tạo độ mượt khi trượt xuất hiện
+    hộp thoại modal
+     - các phần xuất hiện trong animation
+      + <tên keyframe>
+      + hàm thời gian timing function(xem lại kt xẽ rõ)
+      + đỗ trễ delay - sự thay đổi chuyển động trong khoản 0.3s*/
+    animation: modal_apear  ease-in-out  0.6s;
+}
+
+header.modal-header{
+    background: #009688!important;
+    color: #fff!important;
+    padding: 32px 16px;
+    text-align: center;
+    /*k/c giữa các ký tự*/
+    letter-spacing: 4px;
+    font-size: 30px;
+}
+
+/*dấu x*/
+.modal-close-btn{
+    /*dịnh vị trí tuyệt đối cho thẻ con này asoblute ám chỉ thẻ con phụ thuộc
+    trực tiếp thẻ cha có position relative ở bên trên => tạo siwj liên kết vị trí 
+    giữa thẻ cha và thẻ con tối ưu hơn*/
+  position: absolute;
+  right: 0;
+  color: #fff;
+  padding: 20px;
+  /*tạo hiệu ứng khi rê chuột vào sẽ hiện hình con trỏ chuột hình bàn tay*/
+  cursor: pointer;
+  opacity: 0.5;
+}
+.modal-close-btn:hover{
+    background-color: #ccc;
+}
+.modal-body{
+    /* display: flex;
+    flex-direction: column; */
+    padding: 16px;
+}
+.modal-label{
+  margin: 10px 0;
+  /*đữa khối label tách thành khối riêng để nó tách biệt khối với thẻ input
+  -> tự giác input sẽ tách thành hàng riêng*/
+  display: block;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.modal-input{
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc!important;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+#buy-tickets{
+ width: 100%;
+ padding: 16px;
+ text-align: center;
+ font-size: 18px;
+ background-color:#009688;
+ color: #fff;
+ border: none;
+ cursor: pointer;
+}
+
+#buy-tickets:hover{
+    background-color: #757575;
+}
+
+.modal-footer{
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-footer a{
+    color: #009688;
+}
+
+
+/*Khởi tạo hiệu ứng animation khi xuất hiện hộp thoại Modal một cách mượt mà từ trên xuống*/
+/*
+ /*đoạn mã " @keyframes" được sử dụng để định nghĩa các hoạt động hoặc chuyển động tùy chỉnh
+  (animations) cho các phần tử HTML. " @keyframes" cho phép bạn xác định các bước trung gian 
+  trong quá trình hoạt động của phần tử từ trạng thái này sang trạng thái khác.
+  + from: trạng thái ban đầu
+  + to: trạng thái sau khi hoàn thành
+  ==> trong css muốn sử dụng @keyframe thì dùng thuộc tính animation
+*/
+@keyframes modal_apear{
+    from{
+        /*
+        => transform: sử dụng để thay đổi hình dạng, vị trí và kích thước của một phần tử HTML mà không
+        làm thay đổi luồng dữ liệu của trang web.
+        => thuộc tính translateY: di chuyển phần tử theo trục xác định là Y..*/
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /*
+        => mục đich như sau:
+        + ban đầu cho nó giựt lên -100px -> tức là ban đầu nó xuất hiện ỏ vịt rí -100px
+        + sau đó thả nó rới xuống vị trí ban đầu tức 0px
+        --> đưa hiệu ứng animation vào class modal-container(thẻ chứa tất cả
+        hiệu ứng của modal)
+    */
+}
 
 
 
 
+/*****************************************************************************/
+/*****************CONTACT FORM*************************************/
+.contact-content{ 
+    padding-top: 48px;
+}
+.contact-info-text{
+    font-size: 18px;
+    line-height: 1.4;
+}
+/*cách thứ để chỉnh hiệu ứng cho tất cả các element có bắt đầu bằng chữ: "ti-"*/
+.contact-info-text i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+.contact-form{
+    font-size: 15px;
+}
+.contact-form .form-control{
+   padding: 8px;
+   margin-bottom: 5px;
+   border: 0.5px solid rgb(143, 140, 140);
+   width: 100%;
+}
+.contact-submit{
+    margin-top: 10px;
+    padding: 10px;
+    float:right;
+    background: #000;
+    color: #fff;
+}
+.contact-submit:hover{
+    opacity: 0.5;
+}
 
 
+/***********************************************************************
+/*****************Image*************************/
+.background-img img{
+    width: 100%;
+}
 
 
 
@@ -393,5 +669,26 @@ html{
 #footer{
   background-color: #ccc;
   height: 250px;
+  padding: 64px 16px;
+  text-align: center;
 }
 
+#footer .social-list{
+  font-size: 20px;
+}
+
+#footer .social-list a{
+    color: #7c8584;
+    text-decoration: none;
+  }
+
+#footer .social-list a  :hover{
+    opacity: 0.5;
+}
+
+.footer-text{
+    color:#716f6f
+}
+.footer-text a{
+    color:#7c7b7b
+}

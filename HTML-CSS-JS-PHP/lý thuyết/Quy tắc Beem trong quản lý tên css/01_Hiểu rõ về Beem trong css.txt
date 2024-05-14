@@ -29,6 +29,27 @@
 
 
 
+****************************************************************************
+ >>>>>> TẠI SAO LẠI DÙNG BEEM MÀ KHÔNG VIẾT CSS BÌNH THƯỜNG THUI? <<<<<<    
+  => Lý do
+   + mỗi người code một kiểu nên đặt tên css lộn xộn
+   + members đặt class dễ trùng nhau -> dẫn đến css dễ ghi đè lên nhau gây trùng lặp và lỗi
+   ===> như vậy Beem ra đời để giải quyết các khuyết điểm đó và tạo ra các quy tắc code 
+   chuẩn, chỉnh và chuyên nghiệp hơn.
+
+  => ưu điểm khi dùng beem:
+   + rõ ràng rành mạch
+   + tái sử dụng rõ ràng
+   + không bị trùng class, bị ghi đè lên nhau
+   + giúp tạo quy chuẩn giúp một team làm việc hiệu quả hơn...
+   + tính đóng gói css rất cao không lo css này ảnh hưởng ghi đè lên css kia 
+   vì khong bị trùng lặp
+
+
+
+
+
+
 
 ===========================
 >>ví dụ thực tiễn<<
@@ -141,10 +162,10 @@
                 padding: 0 16px;
             }
             .toast__body{
-            /*mục đích là dù cái message trong hộp thông báo có mội dung ngắn
-            thì kích thước chiều ngang của hộ thoại toast thông báo cũng không bị 
-            thu ngắn lại làm xấu đi hộp thoại*/
-            flex-grow: 1;
+                /*mục đích là dù cái message trong hộp thông báo có mội dung ngắn
+                thì kích thước chiều ngang của hộ thoại toast thông báo cũng không bị 
+                thu ngắn lại làm xấu đi hộp thoại*/
+                flex-grow: 1;
             }
             .toast__title{
                 font-size: 18px;

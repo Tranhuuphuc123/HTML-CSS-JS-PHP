@@ -14,6 +14,16 @@ Hiểu về thuộc tính position trong CSS – Khi bạn thiết kế các lay
   - Fixed: Định vị và giúp cho phần tử luôn cố định một chỗ, ví dụ như khi bạn scroll trình duyệt chẳng hạn, phần tử sẽ không thay đổi.
   
   - Inherit: Xác định thừa hưởng thuộc tính từ thành phần cha (thành phần bao ngoài).
+  - static: position: static; là giá trị mặc định của thuộc tính position trong CSS. Khi một phần tử được thiết lập với position: static;, 
+  nó sẽ tuân theo luồng bình thường của tài liệu và không bị ảnh hưởng bởi các thuộc tính vị trí (như top, bottom, left, right). 
+   + Cụ thể: 
+    -> Vị trí tự nhiên: Phần tử sẽ được hiển thị ở vị trí mà nó xuất hiện trong tài liệu HTML. 
+    -> Nó sẽ không di chuyển khỏi vị trí đó dù bạn đặt bất kỳ thuộc tính vị trí nào.
+    -> Không thể dịch chuyển: Bạn không thể sử dụng các thuộc tính top, bottom, left, right để dịch 
+    chuyển phần tử nếu nó đang có giá trị position: static;.
+    -> Không tạo stacking context: Phần tử không tạo một stacking context mới cho các phần tử con. 
+    <--> Điều này có nghĩa là các phần tử con sẽ được xếp chồng lên nhau theo thứ tự trong tài liệu HTML 
+    mà không bị ảnh hưởng bởi thứ tự xuất hiện của phần tử cha.
 
 
 

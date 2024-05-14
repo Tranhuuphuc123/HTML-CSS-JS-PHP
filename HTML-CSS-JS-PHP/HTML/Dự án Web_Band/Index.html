@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +10,21 @@
     <link rel="stylesheet" href="../Dự án Web_Band/assets/img/themify-icons/themify-icons.css">
     <title>Dự án Website_Band đầu tay</title>
 </head>
+
 <body>
 
- <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
     <!-- thẻ div lớn bao hết web -->
-   <div id="Wraper">
+    <div id="Wraper">
         <!-- phần Header -->
-         <div id="header">
-             <!-- cách viết tắt nhanh:
+        <div id="header">
+            <!-- cách viết tắt nhanh:
                 tạo ul có 5li kèm thẻ a
                 thèo sao mỗi li và trong
                 ul có id = nav
                 ==> gõ: ul#nav>li*5>
             -->
-             <ul id="nav">
+            <ul id="nav">
                 <li><a href="">Home</a></li>
                 <li><a href="">Band</a></li>
                 <li><a href="">Tour</a></li>
@@ -31,7 +33,7 @@
                     <a href="#">
                         More
                         <!-- chèn icon -->
-                        <i class="edit-icon-down ti-angle-down"></i>
+                        <i  class="edit-icon-down ti-angle-down"></i >
                     </a>
                     <!-- mục tiêu tạo class
                     thay vì tạo id là vì có thể
@@ -44,11 +46,11 @@
                         <li><a href="">Media</a></li>
                     </ul>
                 </li>
-             </ul>
+            </ul>
 
-              <!--div sear-->
-              <div class="search-btn">
-                 <i class="edit-icon-search ti-search"></i>
+            <!--div sear-->
+            <div class="search-btn">
+                <i class="edit-icon-search ti-search"></i >
               </div>
          </div>
 
@@ -82,67 +84,195 @@
                 to both mainstream and indie music enthusiasts.</p>
 
                 <!-- member các thành viên ban nhạc -->
-                <div class="member-list">
-                    <div class="member-item">
+                <div class=" row member-list">
+                    <div class=" col col-third text-align">
                         <p class="member-text">Name</p>
                         <img src="../Dự án Web_Band/assets/img/band_new.jpg" alt="" class="member-img">
                     </div>
 
-                    <div class="member-item">
+                    <div class="col col-third text-align">
                         <p class="member-text">Name</p>
                         <img src="../Dự án Web_Band/assets/img/band_new.jpg" alt="" class="member-img">
                     </div>
                     
-                    <div class="member-item">
+                    <div class="col col-third text-align">
                         <p class="member-text">Name</p>
                         <img src="../Dự án Web_Band/assets/img/band_new.jpg" alt="" class="member-img">
                     </div>
                 </div>
             </div>
 
-            <!-- TourDates -->
+
+
+            <!-- *****************************TourDates*********************** -->
             <div class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
                     <p class="section-subheading text-white">Remember to book your ticket</p>
 
+                    <!--Tickets-->
                     <ul class="ticket-list">
                         <li>September <span class="sold-out">Sold Out</span></li>
                         <li>October <span class="sold-out">Sold Out</span></li>
                         <li>November <span class="quanlity">3</span></li>
                     </ul>
 
-                    <!--các địa điểm tour nha-->
-                   
+                    <!--các địa điểm tour Places nha-->
+                    <div class="row place-list">
+                        <div class="col col-third">
+                            <img src="./assets/img/places_img/newyork.jpg" alt="New York" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-note">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="place-buy-btn js-tickets-btn">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class="col col-third">
+                            <img src="./assets/img/places_img/paris.jpg" alt="New York" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">Paris</h3>
+                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-note">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="place-buy-btn js-tickets-btn">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class="col col-third">
+                            <img src="./assets/img/places_img/sanfran.jpg" alt="New York" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">San Franciscos</h3>
+                                <p class="place-time">Sun 29 Nov 2016</p>
+                                <p class="place-note">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="place-buy-btn js-tickets-btn">Buy Tickets</button>
+                            </div>
+                        </div><!--end place-item-->
+                    </div><!--end place-list-->
                  </div>
-            </div>
+            </div> <!--end tour-section-->
              
 
-              <!-- Contact -->
+
+
+              <!-- *********************Contact********************** -->
             <div class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
-                <p class="section-subheading">Let contact with us</p> 
-             </div>
+                <p class="section-subheading">Fan? Drop a note!</p> 
 
-              <!-- Image -->
-            <div class="content-section">
-                <h2 class="section-heading">IMAGE</h2>
-                <p class="section-subheading">Collect Image the Band</p>
-                
-             </div>
- 
+                <div class="row contact-content">
+                    <div class="col col-half contact-info-text">
+                        <p><i  class="ti-location-pin"></i >Chicago, US</p>
+                        <p><i  class="ti-mobile"></i >Phone: +00 151515</p>
+                        <p><i  class="ti-email"></i >Email: mail@mail.com</p>
+                    </div>
+                    <div class="col col-half contact-form">
+                       <form action="">
+                            <div class="row">
+                                <div class="col col-half">
+                                    <!--lưu ý thuộc tính required tạo hiệu ứng nhắc nhở ki không nhập vào thẻ input-->
+                                    <input type="text" class="form-control" name="" id="" required placeholder="Name">
+                                </div>
+                                <div class="col col-half">
+                                    <input type="text" class="form-control" name="" id="" required placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-full">
+                                    <input type="text" class="form-control" name="" id="" required placeholder="Message">
+                                </div>
+                            </div>
+                            <input type="submit" value="SEND" class="contact-submit">
+                       </form>
+                    </div>
+                </div>
+            </div>
 
+
+
+
+              <!-- ***********************Image*********************** -->
+            <div class="background-img">
+                <img src="../Dự án Web_Band/assets/img/map.jpg" alt="">
+            </div>
             
+        </div><!--end content-->
+
+
+
+        <!-- ================================================================ -->        
+         <!-- *************************chân footer************************ -->
+         <div id="footer">
+            <div class="social-list">
+                <a href=""><i class="ti-facebook"></i ></a>
+                <a href=""><i class="ti-instagram"></i ></a>
+                <a href=""><i class="ti-sharethis-alt"></i ></a>
+                <a href=""><i class="ti-pinterest"></i ></a>
+                <a href=""><i class="ti-twitter"></i ></a>
+                <a href=""><i class="ti-linkedin"></i ></a>
+            </div>
+            <span class="footer-text">Powered by <a href="">w3.css</a></span>
+         </div>
+
+   </div> <!--end div class = Wrapper-->
+
+
+
+
+
+
+
+
+   <!--***********************modal tickets************************-->
+   <!--hộp thoại tickets modal => khi nhấn button buy tickets nó sẽ hiện lên modal này nằm 
+    nổi trên chỗ content-->
+  <div class="modal js-modal">
+     <div class="modal-container js-modal-container">
+        <div class="modal-close-btn js-close">
+            <i  class="ti-close"></i >
         </div>
 
+        <header class="modal-header">
+            <i  class="ti-bag"></i > Tickets
+        </header>
+
+        <div class="modal-body">
+            <!--cái for trong thẻ label có tác dụng là giúp tạo một cái sự kiện hay ở chỗ
+            thay vì nhập text thì ta trỏ con trỏ chuột vào thẻ input
+            <=> Nhưng vớ for nó giúp ta khi nhấp vào tên label tương ứng của thẻ input
+            thì nó vẫn trỏ đc con trỏ chuột vào thẻ input tương ứng với mục label đó
+            **lưu ý: for chỉ dùng dcd với id không dùng đc với class
+            vd: bên dưới thẻ input ta đặt id "quantity"
+            trên mục label chỏ for="quantity" thì sẽ tạo đc hiệu ứng khi nhấp con trỏ vào
+            tên label nó vẫn chỏ chuột vào mục input như ta trỏ chuột vào thẻ input trực tiếp -->
+            <label for="ticket-quanlity" class="modal-label">
+                <i  class="ti-shopping-cart"></i >
+                Tickets, $15 per person
+            </label>
+            <input type="text" class="modal-input" placeholder="How many?" id="ticket-quanlity">
+
+            <label for="ticket-email" class="modal-label">
+                <i  class="ti-user"></i >
+                Send To
+            </label>
+            <input type="email" class="modal-input" placeholder="Enter Email" id="ticket-email">
+
+            <button id="buy-tickets">
+                Pay
+                <i  class="ti-check"></i >
+            </button>
+        </div>
+
+        <div class="modal-footer">
+
+            <p class="modal-help">Need <a href="#">help?</a></p>
+        </div>
+     </div>
+  </div><!--end hộp thoại tickets modal-->
 
 
-<!-- ===================================================================== -->        
-         <!-- chân footer -->
-         <div id="footer"></div>
-   </div>
-
-
+  <!--dẫn script-->
+  <script src="../Dự án Web_Band/script.js"></script>
 
 </body>
 </html>

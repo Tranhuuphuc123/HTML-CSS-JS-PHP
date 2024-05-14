@@ -1,0 +1,59 @@
+body>div {
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    /*bỏ hiệu ứng gạch dưới */
+    text-decoration: none;
+    /*transparent trong suốt*/
+    background-color: transparent;
+    border: none;
+    /*outline dungfddeer tạo hiệu ứng phàn, thiết lặp viền xung quanh 
+    tử mà khong làm thay đổi cấu trúc hoặc vị trí của chúng*/
+    outline: none;
+    padding: 12px 38px;
+    border-radius: 50px;
+    /*hiệu ứng con trỏ chuột khi click rê chuột*/
+    cursor: pointer;
+    transition: opacity .2s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+
+/*thay vì tùy chỉnh margin left đẻ các button cách bên trái nhau ra 
+ta thường dùng margin-left trong block cha ở đây cụ thẻ là class btn
+==> tuy nhiên cách hiệu quả và chuyên nghiệm hơn là codr ntn::after
+==> ex
+                .btn + .btn{
+                     margin-left: 30px
+                }
+
+ --> điều này có nghĩa là nó hiểu các class có btn của các button nằm sau
+ cái class .btn đầu tiên sẽ tự động cách bên trái một khoảng 30px.
+ --> cách viết này chuyên nghiệp hiệu quả
+*/
+
+.btn+.btn {
+    margin: 50px 0 0 36px;
+}
+
+
+/*dùng modifier bổ nghĩa thêm cho các css block cha
+=> tạo các hiệu ứng màu sắc thông báo cho các button
+*/
+
+.btn--success {
+    background-color: rgb(21, 192, 55);
+}
+
+.btn--warn {
+    background-color: rgb(193, 193, 40)
+}
+
+.btn--danger {
+    background-color: #e60f0f
+}

@@ -1,0 +1,34 @@
+*************************TIỀM HIỂU VỀ QUY TẮC @MEDIA THIÊT LẬP TỶ LỆ TRONG CSS********************
+I/KHÁI NIỆM  
+ => Đây là một kỹ thuật sẽ đc học kỹ trong Reposive nhwung ở đây ta sẽ hiểu khái niệm của nó sơ một tý
+ => @media:
+  + là một quy tắc hoặc một cách để xác định các điều kiện cho việc áp dụng các quy tắc CSS. Nó cho phép bạn xác định các
+   điều kiện như kích thước màn hình, tỉ lệ khung hình, hoặc các tính năng của thiết bị để tùy chỉnh cách hiển thị của trang 
+   web trên các thiết bị khác nhau hoặc trong các ngữ cảnh khác nhau.
+ 
+ >>ví dụ:
+
+
+                    /* CSS cho màn hình lớn hơn hoặc bằng 600px */
+                    body {
+                        font-size: 16px;
+                    }
+
+                    /* CSS chỉ được áp dụng khi màn hình nhỏ hơn 600px */
+                    @media (max-width: 600px) {
+                        body {
+                            font-size: 14px;
+                        }
+                    }
+
+       => lưu ý:
+         + khi để max-with: nghĩa là kích thước tối đa cái trang web đó đạt đc thường có nghĩa là từ kích thước đó trở
+         xuống thui (vd: max-with: 600px nghĩa là chỉ áp dụng cho kích thước từ <600 px trở lại )
+         + khi đẻ min-with: 600px nghìa là kích thước tối thiểu đat đc trở lên (vd: min-with: 600px là áp dụng cho trang web 
+         có kích thước lớn hơn 600px)
+         \
+    
+      => giải thích ví dụ trên
+       Trong ví dụ này, font-size của văn bản sẽ là 16px trên màn hình lớn hơn hoặc bằng 600px. Nhưng khi màn hình nhỏ hơn 600px,
+        font-size của văn bản sẽ được giảm xuống còn 14px. Điều này giúp tối ưu hóa trải nghiệm của người dùng trên các thiết bị 
+        di động hoặc các màn hình nhỏ hơn.

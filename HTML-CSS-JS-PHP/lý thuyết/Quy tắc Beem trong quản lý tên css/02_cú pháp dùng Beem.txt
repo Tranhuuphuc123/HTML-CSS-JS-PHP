@@ -1,0 +1,75 @@
+***************************CÚ PHÁP DÙNG BEEM TRONG CSS********************
+I/QUY TẮC ĐẶT TÊN VỚI BEEM NHƯ SAU:
+ 1/ VỚI BLOCK:
+  -  Đây là phần tử gốc hoặc "block" của một thành phần trên trang web. 
+  - Block thường là phần tử gốc có thể tồn tại độc lập hoặc chứa các phần tử khác. 
+  - Block có tên duy nhất để chỉ định mục đích hoặc loại thành phần.
+        ex: đặt tên các block cho thành phần css bình THƯỜNG
+          .block
+
+
+ 2/ VỚI ELEMENT:
+  - Element (E): Đây là các phần tử bên trong "block" và có mối quan hệ chặt chẽ với block đó. 
+  - Element được kết nối với block bằng hai dấu gạch dưới (__) và có tên riêng biệt. 
+  - Element chỉ có ý nghĩa khi nó được sử dụng trong ngữ cảnh của block mẹ của nó.
+
+        ex: .block__element -> dùng dấu __ để biểu thị element có mối quan hệ chặt chẽ với block
+
+
+ 3/ VỚI MODIFIER 
+  - Modifier là các biến thể hoặc trạng thái bổ nghĩa cho "block" hoặc "element". 
+  - Chúng cho phép bạn thay đổi giao  diện hoặc hành vi của block hoặc element. 
+  - Modifier được kết nối với block hoặc element bằng dấu gạch ngang (--) và có tên riêng biệt.  
+          ex:
+             .block--Modifier : gắn kết nối modifier với block
+             .block__element--Modifier : gắn kết nôi modifier với element của block chính luôn
+
+
+
+
+*******************************************************************************
+>>>THỰC HÀNH CODE VỚI QUY TẮC BEEM TRONG CSS<<<
+ ***demo**
+
+  -> trong html ta viết ntn
+   
+    <=> khi không dùng quy tắc beem để viết tên các class css
+        <div class="card">
+            <h3 class="heading">Saved</h3>
+            <p class="desc">looks like you got a great idea.</p>
+            <div class="btn">Ok, cool</div>
+        </div>
+
+        ==> ta thấy đặt tên class tùy hứng tên các element và block khong dính dáng gì đến
+        nhau nếu một trang web lớn sẽ rất khó quản lý
+
+ --------------------------------------------------------
+
+     <=> khi có dùng quy tắc beem để đặt tên    
+
+       <div class="card card--success">
+            <h3 class="card__heading">Saved</h3>
+            <p class="card__desc">looks like you got a great idea.</p>
+            <div class="card__btn">Ok, cool</div>
+        </div>
+
+        => ta thấy rất rành mạch
+         + card: block
+         + card__heading...: chính là element với block cha like
+         + card--success: chính là Modifier bổ nghĩa thuộc tính thêm cho block cha
+         card mà không cần viết chồng thêm cho css cha là card, một là tránh hiệu ứng
+         ảnh hưởng cả đoạn hai là tính năng thêm tiện quản lý mà chỉ ảnh hưởng lên
+         đúng chỗ cần thêm thuộc tính mới mà nhìn vào cách đặt tên người ta dễ phân biệtk
+         css này là của ai và hiểu đây là thuộc tính bổ sung cho cái class block cha card 
+         trên.
+
+
+
+         
+
+
+
+
+
+
+       

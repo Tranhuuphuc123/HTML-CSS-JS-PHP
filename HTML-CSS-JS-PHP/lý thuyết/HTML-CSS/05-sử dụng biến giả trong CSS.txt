@@ -55,4 +55,4 @@ file html:
 
 
 ------->> như lúc này ta thấy tất cả các thẻ css h1-h3, đều phụ thuộc vào biến giả :root 
-chỉ cần tưa thay đổi gái trị màu đỏ trong biến giả root là ngay lập tức cá thẻ h1 đều thayd dổi màu hêt
+chỉ cần ta thay đổi gái trị màu đỏ trong biến giả root là ngay lập tức cá thẻ h1 đều thay dổi màu hêt

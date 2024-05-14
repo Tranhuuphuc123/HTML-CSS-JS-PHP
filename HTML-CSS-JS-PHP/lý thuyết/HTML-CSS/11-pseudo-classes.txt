@@ -31,6 +31,23 @@
    :first-letter       a:first-letter           ký tự đầu tiên của văn bản
    :hover             a:hover                   định dạng cho liên kết khi rê chuột qua thẻ a
    :focus             a:focus                   thẻ khi được thao tác
+                                                được sử dụng để áp dụng các quy tắc cho phần tử HTML khi nó đang được trỏ tới (focus)
+                                                (công dụng chính:
+                                                 => Thay đổi giao diện hoặc hành vi của phần tử khi nó được chọn hoặc focus
+                                                 => Các trường hợp sử dụng phổ biến của lớp giả :focus bao gồm:
+                                                  + Hiệu ứng Visual:Bạn có thể thay đổi màu sắc, kích thước, hoặc các thuộc 
+                                                  tính khác của phần tử khi nó được focus để chỉ ra rõ ràng cho người dùng 
+                                                  rằng phần tử đang được chọn.\
+
+                                                  + Hiển thị thông tin phụ: Bạn có thể hiển thị hoặc ẩn các phần tử khác 
+                                                  (ví dụ: hộp thoại popup) khi phần tử được focus, giúp cải thiện trải nghiệm 
+                                                  người dùng hoặc cung cấp thông tin bổ sung.
+
+                                                  + Hỗ trợ cho các phần tử nhập liệu: Khi người dùng nhập liệu vào một phần tử 
+                                                  như input hoặc textarea, bạn có thể sử dụng lớp giả :focus để thay đổi kiểu dáng
+                                                   của phần tử hoặc hiển thị các gợi ý hoặc thông tin hỗ trợ.
+                                                )
+
    :link                a:link                  định dạng cho liên kết chưa được nhấn
    :visited            a:visited                định dạng cho các liên kết đã nhấn
    :actived           a:actived                 định dạng cho các liên kết đang nhấn

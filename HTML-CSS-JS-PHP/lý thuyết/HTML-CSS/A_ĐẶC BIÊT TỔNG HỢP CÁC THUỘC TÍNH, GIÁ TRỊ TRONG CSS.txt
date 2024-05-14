@@ -4,7 +4,7 @@
 >>>>>> KIỂU FONT CHỮ <<<<<<<<
  1/ Thuộc tính "text-decoration" đưa thêm các định dạng trang trí cho chữ (các dòng kẻ qua chữ):
    - text-decoration:
-     ++ none: bỏ gạch chân underline cho nội udng text.
+     ++ none: bỏ gạch chân underline cho nội dung text.
      ++ underline: gạch chân
      ++ overline: gạch trên đầu chữ
 
@@ -122,6 +122,16 @@
  1/ Hover:
    + 
 
+ 2/  pointer-events: none
+  -> Vô hiệu hóa sự kiện chuột trên các phần tử được chọn, điều này có nghĩa là các phần tử <i> sẽ không phản ứng với
+  các sự kiện chuột  như nhấp chuột
+
+3/  user-select: none;
+ -> Ngăn chặn người dùng chọn văn bản bên trong các phần tử <i> bằng cách kéo chuột
+
+4/
+
+
 
 
 ===========================================================================================================================================
@@ -135,7 +145,7 @@
 
 
 ===========================================================================================================================================
->>>>>> THUỘC TÍNH CĂN CHỈNH PADDING(giữa, trá, phải)<<<<<<<<
+>>>>>> THUỘC TÍNH CĂN CHỈNH PADDING(giữa, trái, phải)<<<<<<<<
  - line-heigth: thuộc tính căn giữ nội dung chữ so với k/c padding 
  với box bao quanh chữ.
   
@@ -172,8 +182,16 @@
    + list-style-type: none   // xóa đi các thẻ đó
 
 
- 2/ Text-transform: Uppercase;
-  -> thuộc tính giúp viết in hoa bất kỳ ký tự nào  
+ 2/ Text-transform:
+  -> trong CSS được sử dụng để thay đổi việc biểu diễn của văn bản bằng cách chuyển đổi các ký tự thành các
+   kiểu chữ khác nhau
+  -> các thuộc tính 
+  + none: Đây là giá trị mặc định. Văn bản không được thay đổi.
+  + capitalize: Biến đổi chữ cái đầu tiên của mỗi từ trong văn bản thành chữ in hoa.
+  + uppercase: Chuyển toàn bộ văn bản thành chữ in hoa.
+  + lowercase: Chuyển toàn bộ văn bản thành chữ in thường.
+  + full-width: Chuyển đổi các ký tự thành dạng toàn bộ chiều rộng, chủ yếu sử dụng trong văn bản tiếng Nhật 
+  hoặc các ngôn ngữ có ký tự tương tự.
 
  3/ line-height: 
   -> Thuộc tính line-height trong CSS được sử dụng để xác định khoảng cách giữa các dòng văn bản 
@@ -204,19 +222,35 @@
     + matrix(): Thực hiện một phép biến đổi tùy chỉnh sử dụng ma trận 3x2.
     --> ???
 
-  5/ overflow: hidden;   
-    vd:    
-    
-           <div class="member-item">
-                <p class="member-text">Name</p>
-                <img src="../Dự án Web_Band/assets/img/band_new.jpg" alt="" class="member-img">
-            </div>
 
 
-   -->  khi định vị trí bằng float: thì thẻ cha member-list cũng mất định tính bao các thẻ con-> nên dùng margin-bottom:
-    bao nhiêu cũng mất đi định vị đó.
-   -->  overflow: hidden làm khắc phục điều đó giúp thẻ member-list vẫn giữ đc khối bao các
-     thẻ con bên trng nên định marin không bị lỗi */
+  5/ overflow: 
+  **khái niệm***
+  -> à một thuộc tính CSS được sử dụng để quy định cách xử lý nội dung của một phần tử khi nó vượt ra khỏi kích thước của phần tử đó. 
+  -> Thuộc tính này có một số giá trị có thể được sử dụng cùng với nó:
+
+   a/ overflow: hiden;
+    => Thuộc tính overflow: hidden; trong CSS được sử dụng để xác định cách xử lý nội dung bên trong một phần tử khi nội dung
+      đó vượt ra khỏi phạm vi của phần tử đó.
+    => Khi bạn đặt overflow: hidden; Nội dung bên trong sẽ bị cắt đi, Bất kỳ phần nào của nội dung bên trong vượt ra ngoài khu
+      vực hiển thị của phần tử sẽ bị cắt bỏ. 
+        Điều này đảm bảo rằng nội dung không được hiển thị ra bên ngoài khung của phần tử đó. Thanh cuộn sẽ không xuất hiện Khi
+      sử dụng overflow: hidden;, trình duyệt web sẽ không tạo ra thanh cuộn để cho phép người dùng cuộn qua nội dung bị ẩn. Thay 
+      vào đó, bất kỳ nội dung nào bị vượt ra ngoài sẽ đơn giản bị cắt bỏ.
+
+   b/ overflow:auto;
+     => Khi sử dụng giá trị này, nếu nội dung của một phần tử vượt ra khỏi kích thước của phần tử đó, một thanh cuộn sẽ xuất hiện 
+     để cho phép người dùng cuộn nội dung. 
+     => Nếu nội dung không vượt ra khỏi kích thước của phần tử, không có thanh cuộn được hiển thị.
+     <=> Tương tự như overflow: scroll;, nhưng chỉ hiển thị thanh cuộn khi cần thiết. 
+
+
+   c/ overflow:scroll
+    => Nếu nội dung vượt ra khỏi kích thước của phần tử, một thanh cuộn sẽ xuất hiện để cho phép người dùng cuộn nội dung. 
+    => Ngay cả khi nội dung không vượt ra, thanh cuộn vẫn hiển thị nhưng bị vô dụng.  
+
+   d/ overflow:visible
+    => Đây là giá trị mặc định. Nội dung vượt ra khỏi kích thước của phần tử sẽ được hiển thị bên ngoài phần tử đó. 
    
 
  6/ thuộc tính căn chỉnh vị trí trong một khối(hình vuông, tam giác hình tròn)
@@ -254,6 +288,50 @@ Thuộc tính float có thể nhận một trong những giá trị sau:
 
 
 
+
+
+8/ THUỘC TÍNH OBJECT-FIT
+ => Thuộc tính object-fit trong CSS được sử dụng để xác định cách một hình ảnh hoặc video phải thích ứng 
+ với kích thước của phần tử cha mà nó đang nằm trong. 
+ <=> Nói cách khác, nó kiểm soát cách nội dung của một phần tử multimedia (như hình ảnh hoặc video) sẽ hiển
+  thị và điều chỉnh nội dung đó để vừa với kích thước của phần tử cha.
+
+ ****Dưới đây là các giá trị của object-fit****
+   + fill:
+    -> Hình ảnh sẽ được kéo ra hoặc thu nhỏ để điền vào kích thước của phần tử mẹ mà không giữ tỷ 
+    lệ khung hình ban đầu. Điều này có thể làm biến dạng hình ảnh.
+
+  + contain: 
+   -> Hình ảnh sẽ được thu nhỏ hoặc phóng to sao cho toàn bộ nội dung nằm trong phần tử mẹ mà vẫn 
+   giữ nguyên tỷ lệ khung hình ban đầu.
+
+ + cover: 
+  -> Hình ảnh sẽ được phóng to hoặc thu nhỏ để điền vào phần tử mẹ sao cho nó vẫn giữ nguyên tỷ lệ
+   khung hình ban đầu. Một số phần của hình ảnh có thể bị cắt bỏ để phù hợp với kích thước của phần tử cha.
+
+ + none: 
+  -> Hình ảnh sẽ không bị thay đổi kích thước nào và sẽ hiển thị theo kích thước gốc của nó. Điều này có 
+  thể dẫn đến việc hình ảnh bị tràn ra khỏi phần tử mẹ.
+   
+ + scale-down: 
+  -> Sự kết hợp giữa none và contain. Nếu kích thước của hình ảnh lớn hơn kích thước của phần tử mẹ, hình
+   ảnh sẽ được thu nhỏ lại sao cho nó vẫn vừa trong phần tử mẹ mà vẫn giữ nguyên tỷ lệ khung hình ban đầu.
+
+
+
+
+9/ THUỘC TÍNH POINTER-EVENTS 
+ => Trong CSS, pointer-events là một thuộc tính được sử dụng để kiểm soát cách phần tử xử lý các sự kiện liên quan 
+ đến con trỏ chuột. 
+ => Thuộc tính này có các giá trị sau:
+  + auto: 
+   -> Đây là giá trị mặc định. 
+   -> Phần tử sẽ xử lý sự kiện chuột theo quy tắc tiêu chuẩn của trình duyệt.
+
+ + none: 
+   -> Phần tử sẽ bỏ qua bất kỳ sự kiện nào được khởi tạo bởi chuột. 
+   -> Nó sẽ cho phép các sự kiện đi qua phần tử đó và tiếp tục được xử lý bởi các phần tử 
+   nằm dưới nó trong cây DOM.
 
   
   
