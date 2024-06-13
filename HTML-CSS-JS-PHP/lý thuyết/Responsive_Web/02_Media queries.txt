@@ -1,0 +1,31 @@
+*********************TIỀM HIỂU VỀ MEDIA QUERIES**********************
+I/KHÁI NIỆM:
+ => Media queries là một kỹ thuật trong CSS3 cho phép bạn áp dụng các kiểu CSS khác nhau 
+ dựa trên đặc điểm của thiết bị hiển thị. 
+ => Media queries giúp trang web của bạn có thể tự động điều chỉnh giao diện sao cho phù 
+ hợp với nhiều loại thiết bị có kích thước màn hình khác nhau như máy tính để bàn, laptop,
+ máy tính bảng và điện thoại di động.
+ => Media queries là một chỗ truy vấn để viết css phù hợp cho việc tương thích màn hình giữa 
+ các thiết bị(nôm na là một cách thiết kế thong minh cho từng trường hợp: pc, tablet, mobile
+ khi nào đạt đúng kích thước của quy chuẩn đó nó sẽ phát huy đoạn code đó)
+
+
+
+*********************************************************************************
+II/ CẤU TRÚC CỦA MỘT MEDIA QUERIES
+ 1/ Cấu TRÚC
+      @media not|only mediatype and (mediafeature and|or|not mediafeature){
+            ....
+      }
+
+     ***GIẢI THÍCH*****
+     >> keywords
+      + not  
+      + only
+      + and 
+      + or
+
+     >> Mediatypes
+      + print
+      + screen
+       

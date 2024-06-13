@@ -1,3 +1,63 @@
 *****************************TIỀM HIỂU VỀ RESPONSIVE*******************************
 >>>>>>KHÁI NIỆM<<<<<<<<
-=> 
+- "Responsive" trong ngữ cảnh thiết kế web là một thuật ngữ chỉ cách bố trí và
+ giao diện của trang web tự động điều chỉnh để phù hợp với nhiều kích thước màn
+ hình và thiết bị khác nhau. 
+ 
+- Một trang web responsive sẽ có khả năng hiển thị tốt trên mọi thiết bị, từ máy
+ tính để bàn, laptop, máy tính bảng đến điện thoại di động.
+
+
+****************Các yếu tố chính của thiết kế responsive:*******************
+1/ Fluid Grid Layout (Lưới linh hoạt):
+ -> Thay vì sử dụng các đơn vị đo cố định như pixels, thiết kế responsive sử dụng 
+ các đơn vị đo linh hoạt như phần trăm (%) hoặc em. Điều này giúp các phần tử trên 
+ trang web tự động co giãn theo kích thước của màn hình.
+
+2/ Flexible Images (Hình ảnh linh hoạt):
+ -> Hình ảnh cũng được điều chỉnh để phù hợp với kích thước màn hình. CSS thường
+  được sử dụng với quy tắc max-width: 100%; để hình ảnh không vượt quá kích thước 
+  khung chứa nó.
+
+
+3/ Media Queries (Truy vấn phương tiện):
+ -> Media queries là một phần của CSS3 cho phép bạn áp dụng các kiểu CSS khác nhau dựa 
+ trên đặc điểm của thiết bị hiển thị, chẳng hạn như độ rộng, độ cao, độ phân giải của 
+ màn hình. Ví dụ, bạn có thể viết CSS riêng cho màn hình có độ rộng dưới 768px (điện thoại di động) 
+ và CSS khác cho màn hình có độ rộng trên 1024px (máy tính để bàn).
+
+
+
+
+***********Ưu điểm của thiết kế responsive:****************
+ => Cải thiện trải nghiệm người dùng: Người dùng có trải nghiệm nhất quán và tối ưu trên mọi thiết bị.
+ => Tăng cường SEO: Google khuyến khích sử dụng thiết kế responsive và có thể xếp hạng cao hơn cho các 
+ trang web thân thiện với thiết bị di động.
+
+ => Dễ bảo trì: Không cần phải duy trì nhiều phiên bản khác nhau của trang web cho các thiết bị khác nhau.
+ => Chi phí hiệu quả: Giảm chi phí phát triển và bảo trì vì chỉ cần thiết kế và phát triển một trang web duy nhất.
+
+
+
+
+     ++ex:
+            /* CSS cho màn hình có độ rộng dưới 600px (điện thoại di động) */
+              @media (max-width: 600px) {
+                body {
+                  background-color: lightblue;
+                }
+              }
+
+              /* CSS cho màn hình có độ rộng từ 601px đến 1024px (máy tính bảng) */
+              @media (min-width: 601px) and (max-width: 1024px) {
+                body {
+                  background-color: lightgreen;
+                }
+              }
+
+              /* CSS cho màn hình có độ rộng trên 1024px (máy tính để bàn) */
+              @media (min-width: 1025px) {
+                body {
+                  background-color: lightyellow;
+                }
+              }
